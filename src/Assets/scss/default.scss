@@ -1,0 +1,291 @@
+@font-face {
+  font-family: 'LeagueGothic';
+  src: local('LeagueGothic'), url(./fonts/League-Gothic/LeagueGothic-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GlacialIndifferenceItalic';
+  src: local('GlacialIndifferenceItalic'), url(./fonts/glacial-indifference/GlacialIndifference-Italic.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GlacialIndifferenceRegular';
+  src: local('GlacialIndifferenceRegular'), url(./fonts/glacial-indifference/GlacialIndifference-Regular.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GlacialIndifferenceBold';
+  src: local('GlacialIndifferenceBold'), url(./fonts/glacial-indifference/GlacialIndifference-Bold.otf) format('truetype');
+}
+
+header {
+background-color: #ffc480;
+height: 150px;
+
+	.title{
+  font-family: LeagueGothic;
+	font-size: 70px;
+	position: relative;
+	left: 20px;
+	color: #636161;
+	top: 10px;
+	}
+
+	.ucb {
+	
+	position: relative;
+	float: right;
+  right: 6px;
+	font-size: 30px;
+	color: #faf7f7;
+  font-family: GlacialIndifferenceItalic;
+  font-weight: bold;
+	top: -50px;
+
+	}
+	.dots {
+	position: realtive;
+	float: right;
+	margin-right: 440px;
+	}
+	
+}
+
+
+
+.navboxes {
+.stip {
+	position: relative;
+	right: 53.5vmin;
+	top: -27px;
+}
+
+.btn-group{
+top: -48px;
+right: -10.8vmin;
+
+$colors: (
+  primary: #004aad,
+  light: #faf7f7
+);
+
+
+@function text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}
+
+
+@mixin custom-bootstrap-btns {
+ 
+  @each $className in $colors {
+    .btn-#{nth($className, 1)} {
+      $buttonColor: nth($className, 2);
+      background: $buttonColor;
+      color: text-color($buttonColor);
+      border-color: #6172f2;
+      font-family: GlacialIndifferenceItalic;
+      font-weight: bold;
+      &:hover {
+        background: lighten($buttonColor, 10%);
+        color: text-color(lighten($buttonColor, 10%));
+        border-color: $buttonColor;
+      }
+    }
+  }
+
+  .btn {
+    &-lg {
+      width: 200px;
+    }
+    &-sm {
+      
+    }
+    &-link {
+      
+    }
+  }
+}
+
+
+@include custom-bootstrap-btns;
+
+//Layout for Pen
+body {
+  background: #222;
+}
+button {
+ border-radius: 0;
+  cursor: pointer;
+}
+}
+
+
+	
+}
+
+.container-fluid {
+  position: relative;
+
+   top: -48px;
+   width: 100%;
+   height: 200px;
+   text-align: center;
+   h1 {
+   position: relative;
+   font-family: LeagueGothic;
+   font-size: 60px;
+   top: 80px;
+   color: #6b6969;
+   }
+}
+
+
+.optionsPan{
+
+position: realtive;
+
+margin-top: -50px;
+ height: 705px;
+overflow: hidden;
+
+
+ .virt {
+ position: relative;
+ z-index: 5;
+ float: left;
+ margin-top: -150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+padding-right: 100px;
+ padding-left: 450px; 
+ padding-top: 200px;
+ padding-bottom: 200px;
+
+ h2 {
+  position: absolute;
+  top: 290px; //485
+  left: 520px; //540 
+   width: 100%; 
+   font-family: LeagueGothic;
+   font-size: 50px;
+   color: #faf7f7;
+ }
+
+ h3 {
+  position: absolute;
+  top: 340px; //530
+  left: 510px; //475
+   width: 30%; //20
+   color: #004aad; 
+   font-family: GlacialIndifferenceRegular;
+ }
+ button {
+ padding: 0;
+ border: none;
+background: none;
+ }
+ button:hover {
+  box-shadow: 0 30px 20px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+ }
+
+
+ .ours {
+ position: relative;
+ z-index: 5;
+ float: left;
+ margin-top: -150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+ padding-right: 450px; 
+ padding-left: 100px; 
+ padding-top: 200px;
+ padding-bottom: 200px;
+
+
+ h2 {
+  position: absolute;
+  top: 290px; //485
+  left: 215px; //1140
+   width: 100%; 
+   font-family: LeagueGothic;
+   font-size: 50px;
+   color: #faf7f7;
+ }
+
+ h3 {
+  position: absolute;
+  top: 340px; //530
+  left: 155px; //1080
+   width: 30%; //15
+   color: #004aad;
+   font-family: GlacialIndifferenceRegular;
+ }
+
+ button {
+ padding: 0;
+ border: none;
+background: none;
+ }
+ button:hover {
+  box-shadow: 0 30px 20px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+ }
+
+ .gradtext {
+ position: relative;
+
+ z-index: 1;
+ top: -200px;
+ left: 300px;
+
+ h2 {
+  position: absolute;
+  top: 580px;
+  left: 380px; 
+   width: 100%; 
+   color: #faf7f7;
+   font-family: LeagueGothic;
+   font-size: 60px;
+ }
+
+ h3 {
+  position: absolute;
+  font-size: 20px;
+  top: 660px;
+  left: 172px; 
+   width: 50%; 
+   color: #faf7f7;
+   font-family: GlacialIndifferenceItalic;
+
+ }
+
+ }
+
+
+  
+  
+  
+}
+
+.logo-pics {
+.asucs {
+ position: relative;
+ top: -250px;
+ left: 90px;
+ }
+ .escs {
+ position: relative;
+ top: -350px;
+ left: 1540px;
+ }
+}
+

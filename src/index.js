@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './Assets/css/fonts/League-Gothic/LeagueGothic-Regular.otf'
+import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Bold.otf'
+import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Italic.otf'
+import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Regular.otf'
+
 
 ReactDOM.render(
   <React.StrictMode>

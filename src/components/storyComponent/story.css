@@ -9,3 +9,14 @@
 .sideChunk ul {
     padding-left: 10px;
 }
+
+/***** Grids for tiles *****/
+
+.allTiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tilebox {
+    margin-bottom: 10px;
+}

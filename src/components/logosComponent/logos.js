@@ -2,8 +2,8 @@ import React from 'react';
 import { Component } from 'react';
 import asucc from './asuc-smaller.png';
 import escc from './esc.png';
-console.log(asucc);
-console.log(escc);
+// console.log(asucc);
+// console.log(escc);
 
 
 class Logos extends Component {

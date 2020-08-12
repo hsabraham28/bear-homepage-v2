@@ -2,9 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import dot from './dotts.png';
 import NavBar from './NavBar';
-import { Nav } from 'reactstrap';
 import logo from './logo.jpg';
-
 
 class Header extends Component {
   render() {
@@ -14,7 +12,7 @@ class Header extends Component {
           {/* Logo */}
           <div className="logo">
               <a href="/">
-                <img src={logo} style={imgStyle} />
+                <img src={logo} style={imgStyle} alt="Bear with us" />
               </a>
             </div>
 
@@ -32,8 +30,8 @@ class Header extends Component {
         {/* Navigation bar */}
         <div className="navMain">
           <div className="lines">
-            <div class="line1"></div>
-            <div class="line2"></div>
+            <div className="line1"></div>
+            <div className="line2"></div>
           </div>
           <NavBar />
         </div>
@@ -49,17 +47,8 @@ const headerStyle = {
   padding: '0px',
 }
 
-const h1Style = { // fixme delete when placeholder is gone
-  marginBottom: '0px',
-}
-
 const imgStyle = {
   maxWidth: '80%'
-}
-
-const navBarStyle = {
-  flex: '2',
-
 }
 
 export default Header;

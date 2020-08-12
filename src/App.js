@@ -1,7 +1,6 @@
 import React from 'react';
 import './Assets/css/default.min.css';
 import Header from './components/headerComponent/header';
-import Bar from './components/navbarComponent/navigationBar';
 import Highlight from './components/highlightComponent/highlight';
 import Action from './components/actionComponent/action';
 import Logos from './components/logosComponent/logos';

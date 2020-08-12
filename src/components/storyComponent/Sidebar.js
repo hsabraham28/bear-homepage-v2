@@ -45,11 +45,11 @@ function Sidebar() {
 }
 
 const sideMain = {
-    background: '#004aad',
+    background: 'rgb(0, 74, 173, 0.8)',
     color: 'white',
     height: '100%',
     width: '200px',
-    position: 'fixed',
+    // position: 'fixed',
     left: '0',
     overflowX: 'hidden',
     padding: '20px',

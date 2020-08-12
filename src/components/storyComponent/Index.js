@@ -21,7 +21,7 @@ const storyBody = {
 }
 
 const main = {
-
+ paddingTop: '0px',
 }
 
 export default Index

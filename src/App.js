@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Bar />
+        {/* <Bar /> */}
         <Route exact path="/" render={props => (
           <React.Fragment>
             <Highlight />

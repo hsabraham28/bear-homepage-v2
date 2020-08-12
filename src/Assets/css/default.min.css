@@ -56,8 +56,8 @@ header .dots {
 }
 
 .navboxes .btn-group {
-    top: -48px;
-    right: -10.8vmin
+    flex: 2;
+    right: 0;
 }
 
 .navboxes .btn-group .btn-primary {

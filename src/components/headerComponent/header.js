@@ -12,13 +12,15 @@ class Header extends Component {
       <img src={dot} alt="pattern" />
       </div>
 
-      <div className="title">
-      	B E A R &nbsp; {" "} {" "} W I T H &nbsp; {" "} {" "} U S
-      </div>
+      <a href="/">
+        <div className="title">
+        	B E A R &nbsp; {" "} {" "} W I T H &nbsp; {" "} {" "} U S
+        </div>
+      </a>
       
       
       <div className="ucb">
-            university of california, berkeley
+            University of California, Berkeley
       </div>
 
 

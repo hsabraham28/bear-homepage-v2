@@ -1,0 +1,11 @@
+.sideChunk h3 {
+    text-decoration: underline;
+}
+
+.sideChunk {
+    text-align: left;
+}
+
+.sideChunk ul {
+    padding-left: 10px;
+}

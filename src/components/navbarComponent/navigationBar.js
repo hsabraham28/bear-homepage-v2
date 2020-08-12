@@ -24,7 +24,7 @@ class Bar extends Component {
             <div className="navibar">
             <div class="btn-group" role="group" aria-label="Basic example">
   			<button type="button" className="btn btn-lg btn-primary btn-square btn-outline-light custom-btn">virtual sproul</button>
-  			<button type="button" className="btn btn-lg btn-primary btn-square btn-outline-light custom-btn">our story</button>
+  			<a href="/story"><button type="button" className="btn btn-lg btn-primary btn-square btn-outline-light custom-btn">our story</button></a>
   			<button type="button" className="btn btn-lg btn-primary btn-square btn-outline-light custom-btn">about us</button>
   			<button type="button" className="btn btn-lg btn-primary btn-square btn-outline-light custom-btn">log in</button>
   			</div>

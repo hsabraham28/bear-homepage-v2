@@ -4,13 +4,13 @@ import Header from './components/headerComponent/header';
 import Highlight from './components/highlightComponent/highlight';
 import Action from './components/actionComponent/action';
 import Logos from './components/logosComponent/logos';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashRouter as Router, Route} from 'react-router-dom';
 import Story from './components/storyComponent/Index';
 
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
         <Header />
         {/* <Bar /> */}

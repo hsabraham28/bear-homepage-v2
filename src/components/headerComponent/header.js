@@ -13,7 +13,7 @@ class Header extends Component {
         <div className="topHeader">
           {/* Logo */}
           <div className="logo">
-              <Link href="/">
+              <Link to="/">
                 <img src={logo} style={imgStyle} alt="Bear with us" />
               </Link>
             </div>

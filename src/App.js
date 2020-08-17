@@ -16,7 +16,7 @@ function App() {
         {/* <Bar /> */}
         <Route exact path="/" render={props => (
           <React.Fragment>
-            <Highlight />
+            <Highlight /> 
             <div className="togeth">
             <Action />
             <Logos />

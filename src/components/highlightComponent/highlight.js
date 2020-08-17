@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import cal from './caltransparent.v3.cropped.png';
-console.log(cal);
+// console.log(cal);
 
 
 class Highlight extends Component {

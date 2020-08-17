@@ -1,32 +1,54 @@
 import React from 'react';
 import { Component } from 'react';
 import dot from './dotts.png';
-console.log(dot);
-
+import NavBar from './NavBar';
+import logo from './logo.jpg';
 
 class Header extends Component {
   render() {
     return (
-      <header>
-     <div className="dots">
-      <img src={dot} alt="pattern" />
-      </div>
+      <header style={headerStyle}>
+        <div className="topHeader">
+          {/* Logo */}
+          <div className="logo">
+              <a href="/">
+                <img src={logo} style={imgStyle} alt="Bear with us" />
+              </a>
+            </div>
 
-      <div className="title">
-      	B E A R &nbsp; {" "} {" "} W I T H &nbsp; {" "} {" "} U S
-      </div>
-      
-      
-      <div className="ucb">
-            university of california, berkeley
-      </div>
+          {/* Dots */}
+          <div className="dots">
+            <img src={dot} alt="pattern" />
+          </div>
 
+          {/* Uni name */}
+          <div className="ucb">
+                University of California, Berkeley
+          </div>
+        </div>
 
-
+        {/* Navigation bar */}
+        <div className="navMain">
+          <div className="lines">
+            <div className="line1"></div>
+            <div className="line2"></div>
+          </div>
+          <NavBar />
+        </div>
       </header>
-      );
+    );
   }
 }
 
+const headerStyle = {
+  //background: 'grey',
+  height: '100%',
+  width: '100%',
+  padding: '0px',
+}
+
+const imgStyle = {
+  maxWidth: '80%'
+}
 
 export default Header;

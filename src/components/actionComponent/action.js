@@ -5,9 +5,9 @@ import vs from './vs-pin.png';
 import grad from './gradient.png';
 
 
-console.log(os);
-console.log(vs);
-console.log(grad);
+// console.log(os);
+// console.log(vs);
+// console.log(grad);
 
 
 

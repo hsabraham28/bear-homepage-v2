@@ -3,6 +3,8 @@ import { Component } from 'react';
 import dot from './dotts.png';
 import NavBar from './NavBar';
 import logo from './logo.jpg';
+import { Link } from "react-router-dom";
+
 
 class Header extends Component {
   render() {
@@ -11,9 +13,9 @@ class Header extends Component {
         <div className="topHeader">
           {/* Logo */}
           <div className="logo">
-              <a href="/">
+              <Link to="/">
                 <img src={logo} style={imgStyle} alt="Bear with us" />
-              </a>
+              </Link>
             </div>
 
           {/* Dots */}

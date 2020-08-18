@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import './Assets/css/fonts/League-Gothic/LeagueGothic-Regular.otf'
-import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Bold.otf'
-import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Italic.otf'
-import './Assets/css/fonts/glacial-indifference/GlacialIndifference-Regular.otf'
+import './Assets/scss/fonts/League-Gothic/LeagueGothic-Regular.otf';
+import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Bold.otf';
+import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Italic.otf';
+import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Regular.otf';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
 
 
 ReactDOM.render(
+  // fixme might cause trouble for Virtual Sproul
   <React.StrictMode>
     <App />
   </React.StrictMode>,

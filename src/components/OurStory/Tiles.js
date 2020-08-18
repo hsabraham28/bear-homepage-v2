@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Tile from './ourStory';
+import Tile from './Tile';
 
 // fixme might need to set key
 function Tiles(props) {

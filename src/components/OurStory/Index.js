@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Sidebar from './Sidebar';
 import './story.css';
 import Tiles from "./Tiles";
+import ourStory from './Tile';
 
 
 function Index() {

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Assets/css/default.min.css';
-import Header from './components/headerComponent/header';
-import Highlight from './components/highlightComponent/highlight';
-import Action from './components/actionComponent/action';
-import Logos from './components/logosComponent/logos';
 import { HashRouter as Router, Route} from 'react-router-dom';
-import Story from './components/storyComponent/Index';
+
+import Header from './components/Header/Header';
+import Landing from './components/Landing/Landing';
+import VirtualSproul from './components/VirtualSproul/VirtualSproul';
+import Story from './components/OurStory/Index';
 
 
 function App() {
@@ -13,16 +13,9 @@ function App() {
     <Router basename='/'>
       <div className="App">
         <Header />
-        {/* <Bar /> */}
-        <Route exact path="/" render={props => (
-          <React.Fragment>
-            <Highlight /> 
-            <div className="togeth">
-            <Action />
-            <Logos />
-            </div>
-          </React.Fragment>
-        )} />
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/discover" component={VirtualSproul} />
+        <Route exact path="/story" component={Story} />
         <Route exact path="/story" component={Story} />
       </div>
     </Router>

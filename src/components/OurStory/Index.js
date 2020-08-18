@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Sidebar from './Sidebar';
-import './story.css';
+import './story.scss';
 import Tiles from "./Tiles";
 import ourStory from './Tile';
 

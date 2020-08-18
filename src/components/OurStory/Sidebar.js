@@ -1,5 +1,5 @@
 import React from 'react';
-import './story.css';
+import './story.scss';
 
 function Sidebar() {
     return (

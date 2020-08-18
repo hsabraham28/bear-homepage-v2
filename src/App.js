@@ -1,5 +1,5 @@
 import React from 'react';
-import './Assets/css/default.min.css';
+import './Assets/scss/default.scss';
 import { HashRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/Header/Header';
@@ -16,10 +16,10 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/discover" component={VirtualSproul} />
         <Route exact path="/story" component={Story} />
-        <Route exact path="/story" component={Story} />
+        {/* <Route exact path="/story" component={Story} /> */}
       </div>
     </Router>
-  );
+  ); 
 }
 
 export default App;

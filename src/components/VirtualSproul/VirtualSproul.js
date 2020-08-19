@@ -183,15 +183,17 @@ class App extends Component {
         <div className="big-flex">
           <div className='vs--sidebar'>
             <div className="welcome-message">
+            <Search parentUpdateCB = {this.updateSearchKey} />
               <h1>Welcome to Virtual Sproul</h1> 
               <h3>Start looking for the student orgs you're interested in!</h3>
             </div>
-            <Search parentUpdateCB = {this.updateSearchKey} />
+            
             <Filter filterParentUpdate = {this.updateTagState} />
+            <Sort />
           </div>
 
           <div className="vs--main">
-            <Sort />
+            
             <ClubComponent clubArray={mappedClubs} />
           </div>
         </div>

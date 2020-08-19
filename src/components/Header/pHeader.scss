@@ -1,0 +1,151 @@
+/**** TOP ****/
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.dots {
+    margin-right: 30px;
+    align-self: flex-start;
+}
+
+.ucb {
+    font-size: 25px;
+    color: #faf7f7;
+    font-family: GlacialIndifferenceItalic;
+    font-weight: 600;
+    margin: 0 15px 0;
+}
+
+/**** BOTTOM ****/
+
+
+.btn-group{
+
+
+$colors: (
+  primary: #004aad,
+  light: #faf7f7
+);
+
+
+@function text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000; // Lighter backgorund, return dark color
+  } @else {
+    @return #fff; // Darker background, return light color
+  }
+}
+
+
+@mixin custom-bootstrap-btns {
+ 
+  @each $className in $colors {
+    .btn-#{nth($className, 1)} {
+      $buttonColor: nth($className, 2);
+      background: $buttonColor;
+      color: text-color($buttonColor);
+      border-color: #6172f2;
+      font-family: GlacialIndifferenceItalic;
+      font-weight: bold;
+      &:hover {
+        background: lighten($buttonColor, 10%);
+        color: text-color(lighten($buttonColor, 10%));
+        border-color: $buttonColor;
+
+      }
+    }
+  }
+
+  .btn {
+    &-lg {
+      width: 200px;
+    }
+    &-sm {
+      
+    }
+    &-link {
+      
+    }
+  }
+}
+
+
+@include custom-bootstrap-btns;
+
+//Layout for Pen
+body {
+  background: #222;
+}
+button {
+margin-right: 0px;
+margin-left: 0px;
+margin-top: 0px;
+margin-bottom: 0px;
+ border-radius: 0;
+  cursor: pointer;
+}
+}
+
+.navMain {
+    /* background-color: black; */
+    display: flex;
+    color: white;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.lines {
+    background-color: grey;
+    flex-grow: 1;
+} 
+
+//.navibarGroup {
+ //   display: flex;
+//}
+
+//.navibarGroup a {
+  //  flex: 1;
+    //margin: 0;
+    //padding: 0;
+    //flex-grow: 1;
+//}
+
+//.navibar {
+    //width: 700px;
+//}
+
+.navibar * {
+    border-radius: 0px;
+    background-color: #004AAD;
+    border-color: #6172f2;
+    border-bottom: 0;
+
+}
+
+/** Lines **/
+.lines {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 25px;
+}
+
+.line1 {
+    background-color: #5271FF;
+    flex: 1;
+}
+
+.line2 {
+    background-color: #004AAD;
+    flex: 1;
+}
+

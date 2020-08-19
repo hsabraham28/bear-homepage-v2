@@ -8,10 +8,10 @@ import ostile from './os-small.png';
 
 
 function OurStory(props) {
-  const modalID = `#` + name
+  const modalID = `#` + props.name
   console.log(modalID)
 
-  const tempID = `temp` + name
+  const tempID = `temp` + props.name
   return (
     <div className= "shouldEvery tilebox">
       <button type="button" className="btn" data-toggle="modal" data-target={modalID}>
@@ -19,7 +19,7 @@ function OurStory(props) {
       </button>
 
       {/* Props are not responsive due to classes modal and fade (only when both are removed it works) */}
-      <div className="modal fade modal-grey" id={name} tabIndex="-1" role="dialog" aria-labelledby={tempID} aria-hidden="true">
+      <div className="modal fade modal-grey" id={props.name} tabIndex="-1" role="dialog" aria-labelledby={tempID} aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

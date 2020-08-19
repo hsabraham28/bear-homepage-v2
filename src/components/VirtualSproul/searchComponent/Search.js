@@ -88,9 +88,9 @@ class Search extends Component {
         <div className="searchbar">
           <MDBCol>
             <MDBFormInline className="md-form myform">
-              <input className="form-control form-control-lg ml-5 w-75" onChange={this.changeSearchElementName} name="searchElementName" type="text" placeholder="Search for Club Names" aria-label="Search" />
+              <input className="form-control form-control-lg" onChange={this.changeSearchElementName} name="searchElementName" type="text" placeholder="Search for Club Names" aria-label="Search" />
               <div className="sicon">
-                <button onClick={this.callsAppCallBack} type="button" className="btn-light btn-xs"><MDBIcon icon="search" /></button>
+                <button onClick={this.callsAppCallBack} type="button" className="btn btn-xs"><MDBIcon icon="search" /></button>
               </div>
             </MDBFormInline>
           </MDBCol>

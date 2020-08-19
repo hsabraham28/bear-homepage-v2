@@ -15,6 +15,7 @@ function Result(props) {
 
           <MDBCol md='2'>
             <ClubCard />
+            
           </MDBCol>
 
           <MDBCol md='2'>

@@ -1,8 +1,8 @@
 import React from 'react';
-import './peachHeader.scss';
+import './pHeader.scss';
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function pNavBar() {
     return (
         <div className="navibar">
             <div className="btn-group navibarGroup" role="group" aria-label="Basic example">
@@ -15,4 +15,4 @@ function NavBar() {
     )
 }
 
-export default NavBar
+export default pNavBar

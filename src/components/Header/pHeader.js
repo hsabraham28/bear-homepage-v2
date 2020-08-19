@@ -1,12 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
 import dot from './dotts.png';
-import NavBar from './NavBar';
+import NavBar from './pNavBar';
 import logo from './logo.jpg';
 import { Link } from "react-router-dom";
 
 
-class Header extends Component {
+class pHeader extends Component {
   render() {
     return (
       <header style={headerStyle}>
@@ -53,4 +53,4 @@ const imgStyle = {
   maxWidth: '80%'
 }
 
-export default Header;
+export default pHeader;

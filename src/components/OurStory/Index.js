@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Sidebar from './Sidebar';
-import './story.scss';
+import './layout.scss';
+import './style.scss';
 import Tiles from "./Tiles";
-import ourStory from './Tile';
 
 
 function Index() {
@@ -15,7 +15,7 @@ function Index() {
             },
             {
                 name: 'name2',
-                story: 'story1 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero'
+                story: 'story2 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero'
             },
             {
                 name: 'name3',
@@ -41,31 +41,16 @@ function Index() {
     })
 
     return (
-        <div style={main}>
+        <div className="story--main">
             <Sidebar />
-            <div style={storyBody}>
-                <h1 style={headingStyle}>Stories</h1>
+            <div className="story--body">
+                <h1 className="story--heading">Stories</h1>
                 <Tiles stories={state.stories} />
             </div>
         </div>
     )
 }
 
-// High-level styles for the body div
-const main = {
-    paddingTop: '0px',
-    display: 'flex',
-}
-   
-const storyBody = {
-    flexGrow: '1',
-    padding: '25px',
-}
-
-const headingStyle = {
-    textAlign: 'center',
-    color: 'black',
-}
 
 
 export default Index

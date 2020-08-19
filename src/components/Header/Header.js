@@ -10,7 +10,7 @@ class Header extends Component {
       <header className="header">
         <div className="mobilegroup">
           <label className="logo"><Link to="/"><h1>BEAR WITH US</h1></Link></label>
-          <label for="hamburger--check" className="hamburger">
+          <label htmlFor="hamburger--check" className="hamburger">
             <i className="fas fa-bars"></i>
           </label>
         </div>

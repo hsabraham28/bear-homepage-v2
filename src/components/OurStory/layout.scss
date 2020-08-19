@@ -62,13 +62,12 @@
     font-weight: 400;
 }
 
-
-
 /***** Tiles *****/
 
 .allTiles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
     grid-gap: 1em;
 }
 

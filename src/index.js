@@ -7,7 +7,7 @@ import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Bold.otf';
 import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Italic.otf';
 import './Assets/scss/fonts/glacial-indifference/GlacialIndifference-Regular.otf';
 import '@fortawesome/fontawesome-free/css/all.min.css'; 
-// import 'bootstrap-css-only/css/bootstrap.min.css'; 
+//import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
 
 

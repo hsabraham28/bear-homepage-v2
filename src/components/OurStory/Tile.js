@@ -8,18 +8,24 @@ import ostile from './os-small.png';
 
 
 function OurStory(props) {
+  const {name, story} = props.story;
+
+  const modalID = `#` + name
+  console.log(modalID)
+
+  const tempID = `temp` + name
   return (
     <div className= "shouldEvery tilebox">
-      <button type="button" className="btn" data-toggle="modal" data-target="#exampleModalLong">
+      <button type="button" className="btn" data-toggle="modal" data-target={modalID}>
         <img src={ostile} alt="os" />
       </button>
 
       {/* Props are not responsive due to classes modal and fade (only when both are removed it works) */}
-      <div className="modal fade modal-grey" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div className="modal fade modal-grey" id={name} tabIndex="-1" role="dialog" aria-labelledby={tempID} aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLongTitle">{props.story.name}</h5>
+              <h5 className="modal-title" id={tempID}>{name}</h5>
               
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -27,7 +33,7 @@ function OurStory(props) {
             </div>
 
             <div className="modal-body">
-              <p>{props.story.story}</p>
+              <p>{story}</p>
             </div>
           </div>
         </div>

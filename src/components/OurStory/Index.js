@@ -15,7 +15,7 @@ function Index() {
             },
             {
                 name: 'name2',
-                story: 'story1 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero'
+                story: 'story2 Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero'
             },
             {
                 name: 'name3',

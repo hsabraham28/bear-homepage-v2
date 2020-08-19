@@ -1,30 +1,41 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Sidebar from './Sidebar';
 import './story.scss';
 import Tiles from "./Tiles";
 import ourStory from './Tile';
 
 
-function Index() {
+class Index extends React.Component {
     // Placeholder for REST API; remove contents when implementing back-end.
-    const [state, setState] = useState({
-        stories: []
-    })
+    constructor(props) {
+        super()
+        this.state = {
+            stories: []
+        }
 
-    fetch(`http://localhost:8083`)
-    .then(response => response.json())
-    .then(result =>  {
-        setState({stories: result})
-    })
-    return (
-        <div style={main}>
-            <Sidebar />
-            <div style={storyBody}>
-                <h1 style={headingStyle}>Stories</h1>
-                <Tiles stories={state.stories} />
+        this.componentWillMount = this.componentWillMount.bind(this)
+    }
+
+    componentWillMount() {
+        fetch(`http://localhost:8083`)
+        .then(response => response.json())
+        .then(result => {
+            this.setState({stories: result}, () => console.log(this.state.stories))
+        })
+    }
+    
+    render() {
+        return (
+            <div style={main}>
+                <Sidebar />
+                <div style={storyBody}>
+                    <h1 style={headingStyle}>Stories</h1>
+                    <Tiles stories={this.state.stories} />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+    
 }
 
 // High-level styles for the body div

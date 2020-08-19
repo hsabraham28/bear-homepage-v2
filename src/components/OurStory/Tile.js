@@ -20,7 +20,7 @@ function OurStory(props) {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLongTitle">{props.story.name}</h5>
+              <h5 className="modal-title" id="exampleModalLongTitle">{props.name}</h5>
               
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -28,7 +28,7 @@ function OurStory(props) {
             </div>
 
             <div className="modal-body">
-              <p>{props.story.story}</p>
+              <p>{props.text}</p>
             </div>
           </div>
         </div>
@@ -38,8 +38,9 @@ function OurStory(props) {
   );
 }
 
-OurStory.propTypes = {
+/** OurStory.propTypes = {
   story: PropTypes.object.isRequired,
-}
+}*/
+
 
 export default OurStory;

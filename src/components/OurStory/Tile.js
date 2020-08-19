@@ -8,8 +8,6 @@ import ostile from './os-small.png';
 
 
 function OurStory(props) {
-  const {name, story} = props.story;
-
   const modalID = `#` + name
   console.log(modalID)
 
@@ -25,7 +23,7 @@ function OurStory(props) {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title" id={tempID}>{name}</h5>
+              <h5 className="modal-title" id={tempID}>{props.name}</h5>
               
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -33,7 +31,7 @@ function OurStory(props) {
             </div>
 
             <div className="modal-body">
-              <p>{story}</p>
+              <p>{props.text}</p>
             </div>
           </div>
         </div>
@@ -43,8 +41,9 @@ function OurStory(props) {
   );
 }
 
-OurStory.propTypes = {
+/** OurStory.propTypes = {
   story: PropTypes.object.isRequired,
-}
+}*/
+
 
 export default OurStory;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import dot from './dotts.png';
-import NavBar from './NavBar';
+import NavBar from './peachNavBar';
 import logo from './logo.jpg';
 import { Link } from "react-router-dom";
 

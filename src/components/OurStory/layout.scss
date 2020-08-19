@@ -1,27 +1,3 @@
-.sideChunk h3 {
-    text-decoration: none;
-}
-
-.sideChunk {
-    text-align: left;
-}
-
-.sideChunk ul {
-    padding-left: 10px;
-}
-
-/***** Grids for tiles *****/
-
-.allTiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
-    grid-gap: 1em;
-}
-
-.story--heading {
-    text-align: center;
-}
-
 /** Overall Layout **/
 .story--main {
     grid-column: 1 / 2;
@@ -44,7 +20,20 @@
     color: #004AAD;
     padding: 2em 1em 0em;
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
-    margin-top: 2em
+    margin: 2em 0em 1em;
+}
+
+.sideChunk h3 {
+    text-decoration: none;
+}
+
+.sideChunk {
+    text-align: left;
+}
+
+.sideChunk ul {
+    padding-left: 10px;
+    margin-bottom: 1em;
 }
 
 /** Responsive **/
@@ -60,4 +49,50 @@
         text-align: left;
         font-weight: 400;
     }
+
+    .sideChunk ul {
+        margin-bottom: 0px;
+    }
+}
+
+/** Story Body **/
+.story--heading {
+    text-align: center;
+    margin: 0em 0em 0.5em;
+    font-weight: 400;
+}
+
+
+
+/***** Tiles *****/
+
+.allTiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    grid-gap: 1em;
+}
+
+.tilebox {
+    place-self: center;
+}
+
+.tilebox>button {
+    padding: 0em;
+}
+
+.tilebox img {
+    width: 100%;
+}
+
+.tilebox>button, .tilebox img {
+    border-radius: 4px;
+}
+
+/** Modals **/
+.modal-grey {
+    padding-top: 3em;
+}
+
+.modal-dialog {
+    vertical-align: middle;
 }

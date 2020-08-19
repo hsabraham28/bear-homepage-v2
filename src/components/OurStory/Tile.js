@@ -15,7 +15,7 @@ function OurStory(props) {
       </button>
 
       {/* Props are not responsive due to classes modal and fade (only when both are removed it works) */}
-      <div className="modal fade" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div className="modal fade modal-grey" id="exampleModalLong" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">

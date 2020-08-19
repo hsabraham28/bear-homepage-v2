@@ -63,15 +63,20 @@
 }
 
 /** Search.js **/
+
+
 .searchSpace * {
     padding: 0em;
     margin: 0em;
+    
+
 }
 
 .searchSpace {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 4em;
 }
 
 /** Styling **/
@@ -84,8 +89,9 @@
 }
 
 .vs--sidebar>*:first-child {
-    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+    // border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
     padding-top: 0em;
+    padding-bottom: 3em;
 }
 
 /** Header.js **/

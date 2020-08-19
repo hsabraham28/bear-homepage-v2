@@ -1,17 +1,22 @@
 import React from 'react';
-import Highlight from './highlightComponent/highlight';
-import Action from './actionComponent/action';
-import Logos from './logosComponent/logos';
+import './landing.scss';
+
 
 function Landing() {
     return (
-        <React.Fragment>
-            <Highlight />
-            <div className="togeth">
-                <Action />
-                <Logos />
+        <div className="landingMain">
+            <div class="main">
+                <div class="jumbo">Jumbo</div>
+                <div class="btns">
+                    <div class="btn1">Btn1</div>
+                    <div class="btn2">Btn2</div>
+                </div>
             </div>
-        </React.Fragment>
+
+            <div class="footer">
+                Footer
+            </div>
+        </div>
     )
 }
 

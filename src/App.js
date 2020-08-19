@@ -1,5 +1,7 @@
 import React from 'react';
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import './Assets/scss/default.scss';
+import './Assets/scss/shared.scss';
 import { HashRouter as Router, Route} from 'react-router-dom';
 
 import Header from './components/Header/Header';

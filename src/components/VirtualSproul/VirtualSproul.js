@@ -14,47 +14,10 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      organizations: [ // fixme when using proper backend
-        {
-          name: 'Student Org 1',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 2',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 3',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 4',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 5',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 6',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 7',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 8',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-        {
-          name: 'Student Org 9',
-          intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aperiam, facere culpa dolore tempore adipisci.'
-        },
-      ],
+      organizations: [],
       searchDisplayName:"",
       tagList:[]
-  }
+    }
   this.componentDidMount = this.componentDidMount.bind(this)
   this.updateSearchKey = this.updateSearchKey.bind(this)
   this.updateTagState = this.updateTagState.bind(this)
@@ -113,12 +76,11 @@ class App extends Component {
       let accumulator = ""
       console.log(tagParams)
       for (let tag in tagParams) {
-        accumulator += "(" + tagParams[0] + ")"
+        accumulator += "(" + tagParams[tag] + ")"
       }
       //Send API call using this string separated by pattern
       console.log("Case 2 triggered")
-      console.log(`http://localhost:8081/searchTagsAndKey/` + searchName + "/"
-      + accumulator)
+      
 
       
       fetch(`http://localhost:8081/searchTagsAndKey/` + searchName + "/"
@@ -134,11 +96,11 @@ class App extends Component {
     else if(searchName.length == 0 && tagParams.length>0) {
       let accumulator = ""
       for (let tag in tagParams) {
-        accumulator += "(" + tagParams[0] + ")"
+        accumulator += "(" + tagParams[tag] + ")"
         
       }
       console.log("Case 3 triggered")
-      //console.log(accumulator)
+      console.log(accumulator)
       //console.log(this.state.searchDisplayName)
       fetch(`http://localhost:8081/searchMultipleTags/` + accumulator)
       .then(response => response.json())

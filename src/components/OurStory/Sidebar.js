@@ -1,9 +1,8 @@
 import React from 'react';
-import './story.scss';
 
 function Sidebar() {
     return (
-        <div style={sideMain}>
+        <div className="side--main">
             <div className="sideChunk">
                 <h3>Transition</h3>
                 <ul>
@@ -44,15 +43,5 @@ function Sidebar() {
     )
 }
 
-const sideMain = {
-    background: 'rgb(0, 74, 173, 0.9)',
-    color: 'white',
-    height: '100%',
-    width: '17%',
-    // position: 'fixed',
-    left: '0',
-    overflowX: 'hidden',
-    padding: '20px',
-}
 
 export default Sidebar

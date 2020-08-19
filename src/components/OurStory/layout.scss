@@ -1,0 +1,63 @@
+.sideChunk h3 {
+    text-decoration: none;
+}
+
+.sideChunk {
+    text-align: left;
+}
+
+.sideChunk ul {
+    padding-left: 10px;
+}
+
+/***** Grids for tiles *****/
+
+.allTiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
+    grid-gap: 1em;
+}
+
+.story--heading {
+    text-align: center;
+}
+
+/** Overall Layout **/
+.story--main {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.side--main {
+    flex: 1 0 10em;
+    margin-right: auto;
+}
+
+.story--body {
+    flex: 10 0 20em;
+    padding: 1em;
+}
+
+/** Sidebar **/
+.side--main {
+    color: #004AAD;
+    padding: 2em 1em 0em;
+    border-right: 1px rgba(0, 0, 0, 0.2) solid;
+    margin-top: 2em
+}
+
+/** Responsive **/
+@media (max-width: 732px) {
+    .side--main {
+        margin: 0em 1em 0em;
+        border: none;
+        padding: 1em 1em 0em;
+        border-bottom: 1px rgba(0, 0, 0, 0.2) solid
+    }
+
+    .side--main h3 {
+        text-align: left;
+        font-weight: 400;
+    }
+}

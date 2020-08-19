@@ -1,42 +1,28 @@
 import React from 'react';
 import { Component } from 'react';
-import dot from './dotts.png';
-import NavBar from './NavBar';
-import logo from './logo.jpg';
+import './header.scss'
 import { Link } from "react-router-dom";
 
 
 class Header extends Component {
   render() {
     return (
-      <header style={headerStyle}>
-        <div className="topHeader">
-          {/* Logo */}
-          <div className="logo">
-              <Link to="/">
-                <img src={logo} style={imgStyle} alt="Bear with us" />
-              </Link>
-            </div>
-
-          {/* Dots */}
-          <div className="dots">
-            <img src={dot} alt="pattern" />
-          </div>
-
-          {/* Uni name */}
-          <div className="ucb">
-                University of California, Berkeley
-          </div>
+      <header className="header">
+        <div className="mobilegroup">
+          <label className="logo"><Link to="/"><h1>BEAR WITH US</h1></Link></label>
+          <label for="hamburger--check" className="hamburger">
+            <i className="fas fa-bars"></i>
+          </label>
         </div>
-
-        {/* Navigation bar */}
-        <div className="navMain">
-          <div className="lines">
-            <div className="line1"></div>
-            <div className="line2"></div>
-          </div>
-          <NavBar />
-        </div>
+        <nav>
+          <input type="checkbox" id="hamburger--check"></input>
+          <ul className="navmenu">
+            <li><Link to="/discover">virtual sproul</Link></li>
+            <li><Link to="/story">our story</Link></li>
+            <li><Link to="#">about us</Link></li>
+            <li><Link to="#">sign up</Link></li>
+          </ul>
+        </nav>
       </header>
     );
   }

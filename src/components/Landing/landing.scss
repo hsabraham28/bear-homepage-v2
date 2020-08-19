@@ -1,0 +1,49 @@
+/** Overall layout **/
+.landingMain {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        ". m ."
+        "f f f"
+    ;
+}
+
+.main {
+grid-area: m;
+place-self: center;
+width: 100%;
+text-align: center;
+}
+
+.footer {
+background-color: cadetblue;
+grid-area: f;
+text-align: right;
+padding: 20px;
+}
+
+/** Jumbo **/
+.jumbo {
+background: salmon;
+padding: 2em;
+margin-bottom: 0.5em;
+min-width: 8em
+}
+
+.btns {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;  
+}
+
+.btn1, .btn2 {
+background: lightseagreen;
+padding: 0.5em;
+flex: 1 0 9em;
+border-radius: 3em;
+margin: 0.5em 1em 0.5em;
+}
+  
+  
+  

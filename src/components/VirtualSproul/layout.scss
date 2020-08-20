@@ -107,16 +107,24 @@
 
 .searchbar {
 	display: flex;
-    // flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-}
-
-.sicon {
-    display: inline;
 }
 
 .sicon>.btn {
     margin: 0 1px;
     height: 3em;
+}
+
+.welcome-message h1 {
+    font-weight: 400;
+}
+
+.welcome-message {
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+/** Filters Styling **/
+.myFilter label {
+    font-size: 1.3em;
 }

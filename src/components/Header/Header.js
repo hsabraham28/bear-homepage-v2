@@ -11,7 +11,6 @@ class Header extends Component {
     this.state = {isMobile: window.innerWidth < 1000}
     // hides mobile menu when nav item is clicked
     this.hideMobile = (e) => {
-      console.log(this.refs['hambCheck'])
       this.refs['hambCheck'].checked = !this.refs['hambCheck'].checked;
     }
   }

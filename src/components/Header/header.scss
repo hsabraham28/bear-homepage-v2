@@ -7,6 +7,7 @@
   flex-wrap: wrap;
   height: auto;
   padding-bottom: 0px;
+  background: lightblue; //fixme
 }
   
 .mobilegroup {
@@ -87,6 +88,10 @@ h1, ul {
 
 .logo {
   margin: 0px;
+}
+
+.logo h1 {
+  font-weight: 300;
 }
 
 .navmenu a {

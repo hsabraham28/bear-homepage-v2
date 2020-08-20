@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import './header.scss'
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 
 class Header extends Component {
@@ -12,7 +12,14 @@ class Header extends Component {
     // hides mobile menu when nav item is clicked
     this.hideMobile = (e) => {
       this.refs['hambCheck'].checked = !this.refs['hambCheck'].checked;
+    };    
+
+    this.headerStyle = this.props.isLanding ? {
+      background: 'white',
+    } : {
+      background: 'lightblue',
     }
+    
   }
 
   componentDidMount() {
@@ -22,12 +29,11 @@ class Header extends Component {
       });
     }, false);
   }
-  
 
   render() {
     const trapezoidness = this.state.isMobile ? '' : 'trapezoid';
     return (
-      <header className="header">
+      <header className="header" style={this.headerStyle}>
         <div className="mobilegroup">
           <label className="logo"><Link to="/"><h1>BEAR BEGINNINGS</h1></Link></label>
           <label htmlFor="hamburger--check" className="hamburger">
@@ -48,12 +54,7 @@ class Header extends Component {
   }
 }
 
-const headerStyle = {
-  //background: 'grey',
-  height: '100%',
-  width: '100%',
-  padding: '0px',
-}
+
 
 const imgStyle = {
   maxWidth: '80%'

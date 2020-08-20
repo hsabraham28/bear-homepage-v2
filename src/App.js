@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import './Assets/scss/default.scss';
 import './Assets/scss/shared.scss';
@@ -11,10 +11,12 @@ import Story from './components/OurStory/Index';
 
 
 function App() {
+
   return (
     <Router basename='/'>
       <div className="App">
-        <Header />
+        <Header isLanding={false} />
+        
         <Route exact path="/" component={Landing} />
         <Route exact path="/discover" component={VirtualSproul} />
         <Route exact path="/story" component={Story} />

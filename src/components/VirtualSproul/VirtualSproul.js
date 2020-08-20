@@ -141,9 +141,9 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        
+        <Header isLanding={false} />
         <div className="App">
-          {/* <Header /> */}
+          
           <div className="big-flex">
             <div className='vs--sidebar'>
               <div className="welcome-message">

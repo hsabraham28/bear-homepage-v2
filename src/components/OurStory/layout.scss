@@ -18,13 +18,14 @@
 /** Sidebar **/
 .side--main {
     color: #004AAD;
-    padding: 2em 1em 0em;
+    padding: 2em 2em 0em;
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
     margin: 2em 0em 1em;
 }
 
 .sideChunk h3 {
     text-decoration: none;
+    font-weight: 400;
 }
 
 .sideChunk {
@@ -47,7 +48,6 @@
 
     .side--main h3 {
         text-align: left;
-        font-weight: 400;
     }
 
     .sideChunk ul {

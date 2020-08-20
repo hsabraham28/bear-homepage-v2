@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import './style.scss';
 import './layout.scss';
-import Header from './headerComponent/Header';
+import Header from '../Header/Header';
 import Search from './searchComponent/Search';
 import Filter from './filterComponent/Filter';
 import Sort from './sortComponent/Sort';
@@ -140,34 +140,37 @@ class App extends Component {
     
 
     return (
-      <div className="App">
-        {/* <Header /> */}
-        <div className="big-flex">
-          <div className='vs--sidebar'>
-            <div className="welcome-message">
-            <Search parentUpdateCB = {this.updateSearchKey} />
-              <h1>Welcome to Virtual Sproul</h1> 
-              <h3>Start looking for the student orgs you're interested in!</h3>
+      <React.Fragment>
+        
+        <div className="App">
+          {/* <Header /> */}
+          <div className="big-flex">
+            <div className='vs--sidebar'>
+              <div className="welcome-message">
+              <Search parentUpdateCB = {this.updateSearchKey} />
+                <h1>Welcome to Virtual Sproul</h1> 
+                <h3>Start looking for the student orgs you're interested in!</h3>
+              </div>
+              
+              <Filter filterParentUpdate = {this.updateTagState} />
+              <Sort />
             </div>
-            
-            <Filter filterParentUpdate = {this.updateTagState} />
-            <Sort />
+  
+            <div className="vs--main">
+              
+              <ClubComponent clubArray={mappedClubs} />
+            </div>
           </div>
-
-          <div className="vs--main">
-            
-            <ClubComponent clubArray={mappedClubs} />
-          </div>
+  
+          {/** This part should rerender based off the search results! */ }
+  
+          {/**Conditional rendering should be done here to display "Search results for XYZ when search button is clicked" */}
+  
+          {this.state.searchDisplayName.length != 0 && //fixme
+            <h1> Search Results for {this.state.searchDisplayName}</h1>
+          }
         </div>
-
-        {/** This part should rerender based off the search results! */ }
-
-        {/**Conditional rendering should be done here to display "Search results for XYZ when search button is clicked" */}
-
-        {this.state.searchDisplayName.length != 0 && //fixme
-          <h1> Search Results for {this.state.searchDisplayName}</h1>
-        }
-      </div>
+      </React.Fragment>
     );
 
 

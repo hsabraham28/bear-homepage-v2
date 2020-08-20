@@ -8,10 +8,6 @@
     grid-column: 1 / 2; 
 }
 
-.vs--sidebar {
-    padding: 1em;
-}
-
 /** Big flex **/
 .big-flex {
     grid-column: 1 / 2;
@@ -22,7 +18,8 @@
 .vs--sidebar {
     flex: 1 0 23em;
     margin-right: auto;
-    padding: 2em;
+    padding: 1.5em;
+    margin-top: 1em;
 }
 
 .vs--main {

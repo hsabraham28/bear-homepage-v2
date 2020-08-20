@@ -20,13 +20,13 @@
 }
 
 .vs--sidebar {
-    flex: 1 0 25em;
+    flex: 1 0 23em;
     margin-right: auto;
     padding: 2em;
 }
 
 .vs--main {
-    flex: 10 0 20em;
+    flex: 15 0 20em;
     padding: 2em;
 }
 
@@ -76,7 +76,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
 }
 
 /** Styling **/
@@ -91,10 +91,40 @@
 .vs--sidebar>*:first-child {
     // border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
     padding-top: 0em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
 }
 
 /** Header.js **/
 .navbar-nav {
     margin-left: auto !important;
+}
+
+/** Search layout **/
+.searchSpace {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.searchbar {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sicon>.btn {
+    margin: 0 1px;
+    height: 3em;
+}
+
+.welcome-message h1 {
+    font-weight: 400;
+}
+
+.welcome-message {
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+}
+
+/** Filters Styling **/
+.myFilter label {
+    font-size: 1.3em;
 }

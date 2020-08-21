@@ -51,7 +51,7 @@ class ClubCard extends Component {
         </MDBCard>
 
         <div className="modal fade" id={cardID} tabindex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
-          <div className="modal-dialog" role="document">
+          <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id={titleID}>{org.name}</h5>

@@ -14,7 +14,40 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      organizations: [],
+      organizations: [
+        {
+          abbrevName: 'aaa',
+          clubEmail: 'aaa@aa.com',
+          experience: 'blablabla experience',
+          id: '81264916824721074124',
+          intro: 'blabla intro here',
+          logo: '',
+          name: 'Big Boi CLub',
+          repreEmail: 'repre@email.com',
+          repreName: 'Repre Smith',
+          size: 'less than 420 members',
+          sizeTags: 2,
+          socialMedia: null,
+          tags: ["#Business #Technology"],
+          yTLink: 'www.youtube.aaa'
+        },
+        {
+          abbrevName: 'bbb',
+          clubEmail: 'bbb@aa.com',
+          experience: 'blablabla experience',
+          id: '24523451254214',
+          intro: 'blabla intro here',
+          logo: '',
+          name: 'Big Boi CLub The Sequel',
+          repreEmail: 'repre2@email.com',
+          repreName: 'Repre2 Smith',
+          size: 'less than 4202 members',
+          sizeTags: 2,
+          socialMedia: null,
+          tags: ["#Business #Technology"],
+          yTLink: 'www.youtube.aaa'
+        },
+      ],
       searchDisplayName:"",
       tagList:[]
     }
@@ -56,17 +89,17 @@ class App extends Component {
      * Case 2 - SearchKey and tagList of size x
      * Case 3 - No SearchKey and tagList of size x only
      */
-    console.log("Calling fetchSearchData to consume backend API")
-    console.log(searchName.length)
-    console.log(tagParams.length)
+    //console.log("Calling fetchSearchData to consume backend API")
+    //console.log(searchName.length)
+    //console.log(tagParams.length)
     //Case 1
     if(searchName.length>0 && tagParams.length==0) {
       fetch(`http://localhost:8081/searchByName/` + searchName)
     .then(response => 
       response.json())
     .then(result => {
-      this.setState({organizations: result})
-      console.log(this.state.organizations)
+      this.setState({organizations: result}, () => console.log(this.state.organizations))
+      
       
   })
     }
@@ -123,7 +156,7 @@ class App extends Component {
         {
         this.setState({
           organizations: result
-        })
+        }, () => console.log(this.state.organizations))
       }
       )
     //console.log(this.state.organizations)
@@ -135,15 +168,15 @@ class App extends Component {
     /** Call fetch function here */
    
     const mappedClubs = this.state.organizations.map(item => (
-      <ClubCard name = {item.name} info = {item.intro}/>
+      <ClubCard key={item.id} org={item}/> //fixme var imports
     ))
     
 
     return (
       <React.Fragment>
-        
+        <Header isLanding={false} />
         <div className="App">
-          {/* <Header /> */}
+          
           <div className="big-flex">
             <div className='vs--sidebar'>
               <div className="welcome-message">

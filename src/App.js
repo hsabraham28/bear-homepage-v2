@@ -14,9 +14,7 @@ function App() {
 
   return (
     <Router basename='/'>
-      <div className="App">
-        <Header isLanding={false} />
-        
+      <div className="App">        
         <Route exact path="/" component={Landing} />
         <Route exact path="/discover" component={VirtualSproul} />
         <Route exact path="/story" component={Story} />

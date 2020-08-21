@@ -11,28 +11,25 @@ import oski from './oski-big.png';
 class ClubCard extends Component{
   constructor(props) {
     super()
-    this.state = {
-      name:"",
-      email:"",
-      size: "",
-      about:"",
-      experience:"",
-      tags:[],
-      social:"",
-      yTubeLink:""
-    }
     this.componentDidMount = this.componentDidMount.bind(this)
   }
 
   render() {
     //console.log(this.props.name)
+    const org = this.props.org
+
+    const cardID = 'a' + org.id;
+    const cardIDPound = '#a' + org.id;
+
+    const titleID = 'a' + org.id;
+
     return (
 
 
       <div className="clubLayout">
         
 
-        <MDBCard wide cascade data-toggle="modal" data-target={"#" + this.props.name}>
+        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}>
           <MDBView cascade>
             <MDBCardImage
               hover
@@ -47,7 +44,7 @@ class ClubCard extends Component{
 
           <MDBCardBody cascade className='text-center'>
             <MDBCardTitle className='card-title'>
-              <strong>{this.state.name}</strong>
+              <strong>{org.name}</strong>
             </MDBCardTitle>
 
 
@@ -62,13 +59,13 @@ class ClubCard extends Component{
 
         </MDBCard>
      
-      <div className="modal fade" id={this.props.name} tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div className="modal fade" id={cardID} tabindex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
 
 
-        <h5 className="modal-title" id={this.props.name}>{this.state.name}</h5>
+        <h5 className="modal-title" id={titleID}>{org.name}</h5>
         
         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -82,7 +79,7 @@ class ClubCard extends Component{
         <div className="container-fluid">
         <div className="row">
       <div className="col-md-3">Email: </div>
-      <div className="col-md-9 ml-auto">{this.state.email}</div>
+      <div className="col-md-9 ml-auto">{org.email}</div>
     </div>
     <div className="row">
       <div className="col-md-3">Size: </div>
@@ -124,16 +121,16 @@ class ClubCard extends Component{
   }
 
   componentDidMount() {
-    this.setState({
-      name: this.props.name,
-      email: this.props.email,
-      size: this.props.size,
-      about: this.props.intro,
-      experience: this.props.experience,
-      tags: this.props.tags,
-      social: this.props.socialMedia,
-      yTubeLink: this.props.yTube
-    }, () => console.log(this.state))
+    // this.setState({
+    //   name: this.props.name,
+    //   email: this.props.email,
+    //   size: this.props.size,
+    //   about: this.props.intro,
+    //   experience: this.props.experience,
+    //   tags: this.props.tags,
+    //   social: this.props.socialMedia,
+    //   yTubeLink: this.props.yTube
+    // }, () => console.log(this.state))
   }
     
 }

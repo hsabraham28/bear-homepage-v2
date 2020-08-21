@@ -135,8 +135,7 @@ class App extends Component {
     /** Call fetch function here */
    
     const mappedClubs = this.state.organizations.map(item => (
-      <ClubCard name = {item.name} intro = {item.intro} size = {item.size}
-      experience = {item.experience} tags = {item.tags} socialMedia = {item.socialMedia} yTube = {item.yTLink} email = {item.clubEmail}/>
+      <ClubCard key={item.id} org={item}/>
     ))
     
 

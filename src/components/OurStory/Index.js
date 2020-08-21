@@ -13,10 +13,10 @@ class Index extends React.Component {
             stories: []
         }
 
-        this.componentWillMount = this.componentWillMount.bind(this)
+        this.componentDidMount = this.componentDidMount.bind(this)
     }
 
-    componentWillMount() {
+    componentDidMount() {
         fetch(`http://localhost:8083`)
             .then(response => response.json())
             .then(result => {

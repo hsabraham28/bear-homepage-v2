@@ -8,6 +8,7 @@ function Tiles(props) {
     const mappedStories = props.stories.map(story => (
         <Tile key={story.id} name = {story.name} text={story.challenge} />
     ))
+    //console.log(mappedStories)
     return (
         <div className="allTiles">
             <ShowStories array = {mappedStories} />

@@ -2,16 +2,15 @@
 $blue: 004aad;
 
 /** General Layout **/
-.App {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "h"
-      ".";
-}
-
+.AppChild {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "h"
+    ".";
+  }
 .header {
     grid-area: h;
     }

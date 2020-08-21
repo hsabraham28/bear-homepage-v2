@@ -17,7 +17,6 @@
 
 /** Sidebar **/
 .side--main {
-    color: #004AAD;
     padding: 2em 2em 0em;
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
     margin: 2em 0em 1em;
@@ -60,6 +59,10 @@
     text-align: center;
     margin: 0em 0em 0.5em;
     font-weight: 400;
+}
+
+.story--main h1, p, h3 {
+    color: #244067
 }
 
 /***** Tiles *****/

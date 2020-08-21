@@ -10,7 +10,19 @@ class Index extends React.Component {
     constructor(props) {
         super()
         this.state = {
-            stories: []
+            stories: [
+                {
+                    id: "1231231",
+                    challenge: "challenge here blabla",
+                    concern: "not really",
+                    emo: "emo wow",
+                    feel: "feelgood",
+                    major: "m-m-m-major",
+                    name: "John Doenut",
+                    residency: "in-state",
+                    year: "sophomore"
+                }
+            ]
         }
 
         this.componentDidMount = this.componentDidMount.bind(this)
@@ -27,7 +39,7 @@ class Index extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="AppChild">
                 <Header isLanding={false} />
                 <div className="story--main">
                     <Sidebar />
@@ -36,7 +48,7 @@ class Index extends React.Component {
                         <Tiles stories={this.state.stories} />
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         )
     }
 }

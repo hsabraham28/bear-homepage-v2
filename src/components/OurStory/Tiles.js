@@ -6,7 +6,7 @@ import ShowStories from "./ShowStories"
 // fixme might need to set key
 function Tiles(props) {
     const mappedStories = props.stories.map(story => (
-        <Tile key={story.id} name = {story.name} text={story.challenge} />
+        <Tile key={story.id} story={story} />
     ))
     //console.log(mappedStories)
     return (

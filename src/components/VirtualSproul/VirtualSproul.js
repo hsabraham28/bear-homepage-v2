@@ -173,9 +173,9 @@ class App extends Component {
     
 
     return (
-      <React.Fragment>
+      <div className="AppChild">
         <Header isLanding={false} />
-        <div className="App">
+        <div className="AppChild">
           
           <div className="big-flex">
             <div className='vs--sidebar'>
@@ -203,7 +203,7 @@ class App extends Component {
             <h1> Search Results for {this.state.searchDisplayName}</h1>
           }
         </div>
-      </React.Fragment>
+      </div>
     );
 
 

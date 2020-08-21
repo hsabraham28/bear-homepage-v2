@@ -14,9 +14,12 @@ console.log(esclog);
 console.log(tab);
 
 
+
 function Landing() {
     return (
+        
       <React.Fragment>
+      
         <Header isLanding={true} />
         <div className="landingMain">
             <div className="main">
@@ -42,7 +45,9 @@ function Landing() {
                 <img src={esclog} alt="esc" />
             </div>
         </div>
+       
       </React.Fragment>
+      
     )
 }
 

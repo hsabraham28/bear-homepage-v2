@@ -5,18 +5,21 @@ import vsbi from './vsbuttonimg3.png';
 import asuclog from './asuc-smaller2.png';
 import esclog from './esc.png';
 import tab from './tabbed3.png';
+import Header from '../Header/Header'
 
 console.log(obi);
 console.log(vsbi);
 console.log(asuclog);
 console.log(esclog);
 console.log(tab);
-import Header from '../Header/Header'
+
 
 
 function Landing() {
     return (
+        
       <React.Fragment>
+      
         <Header isLanding={true} />
         <div className="landingMain">
             <div className="main">
@@ -42,7 +45,9 @@ function Landing() {
                 <img src={esclog} alt="esc" />
             </div>
         </div>
+       
       </React.Fragment>
+      
     )
 }
 

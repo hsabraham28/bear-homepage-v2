@@ -8,13 +8,14 @@
         "m m m"
         "f f f"
     ;
+
 }
 
 .main {
-grid-area: m;
-place-self: center;
-width: 100%;
-text-align: center;
+    grid-area: m;
+    place-self: center;
+    width: 100%;
+    text-align: center;
 }
 
 .footer {
@@ -70,12 +71,15 @@ flex-basis: 14em;
 margin: 0.5em 1em 0.5em;
 }
 
-
-
 }
 
+/** transparent header only for landing page **/
+.header {
+    background: lightblue; //fixme
+}
 
-  
+.header h1 {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
-  
-  

@@ -56,17 +56,17 @@ class App extends Component {
      * Case 2 - SearchKey and tagList of size x
      * Case 3 - No SearchKey and tagList of size x only
      */
-    console.log("Calling fetchSearchData to consume backend API")
-    console.log(searchName.length)
-    console.log(tagParams.length)
+    //console.log("Calling fetchSearchData to consume backend API")
+    //console.log(searchName.length)
+    //console.log(tagParams.length)
     //Case 1
     if(searchName.length>0 && tagParams.length==0) {
       fetch(`http://localhost:8081/searchByName/` + searchName)
     .then(response => 
       response.json())
     .then(result => {
-      this.setState({organizations: result})
-      console.log(this.state.organizations)
+      this.setState({organizations: result}, () => console.log(this.state.organizations))
+      
       
   })
     }
@@ -123,7 +123,7 @@ class App extends Component {
         {
         this.setState({
           organizations: result
-        })
+        }, () => console.log(this.state.organizations))
       }
       )
     //console.log(this.state.organizations)

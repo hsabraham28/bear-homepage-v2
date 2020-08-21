@@ -22,10 +22,11 @@ function Landing() {
                 <h2>Congratulations on your acceptance to UC Berkeley! As students, we understand how difficult the first year of college is, and now even more in the midst of a global pandemic. Times like these are not easy, but you do not have to go through them alone. We have designed this website just for the Class of 2024 to alleviate your stress and share our Berkeley perspective and experiences with you!</h2>
                 </div>
                 <div className="btns">
-                    <div className="btn1 btn"><img src={vsbi} class="rounded-circle" alt="vspic" /> VIRTUAL SPROUL </div>
+                    
+                    <div className="btn1 btn"><img align="left" src={vsbi} class="rounded-circle" alt="vspic" /> <h1>VIRTUAL SPROUL</h1> </div>
                     
                     
-                    <div className="btn2 btn"><img src={obi} class="rounded-circle" alt="ospic" /> &nbsp; OUR STORY</div>
+                    <div className="btn2 btn"><img align="left" src={obi} class="rounded-circle" alt="ospic" /> <h1>OUR STORY</h1></div>
                     
                     
                 </div>

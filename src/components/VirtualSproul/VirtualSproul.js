@@ -14,7 +14,40 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      organizations: [],
+      organizations: [
+        {
+          abbrevName: 'aaa',
+          clubEmail: 'aaa@aa.com',
+          experience: 'blablabla experience',
+          id: '81264916824721074124',
+          intro: 'blabla intro here',
+          logo: '',
+          name: 'Big Boi CLub',
+          repreEmail: 'repre@email.com',
+          repreName: 'Repre Smith',
+          size: 'less than 420 members',
+          sizeTags: 2,
+          socialMedia: null,
+          tags: ["#Business #Technology"],
+          yTLink: 'www.youtube.aaa'
+        },
+        {
+          abbrevName: 'bbb',
+          clubEmail: 'bbb@aa.com',
+          experience: 'blablabla experience',
+          id: '24523451254214',
+          intro: 'blabla intro here',
+          logo: '',
+          name: 'Big Boi CLub The Sequel',
+          repreEmail: 'repre2@email.com',
+          repreName: 'Repre2 Smith',
+          size: 'less than 4202 members',
+          sizeTags: 2,
+          socialMedia: null,
+          tags: ["#Business #Technology"],
+          yTLink: 'www.youtube.aaa'
+        },
+      ],
       searchDisplayName:"",
       tagList:[]
     }
@@ -135,7 +168,7 @@ class App extends Component {
     /** Call fetch function here */
    
     const mappedClubs = this.state.organizations.map(item => (
-      <ClubCard key={item.id} org={item}/>
+      <ClubCard key={item.id} org={item}/> //fixme var imports
     ))
     
 

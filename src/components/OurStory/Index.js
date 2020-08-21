@@ -27,7 +27,7 @@ class Index extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className="AppChild">
                 <Header isLanding={false} />
                 <div className="story--main">
                     <Sidebar />
@@ -36,7 +36,7 @@ class Index extends React.Component {
                         <Tiles stories={this.state.stories} />
                     </div>
                 </div>
-            </React.Fragment>
+            </div>
         )
     }
 }

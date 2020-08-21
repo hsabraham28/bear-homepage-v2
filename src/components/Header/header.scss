@@ -1,13 +1,10 @@
 /** header **/
 .header {
-  /*   border-bottom: 1px grey solid; */
-  background: lightpink;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   height: auto;
   padding-bottom: 0px;
-  background: lightblue; //fixme
 }
   
 .mobilegroup {
@@ -27,7 +24,7 @@
 /** Responsive header **/
 .hamburger {
   font-size: 30px;
-  color: black;
+  color: white;
   margin: 1em;
   cursor: pointer;
   display: none;
@@ -92,6 +89,7 @@ h1, ul {
 
 .logo h1 {
   font-weight: 300;
+  // text-shadow: 20px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navmenu a {

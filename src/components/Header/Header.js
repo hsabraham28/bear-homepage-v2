@@ -17,7 +17,7 @@ class Header extends Component {
     this.headerStyle = this.props.isLanding ? {
       background: 'rgba(0, 0, 0, 0)',
     } : {
-      background: 'lightblue',
+      background: '#244067',
     }
     
   }

@@ -175,7 +175,7 @@ class App extends Component {
     return (
       <div className="AppChild">
         <Header isLanding={false} />
-        <div className="App">
+        <div className="AppChild">
           
           <div className="big-flex">
             <div className='vs--sidebar'>

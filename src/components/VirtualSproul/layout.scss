@@ -1,8 +1,8 @@
-.App {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: auto 1fr;
-}
+// .App {
+//     display: grid;
+//     height: 100vh;
+//     grid-template-rows: auto 1fr;
+// }
 
 .toplevel-header {
     grid-column: 1 / 2; 
@@ -57,6 +57,10 @@
 
 .md-form {
     margin: 0em !important;
+}
+
+.big-flex h1, h3, h5 {
+    color: #244067;
 }
 
 /** Search.js **/

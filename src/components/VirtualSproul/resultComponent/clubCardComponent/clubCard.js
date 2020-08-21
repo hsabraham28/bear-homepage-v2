@@ -96,11 +96,12 @@ class ClubCard extends Component {
             </div>
           </div>
         </div>
-  );
+      </div>
+    );
   }
 
-  
-    
+
+
 }
 
 

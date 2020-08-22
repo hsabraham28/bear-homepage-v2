@@ -1,0 +1,52 @@
+.about-main {
+  display: flex;
+  flex-direction: column;
+}
+.about-main .heading {
+  background: lightblue;
+  color: white;
+}
+.about-main .heading > h2 {
+  text-shadow: 0 0 1px black;
+  margin: 0.4em 0.5em;
+}
+.about-main .heading .storybox {
+  background: azure;
+  position: relative;
+  top: 3em;
+  text-align: center;
+  padding: 2em;
+  margin: 0 10% 0;
+}
+.about-main .body {
+  background: cadetblue;
+  padding: 0 5% 0;
+}
+.about-main .body > h2 {
+  color: white;
+  padding-top: 2em;
+}
+.about-main .body h3 {
+  text-align: center;
+}
+.about-main .body .members {
+  background: aliceblue;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin: 0 auto 1em;
+  flex-wrap: wrap;
+  color: white;
+}
+.about-main .body .members .member {
+  background: darkslateblue;
+  flex: 0 0 9.5em;
+  text-align: center;
+}
+.about-main .body .members .member img {
+  width: 100%;
+  opacity: 0%;
+}
+.about-main .body .members .member h2 {
+  padding-top: 0em;
+}

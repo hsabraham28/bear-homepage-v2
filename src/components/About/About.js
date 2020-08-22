@@ -34,6 +34,24 @@ function About(props) {
                 pic: placeholder
             },
         ],
+        uiux: [
+            {
+                name: "Person1",
+                pic: placeholder,
+            },
+        ],
+        marketing: [
+            {
+                name: "person2",
+                pic: placeholder,
+            }
+        ],
+        special: [
+            {
+                name: "person1",
+                pic: placeholder
+            }
+        ]
     }
 
     return (
@@ -41,9 +59,11 @@ function About(props) {
             <Header isLanding={false} />
             <div className="about-main">
                 <div className="heading">
-                    <h2>THE STORY OF BEAR BEGINNINGS</h2>
-                    <div className="storybox">
-                        <p>Add a paragraph about why we started Bear Beginnings and the story behind it.</p>
+                    <div className="heading-overlay">
+                        <h2>THE STORY OF BEAR BEGINNINGS</h2>
+                        <div className="storybox">
+                            <p>Add a paragraph about why we started Bear Beginnings and the story behind it.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="body">
@@ -52,6 +72,12 @@ function About(props) {
                     <Team team={teams.frontend}/>
                     <h3>Back End Team</h3>
                     <Team team={teams.backend}/>
+                    <h3>Marketing Team</h3>
+                    <Team team={teams.marketing}/>
+                    <h3>UI/UX Team</h3>
+                    <Team team={teams.uiux}/>
+                    <h3>Special Thanks</h3>
+                    <Team team={teams.special}/>
 
                     
                 </div>

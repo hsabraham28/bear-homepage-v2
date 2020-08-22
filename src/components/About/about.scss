@@ -3,28 +3,41 @@
     flex-direction: column;
 
     .heading {
-       background: lightblue;
-       color: white;
-       
-       & > h2 {
-           text-shadow: 0 0 1px black;
-           margin: 0.4em 0.5em;
-       }
+        background: url('./lib-bg.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
 
-       .storybox {
-           background: azure;
-           position: relative;
-           top: 3em;
-           text-align: center;
-           padding: 2em;
-           margin: 0 10% 0;
-       }
+        .heading-overlay {
+            background: rgba(36, 64, 103, 0.3);
+
+            & > h2 {
+                text-shadow: 0 0 19px black;
+                padding: 0.4em 0.5em;
+                margin-bottom: -0em;
+            }
+        }
+
+        .storybox {
+            background: #FFC480;
+            position: relative;
+            top: 3em;
+            text-align: center;
+            padding: 2em;
+            margin: 0 10% 0;
+            
+            p {
+                color: white;
+                text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+                font-weight: 500;
+                font-size: large;
+            }
+        }
     }
 
     .body {
-        background: cadetblue;
+        background: #244067;
         padding: 0 5% 0;
-
 
         & > h2 {
             color: white;
@@ -33,10 +46,13 @@
 
         h3 {
             text-align: center;
+            color: #FFC480;
+            font-weight: 400;
+            font-style: italic;
         }
 
         .members {
-            background: aliceblue;
+            // background: aliceblue;
             display: flex;
             gap: 2em;
             justify-content: center;
@@ -45,16 +61,16 @@
             color: white;
 
             .member {
-                background: darkslateblue;
                 flex: 0 0 9.5em;
                 text-align: center;
 
                 img {
-                    width: 100%
+                    width: 100%;
+                    opacity: 0%;
                 }
-                
+
                 h2 {
-                    padding-top: 0.2em;
+                    padding-top: 0em;
                 }
             }
         }

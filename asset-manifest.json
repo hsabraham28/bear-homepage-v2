@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bear-homepage-v2/static/css/main.a5cd7c03.chunk.css",
+    "main.css": "/bear-homepage-v2/static/css/main.258c33d9.chunk.css",
     "main.js": "/bear-homepage-v2/static/js/main.a43a9b54.chunk.js",
     "main.js.map": "/bear-homepage-v2/static/js/main.a43a9b54.chunk.js.map",
     "runtime-main.js": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js",
@@ -9,10 +9,10 @@
     "static/js/2.27d7c657.chunk.js": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js",
     "static/js/2.27d7c657.chunk.js.map": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js.map",
     "index.html": "/bear-homepage-v2/index.html",
-    "precache-manifest.9f32d4b3052417bce539a6d54d0129de.js": "/bear-homepage-v2/precache-manifest.9f32d4b3052417bce539a6d54d0129de.js",
+    "precache-manifest.33feae7f58d723ad7e2267b6743e7b7f.js": "/bear-homepage-v2/precache-manifest.33feae7f58d723ad7e2267b6743e7b7f.js",
     "service-worker.js": "/bear-homepage-v2/service-worker.js",
     "static/css/2.4b2ef6ba.chunk.css.map": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css.map",
-    "static/css/main.a5cd7c03.chunk.css.map": "/bear-homepage-v2/static/css/main.a5cd7c03.chunk.css.map",
+    "static/css/main.258c33d9.chunk.css.map": "/bear-homepage-v2/static/css/main.258c33d9.chunk.css.map",
     "static/js/2.27d7c657.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js.LICENSE.txt",
     "static/media/GlacialIndifference-Bold.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Bold.f801e234.otf",
     "static/media/GlacialIndifference-Italic.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Italic.69b161f1.otf",
@@ -32,7 +32,7 @@
     "static/js/runtime-main.30aa8497.js",
     "static/css/2.4b2ef6ba.chunk.css",
     "static/js/2.27d7c657.chunk.js",
-    "static/css/main.a5cd7c03.chunk.css",
+    "static/css/main.258c33d9.chunk.css",
     "static/js/main.a43a9b54.chunk.js"
   ]
 }

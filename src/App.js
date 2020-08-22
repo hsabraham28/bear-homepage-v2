@@ -6,6 +6,7 @@ import { HashRouter as Router, Route} from 'react-router-dom';
 import Landing from './components/Landing/Landing';
 import VirtualSproul from './components/VirtualSproul/VirtualSproul';
 import Story from './components/OurStory/Index';
+import About from './components/About/About';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/discover" component={VirtualSproul} />
         <Route exact path="/story" component={Story} />
-        {/* <Route exact path="/story" component={Story} /> */}
+        <Route exact path="/about" component={About} />
       </div>
     </Router>
   ); 

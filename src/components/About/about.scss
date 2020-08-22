@@ -1,0 +1,57 @@
+.about-main {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+       background: lightblue;
+       color: white;
+       
+       h2 {
+           text-shadow: 0 0 1px black;
+           margin: 0.4em 0.5em;
+       }
+
+       .storybox {
+           background: azure;
+           position: relative;
+           top: 3em;
+           text-align: center;
+           padding: 2em;
+           margin: 0 10% 0;
+       }
+    }
+
+    .body {
+        background: cadetblue;
+        padding: 0 5% 0;
+
+
+        h2 {
+            color: white;
+            padding-top: 2em;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .members {
+            background: aliceblue;
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            margin: 0 auto 1em;
+            flex-wrap: wrap;
+
+            .member {
+                background: darkslateblue;
+                flex: 0 0 9.5em;
+                text-align: center;
+
+                img {
+                    width: 100%
+                }
+            }
+        }
+    }
+}

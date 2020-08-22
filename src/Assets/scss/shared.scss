@@ -5,13 +5,13 @@ $blue: 004aad;
 .AppChild {
   display: grid;
   height: 100vh;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas:
     "h"
-    ".";
+    "."
+    "ff";
   }
 .header {
     grid-area: h;
     }
-  

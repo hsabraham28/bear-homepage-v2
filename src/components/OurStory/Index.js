@@ -21,7 +21,7 @@ class Index extends React.Component {
                     name: "John Doenut",
                     residency: "in-state",
                     year: "sophomore"
-                }
+                },
             ]
         }
 

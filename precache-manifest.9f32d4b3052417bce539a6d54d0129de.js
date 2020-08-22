@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "57b23abd853d7d05c60bc476d0019779",
+    "revision": "dfca0171b39ab8817b9a0c35c445e76a",
     "url": "/bear-homepage-v2/index.html"
   },
   {
-    "revision": "24bdb176dd59720fb00d",
+    "revision": "eb3d7af96268c58a8773",
     "url": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css"
   },
   {
-    "revision": "b539e9eaf6b30066358a",
-    "url": "/bear-homepage-v2/static/css/main.c40293e9.chunk.css"
+    "revision": "b6b23caff7b34bec65f1",
+    "url": "/bear-homepage-v2/static/css/main.a5cd7c03.chunk.css"
   },
   {
-    "revision": "24bdb176dd59720fb00d",
-    "url": "/bear-homepage-v2/static/js/2.8f5b1913.chunk.js"
+    "revision": "eb3d7af96268c58a8773",
+    "url": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/bear-homepage-v2/static/js/2.8f5b1913.chunk.js.LICENSE.txt"
+    "url": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b539e9eaf6b30066358a",
-    "url": "/bear-homepage-v2/static/js/main.92a92cc5.chunk.js"
+    "revision": "b6b23caff7b34bec65f1",
+    "url": "/bear-homepage-v2/static/js/main.a43a9b54.chunk.js"
   },
   {
     "revision": "442a76d5af93cb2910c4",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cad4b3591ecdfe89ecf86ff8ebcba6e8",
     "url": "/bear-homepage-v2/static/media/LeagueGothic-Regular.cad4b359.otf"
+  },
+  {
+    "revision": "36a83de8df287a1c054bda7ac295814c",
+    "url": "/bear-homepage-v2/static/media/about-mask.36a83de8.png"
   },
   {
     "revision": "11911410dca2de148f30954eb2fd5eab",
@@ -118,6 +122,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee09ad7553b8ad3d81150d609d5341a0",
     "url": "/bear-homepage-v2/static/media/fa-solid-900.ee09ad75.woff"
+  },
+  {
+    "revision": "3ffacbd2a34fef1fcf09ca5056434760",
+    "url": "/bear-homepage-v2/static/media/lib-bg.3ffacbd2.png"
   },
   {
     "revision": "04126c63b6e38ac2c6f5f1894da04a52",

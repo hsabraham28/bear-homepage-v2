@@ -8,29 +8,29 @@ function About(props) {
     const teams = {
         frontend: [
             {
-                name: "Ivan",
+                name: "Person",
                 pic: placeholder
             },
             {
-                name: "Ivan2",
+                name: "Person2",
                 pic: placeholder
             },
         ],
         backend: [
             {
-                name: "Ivan3",
+                name: "Person3",
                 pic: placeholder
             },
             {
-                name: "Ivan4",
+                name: "Person4",
                 pic: placeholder
             },
             {
-                name: "Ivan3",
+                name: "Person5",
                 pic: placeholder
             },
             {
-                name: "Ivan4",
+                name: "Person6",
                 pic: placeholder
             },
         ],

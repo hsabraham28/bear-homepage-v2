@@ -99,7 +99,42 @@ padding-top: 35px;
     padding-bottom: 20px;
     }
 
-    .col-md-6, .col-md-4, .col-md-8, .col-md-3, .col-md-9 {
+    .col-md-6, .col-md-5, .col-md-4, .col-md-8, .col-md-3, .col-md-9, .col-md-7 {
     text-align: left;
     }
 }
+
+/** Inner tile styling **/
+.vs--inner-tile {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3em;
+
+	i {
+	margin-right: 0.5em;
+	color: #004687;
+	display: inline;
+	}
+
+	p {
+		font-weight: 400;
+		display: inline;
+	}
+
+	.vs-text-img {
+		flex: 0 0 25em;
+	}
+	img {
+		width: 100%;
+		
+	}
+
+	.vs-text-wrapper {
+		flex: 1 0 10em;
+	}
+}
+
+.modal-header h5 {
+	font-weight: 400;
+}
+

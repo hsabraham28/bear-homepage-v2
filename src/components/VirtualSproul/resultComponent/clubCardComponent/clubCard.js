@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
-import oski from './oski-big.png';
+import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBView, MDBCol } from 'mdbreact';
+import placeholder from './placeholder.png';
 
 //console.log(oski);
 
@@ -31,7 +31,7 @@ class ClubCard extends Component {
               hover
               overlay='white-slight'
               className='card-img-top'
-              src={oski}
+              src={placeholder}
               alt='Card cap'
             />
           </MDBView>
@@ -62,34 +62,65 @@ class ClubCard extends Component {
               </div>
               <div className="modal-body">
 
-                <div className="container-fluid">
-                  <div className="row">
-                    <div className="col-md-3">Email: </div>
-                    <div className="col-md-9 ml-auto">{org.clubEmail}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">Size: </div>
-                    <div className="col-md-9 ml-auto">{org.size}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">What is the student organization about? </div>
-                    <div className="col-md-9 ml-auto">{org.intro}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">What is it like to be a part of the student organization? </div>
-                    <div className="col-md-9 ml-auto">{org.experience}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">Tags </div>
-                    <div className="col-md-9 ml-auto">{org.tags}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">Social Media: </div>
-                    <div className="col-md-9 ml-auto">{org.socialMedia}</div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-3">Youtube Link: </div>
-                    <div className="col-md-9 ml-auto">{org.yTLink}</div>
+                <div className="container-fluid vs--inner-tile">
+                  <div className="vs-text-img">
+                    <img src={placeholder}></img>
+                    </div>
+                  <div className="vs-text-wrapper">
+                    <div className="row">
+                      <div className="col-md-3">
+                      <i className="fas fa-envelope"></i>
+                      <p>Club:</p>
+                        </div>
+                      <div className="col-md-9 ml-auto">{org.clubEmail}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-search-plus"></i>
+                        <p>Commonly known by:</p>
+                      </div>
+                      <div className="col-md-9 ml-auto">{org.abbrevName}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-map-marker-alt"></i>
+                        <p>Size of the club:</p> </div>
+                      <div className="col-md-9 ml-auto">{org.size}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-home"></i>
+                        <p>About {org.name}</p>:
+                      </div>
+                      <div className="col-md-9 ml-auto">{org.intro}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-hands-helping"></i>
+                        <p>What is it like to be a part of the student organization?</p>
+                      </div>
+                      <div className="col-md-9 ml-auto">{org.experience}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-tags"></i>
+                        <p>Tags:</p>
+                      </div>
+                      <div className="col-md-9 ml-auto">{org.tags}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-hashtag"></i>
+                        <p>Social Media:</p>
+                      </div>
+                      <div className="col-md-9 ml-auto">{org.socialMedia}</div>
+                    </div>
+                    <div className="row">
+                      <div className="col-md-3">
+                        <i className="fas fa-video"></i>
+                        <p>LEAD Center Video:</p> </div>
+                      <div className="col-md-9 ml-auto">{org.yTLink}</div>
+                    </div>
                   </div>
                 </div>
               </div>

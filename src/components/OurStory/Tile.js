@@ -1,11 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import ostile from './os-small.png';
-
-// console.log(ostile);
-
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+import ostile from './placeholder.png';
 
 class Tile extends Component {
 
@@ -19,9 +15,32 @@ class Tile extends Component {
 
     return (
       <div className="shouldEvery tilebox">
-        < button type="button" className="btn" data-toggle="modal" data-target={cardIDPound}>
-          <img src={ostile} alt="os" />
-        </button>
+        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}>
+          <MDBView cascade>
+            <MDBCardImage
+              hover
+              overlay='white-slight'
+              className='card-img-top'
+              src={ostile}
+              alt='Card cap'
+            />
+          </MDBView>
+
+          <MDBCardBody cascade className='text-center'>
+            <MDBCardTitle className='card-title'>
+              <h4>{story.name}</h4>
+            </MDBCardTitle>
+
+
+            <MDBCardText className="story--card-text">
+              <div class="story--major">{story.major}</div>
+              <div class="story--residency">{story.residency}</div>
+            </MDBCardText>
+
+            <MDBCol md='12' className='d-flex justify-content-center'>
+            </MDBCol>
+          </MDBCardBody>
+        </MDBCard>
 
         <div className="modal fade modal-grey" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
           <div className="modal-dialog" role="document">

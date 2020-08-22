@@ -1,0 +1,22 @@
+/** OS Tile Descriptions **/
+.story--card-text {
+    display: flex;
+    justify-content: center;
+
+    .story--major {
+        background-color: #00a9a5;
+
+    }
+
+    .story--residency {
+        background-color: #e75a7c;
+    }
+
+    * {
+        margin: 0 0.5em;
+        padding: 0 1em;
+        color: white;
+        border-radius: 50em;
+        display: inline-block;
+    }
+}

@@ -25,7 +25,7 @@ class Header extends Component {
   componentDidMount() {
     window.addEventListener('resize', () => {
       this.setState({
-        isMobile: window.innerWidth < 1000
+        isMobile: window.innerWidth < 1100
       });
     }, false);
   }
@@ -45,7 +45,7 @@ class Header extends Component {
           <ul className="navmenu">
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/discover">virtual sproul</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/story">our story</Link></li>
-            <li className={trapezoidness}><Link onClick={this.hideMobile} to="#">about us</Link></li>
+            <li className={trapezoidness}><Link onClick={this.hideMobile} to="/about">about us</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="#">sign up</Link></li>
           </ul>
         </nav>

@@ -8,6 +8,7 @@
     grid-template-areas:
         "m m m"
         "f f f";
+    height: 100%;
 }
 
 .main {
@@ -19,7 +20,7 @@
 
 .footer {
     float: left;
-    grid-area: f;
+    grid-area: ff;
     text-align: right;
     padding: 20px;
     img {
@@ -53,21 +54,22 @@
     .btn2,
     .btn {
         cursor: pointer;
-
-        h1 {
-            line-height: 70px;
-        }
         color: white;
         font-family: GlacialIndifferenceRegular;
         font-size: 2em;
-        text-align: center;
         background: #ffc480;
         border-radius: 3em;
-        margin-bottom: 0;
-        padding: 0.5em;
-        flex-basis: 14em;
-
+        padding: 0.2em;
+        flex: 0 0 11em;
         margin: 0.5em 1em 0.5em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h1 {
+            font-size: 90%;
+            margin: 0 auto 0 auto;
+        }
     }
 }
 
@@ -77,5 +79,11 @@
 }
 
 .try {
+    background: black;
+}
+
+
+.f {
+    grid-area: ff;
     background: black;
 }

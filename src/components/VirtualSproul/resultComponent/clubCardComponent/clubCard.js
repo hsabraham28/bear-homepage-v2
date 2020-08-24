@@ -9,10 +9,13 @@ import placeholder from './placeholder.png';
 class ClubCard extends Component {
   constructor(props) {
     super()
+    this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
+      <p>{tag}</p>
+    ))
+    // console.log(this.tags)
   }
 
   render() {
-    //console.log(this.props.name)
     const org = this.props.org
 
     const cardID = 'a' + org.id;
@@ -43,8 +46,12 @@ class ClubCard extends Component {
 
 
             <MDBCardText>
-
+              <div className="tagshown">
+                {this.tags}
+              </div>
+              {org.intro.substring(0, 150) + '...'}
             </MDBCardText>
+
             <MDBCol md='12' className='d-flex justify-content-center'>
             </MDBCol>
           </MDBCardBody>

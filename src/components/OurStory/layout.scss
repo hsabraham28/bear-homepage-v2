@@ -42,7 +42,7 @@
         margin: 0em 1em 0em;
         border: none;
         padding: 1em 1em 0em;
-        border-bottom: 1px rgba(0, 0, 0, 0.2) solid
+        border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
     }
 
     .side--main h3 {
@@ -61,8 +61,10 @@
     font-weight: 400;
 }
 
-.story--main h1, p, h3 {
-    color: #244067
+.story--main h1,
+p,
+h3 {
+    color: #244067;
 }
 
 /***** Tiles *****/
@@ -72,13 +74,29 @@
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
     grid-gap: 1em;
+
+    .shouldEvery {
+        cursor: pointer;
+        box-shadow: default;
+        transition: box-shadow 0.15s ease;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    @media (min-width: 576px) {
+        .modal-dialog {
+            max-width: 80em;
+        }
+    }
 }
 
 .tilebox {
     place-self: center;
 }
 
-.tilebox>button {
+.tilebox > button {
     padding: 0em;
 }
 
@@ -86,7 +104,8 @@
     width: 100%;
 }
 
-.tilebox>button, .tilebox img {
+.tilebox > button,
+.tilebox img {
     border-radius: 4px;
 }
 

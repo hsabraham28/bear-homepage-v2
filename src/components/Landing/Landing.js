@@ -80,8 +80,14 @@ class Landing extends React.Component {
             </div>
           </div>
           <div className="footer">
-            <img src={asuclog} alt="asuc" />
-            <img src={esclog} alt="esc" />
+            <div className="disclaimer">
+              <p>Bear Beginnings is not affiliated with UC Berkeley and its actions are completely independent from the university.</p>
+            </div>
+
+            <div>
+              <img src={asuclog} alt="asuc" />
+              <img src={esclog} alt="esc" />
+            </div>
           </div>
         </div>
       </div>

@@ -22,9 +22,26 @@
         .footer {
             float: left;
             grid-area: ff;
-            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
             padding: 20px;
-            img {
+            gap: 1em;
+
+            .disclaimer {
+                flex: 0 1 23em;
+                padding: 0.4em;
+                p {
+                    // visibility: hidden;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: small;
+                    margin: 0 auto 0;
+                }
+            }
+            
+
+            div>img {
                 padding-right: 0.5em;
             }
         }

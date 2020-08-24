@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95b5427c448f320d443866cb0dd817cf",
+    "revision": "8f2e0569d431230970fd586ab9c12e66",
     "url": "/bear-homepage-v2/index.html"
   },
   {
-    "revision": "2005a166c11c33871f4d",
+    "revision": "41871cfde3f3c62310ce",
     "url": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css"
   },
   {
-    "revision": "6eb19503b8d5a6bdce74",
+    "revision": "79efaf32020f116e25f6",
     "url": "/bear-homepage-v2/static/css/main.d8dcb103.chunk.css"
   },
   {
-    "revision": "2005a166c11c33871f4d",
-    "url": "/bear-homepage-v2/static/js/2.66ef47e5.chunk.js"
+    "revision": "41871cfde3f3c62310ce",
+    "url": "/bear-homepage-v2/static/js/2.3b3fb1b2.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/bear-homepage-v2/static/js/2.66ef47e5.chunk.js.LICENSE.txt"
+    "url": "/bear-homepage-v2/static/js/2.3b3fb1b2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6eb19503b8d5a6bdce74",
-    "url": "/bear-homepage-v2/static/js/main.469dcd86.chunk.js"
+    "revision": "79efaf32020f116e25f6",
+    "url": "/bear-homepage-v2/static/js/main.4b68962e.chunk.js"
   },
   {
     "revision": "442a76d5af93cb2910c4",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ef6a08cdc1154920165680a4edde771",
     "url": "/bear-homepage-v2/static/media/arrow_right.8ef6a08c.svg"
+  },
+  {
+    "revision": "73c1e61c799b9ea2b1da5af4ed42b48b",
+    "url": "/bear-homepage-v2/static/media/arrushi.73c1e61c.jpg"
   },
   {
     "revision": "2b96c449a68d410e958613ad875e7d6b",
@@ -126,6 +130,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "886efee3a06b6afd06ce58ff888f4816",
     "url": "/bear-homepage-v2/static/media/gate.886efee3.svg"
+  },
+  {
+    "revision": "d0e49e4389105a36b3465d47879fc517",
+    "url": "/bear-homepage-v2/static/media/hannah.d0e49e43.jpg"
   },
   {
     "revision": "3ffacbd2a34fef1fcf09ca5056434760",

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db90bb04467fc894ec76941bebfa4e9e",
+    "revision": "0e61209ddd8fa69059a632bf1ba1117e",
     "url": "/bear-homepage-v2/index.html"
   },
   {
-    "revision": "eb3d7af96268c58a8773",
+    "revision": "2e45bdd9a7cbf10060ce",
     "url": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css"
   },
   {
-    "revision": "142cfeed62453c61d9eb",
-    "url": "/bear-homepage-v2/static/css/main.e8a500b8.chunk.css"
+    "revision": "f548dac614d645475b8d",
+    "url": "/bear-homepage-v2/static/css/main.dde7c63c.chunk.css"
   },
   {
-    "revision": "eb3d7af96268c58a8773",
-    "url": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js"
+    "revision": "2e45bdd9a7cbf10060ce",
+    "url": "/bear-homepage-v2/static/js/2.4a152adc.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/bear-homepage-v2/static/js/2.27d7c657.chunk.js.LICENSE.txt"
+    "url": "/bear-homepage-v2/static/js/2.4a152adc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "142cfeed62453c61d9eb",
-    "url": "/bear-homepage-v2/static/js/main.3b75ea69.chunk.js"
+    "revision": "f548dac614d645475b8d",
+    "url": "/bear-homepage-v2/static/js/main.5dfd7868.chunk.js"
   },
   {
     "revision": "442a76d5af93cb2910c4",
@@ -124,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bear-homepage-v2/static/media/fa-solid-900.ee09ad75.woff"
   },
   {
+    "revision": "886efee3a06b6afd06ce58ff888f4816",
+    "url": "/bear-homepage-v2/static/media/gate.886efee3.svg"
+  },
+  {
     "revision": "3ffacbd2a34fef1fcf09ca5056434760",
     "url": "/bear-homepage-v2/static/media/lib-bg.3ffacbd2.png"
   },
@@ -134,6 +138,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "053346dcd471d202d74e9934fe5fe369",
     "url": "/bear-homepage-v2/static/media/placeholder.053346dc.png"
+  },
+  {
+    "revision": "db600f6fb95f6fac89da876ee82c9658",
+    "url": "/bear-homepage-v2/static/media/smile.db600f6f.svg"
   },
   {
     "revision": "5d1e1a1e8887a2a90a10914fda656760",

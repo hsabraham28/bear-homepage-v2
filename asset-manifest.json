@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/bear-homepage-v2/static/css/main.dde7c63c.chunk.css",
-    "main.js": "/bear-homepage-v2/static/js/main.5dfd7868.chunk.js",
-    "main.js.map": "/bear-homepage-v2/static/js/main.5dfd7868.chunk.js.map",
+    "main.css": "/bear-homepage-v2/static/css/main.ff68da04.chunk.css",
+    "main.js": "/bear-homepage-v2/static/js/main.469dcd86.chunk.js",
+    "main.js.map": "/bear-homepage-v2/static/js/main.469dcd86.chunk.js.map",
     "runtime-main.js": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js",
     "runtime-main.js.map": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js.map",
     "static/css/2.4b2ef6ba.chunk.css": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css",
-    "static/js/2.4a152adc.chunk.js": "/bear-homepage-v2/static/js/2.4a152adc.chunk.js",
-    "static/js/2.4a152adc.chunk.js.map": "/bear-homepage-v2/static/js/2.4a152adc.chunk.js.map",
+    "static/js/2.66ef47e5.chunk.js": "/bear-homepage-v2/static/js/2.66ef47e5.chunk.js",
+    "static/js/2.66ef47e5.chunk.js.map": "/bear-homepage-v2/static/js/2.66ef47e5.chunk.js.map",
     "index.html": "/bear-homepage-v2/index.html",
-    "precache-manifest.5369b99787e8e4ce8f2526710ee53dd1.js": "/bear-homepage-v2/precache-manifest.5369b99787e8e4ce8f2526710ee53dd1.js",
+    "precache-manifest.b7ccddf3ba5f14bdf672225eb2f36cb7.js": "/bear-homepage-v2/precache-manifest.b7ccddf3ba5f14bdf672225eb2f36cb7.js",
     "service-worker.js": "/bear-homepage-v2/service-worker.js",
     "static/css/2.4b2ef6ba.chunk.css.map": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css.map",
-    "static/css/main.dde7c63c.chunk.css.map": "/bear-homepage-v2/static/css/main.dde7c63c.chunk.css.map",
-    "static/js/2.4a152adc.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.4a152adc.chunk.js.LICENSE.txt",
+    "static/css/main.ff68da04.chunk.css.map": "/bear-homepage-v2/static/css/main.ff68da04.chunk.css.map",
+    "static/js/2.66ef47e5.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.66ef47e5.chunk.js.LICENSE.txt",
     "static/media/GlacialIndifference-Bold.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Bold.f801e234.otf",
     "static/media/GlacialIndifference-Italic.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Italic.69b161f1.otf",
     "static/media/GlacialIndifference-Regular.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Regular.13dc531a.otf",
@@ -25,6 +25,7 @@
     "static/media/all.min.css": "/bear-homepage-v2/static/media/fa-solid-900.ee09ad75.woff",
     "static/media/gate.svg": "/bear-homepage-v2/static/media/gate.886efee3.svg",
     "static/media/about.scss": "/bear-homepage-v2/static/media/lib-bg.3ffacbd2.png",
+    "static/media/muskaan.jpg": "/bear-homepage-v2/static/media/muskaan.32447e80.jpg",
     "static/media/ourstorybuttonimg6.png": "/bear-homepage-v2/static/media/ourstorybuttonimg6.04126c63.png",
     "static/media/placeholder.png": "/bear-homepage-v2/static/media/placeholder.053346dc.png",
     "static/media/smile.svg": "/bear-homepage-v2/static/media/smile.db600f6f.svg",
@@ -33,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.30aa8497.js",
     "static/css/2.4b2ef6ba.chunk.css",
-    "static/js/2.4a152adc.chunk.js",
-    "static/css/main.dde7c63c.chunk.css",
-    "static/js/main.5dfd7868.chunk.js"
+    "static/js/2.66ef47e5.chunk.js",
+    "static/css/main.ff68da04.chunk.css",
+    "static/js/main.469dcd86.chunk.js"
   ]
 }

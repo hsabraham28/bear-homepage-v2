@@ -77,6 +77,12 @@ h3 {
 
     .shouldEvery {
         cursor: pointer;
+        box-shadow: default;
+        transition: box-shadow 0.15s ease;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
     }
 
     @media (min-width: 576px) {

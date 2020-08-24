@@ -151,6 +151,8 @@
 .tagshown {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 1em;
 
     p {
@@ -158,6 +160,7 @@
         color: rgba(91, 147, 194, 1);
         border-radius: 2em;
         padding: 0 0.5em 0;
+        flex: 0 0 auto;
     }
 }
 

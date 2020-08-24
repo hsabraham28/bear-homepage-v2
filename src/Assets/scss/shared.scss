@@ -11,7 +11,16 @@ $blue: 004aad;
     "h"
     "."
     "ff";
+
+  
   }
+
+@media (max-width: 400px) { //fixme pls find better alternative
+  .AppChild {
+    height: auto;
+  }
+}
+
 .header {
     grid-area: h;
     }

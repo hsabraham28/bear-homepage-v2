@@ -1,26 +1,19 @@
 /** Colors **/
-$blue: 004aad;
+$blue: #004aad;
 
 /** General Layout **/
 .AppChild {
   display: grid;
-  height: 100vh;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   grid-template-areas:
     "h"
     "."
     "ff";
-
-  
-  }
-
-@media (max-width: 400px) { //fixme pls find better alternative
-  .AppChild {
-    height: auto;
-  }
 }
 
+
+
 .header {
-    grid-area: h;
-    }
+  grid-area: h;
+}

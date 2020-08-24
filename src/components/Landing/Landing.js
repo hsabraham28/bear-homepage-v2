@@ -62,13 +62,13 @@ class Landing extends React.Component {
 
               <Link to="/discover" className="btn1 btn">
                 <img align="left" src={vsbi} class="rounded-circle" alt="vspic" />
-                <h1 style={fontSize}>VIRTUAL SPROUL</h1>
+                <h1>VIRTUAL SPROUL</h1>
               </Link>
 
 
               <Link to="/story" className="btn2 btn">
                 <img align="left" src={obi} class="rounded-circle" alt="ospic" />
-                <h1 style={fontSize}>OUR STORY</h1>
+                <h1>OUR STORY</h1>
               </Link>
 
 

@@ -7,11 +7,11 @@ function About(props) {
     const teams = {
         frontend: [
             {
-                name: "Person",
-                pic: require('./teampics/placeholder.png')
+                name: "Hannah Abraham",
+                pic: require('./teampics/hannah.jpg')
             },
             {
-                name: "Person2",
+                name: "Ivan A. Kristanto",
                 pic: require('./teampics/placeholder.png')
             },
         ],
@@ -41,8 +41,8 @@ function About(props) {
         ],
         marketing: [
             {
-                name: "person2",
-                pic: require('./teampics/placeholder.png'),
+                name: "Arrushi Agarwal",
+                pic: require('./teampics/arrushi.jpg'),
             }
         ],
         special: [

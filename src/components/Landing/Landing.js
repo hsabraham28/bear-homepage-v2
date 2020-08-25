@@ -8,7 +8,8 @@ import tab from './tabbed3.png';
 import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 import bg from './backimg3.png';
-import gate from "./gate.svg"; import smile from "./smile.svg";
+import gate from "./gate.png"; 
+import smile from "./smile.svg";
 
 // console.log(obi);
 // console.log(vsbi);

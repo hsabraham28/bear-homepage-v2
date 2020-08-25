@@ -89,10 +89,13 @@
     cursor: pointer;
     font-family: GlacialIndifferenceRegular;
 
+    &>a {
+        flex: 0 1 18em;
+
+    }
     .vs,
     .os {
         color: white;
-        flex-grow: 1;
 
         display: flex;
         flex-direction: column;
@@ -111,7 +114,7 @@
 
         img {
             color: white;
-            width: 55%;
+            width: 90%;
         }
 
         h1 {
@@ -128,6 +131,6 @@
         }
     }
     .os img {
-        width: 39%;
+        width: 65%;
     }
 }

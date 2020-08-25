@@ -3,17 +3,21 @@ import React, { Component } from 'react'
 export class Check extends Component {
     constructor(props) {
         super(props);
-        [this.tagName, this.tagBool] = Object.entries(props.tag).map(
-            ([key, value]) => [key, value]
-        );
-        console.log(props.tag, Object.entries(props.tag));
+        this.tagName = props.tagName;
+        this.tagID = this.tagName.replace(/\s/g, "");
+        this.onCheck = this.onCheck.bind(this);
+    }
+
+    onCheck(e) {
+        this.props.eHandler(e, this.tagBool)
     }
 
     render() {
+        this.tagBool = this.props.tagBool;
         return (
             <div className="form-check form-check-inline">
-                {/* <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Technology)} name="Technology" type="checkbox" id="inlineCheckboxTech" checked={this.state.Technology} />
-                <label className="form-check-label" htmlFor="inlineCheckbox1">Tech</label> */}
+                <input className="form-check-input" onChange={this.onCheck.bind(this)} name="Technology" type="checkbox" id={this.tagID} checked={this.tagBool} />
+                <label className="form-check-label" htmlFor={this.tagID}>{this.tagName}</label>
             </div>
         )
     }

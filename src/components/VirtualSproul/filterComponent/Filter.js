@@ -22,6 +22,8 @@ class Filter extends Component {
       tagList: []
     }
     this.filterCheckBoxEventHandler = this.filterCheckBoxEventHandler.bind(this)
+
+ 
   }
 
   filterCheckBoxEventHandler(event, currBool) {
@@ -40,19 +42,14 @@ class Filter extends Component {
 
 
   render() {
-    console.log(Object.entries(this.state).slice(0, -2));
 
     return (
 
       <div className="filter-section">
         <div className="boxes myFilter">
           <h3>Filters</h3>
-          <Check tag={this.state.Technology} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Tech" tagName="Tech" tagBool={this.state.Technology} />
 
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Technology)} name="Technology" type="checkbox" id="inlineCheckboxTech" checked={this.state.Technology} />
-            <label className="form-check-label" htmlFor="inlineCheckbox1">Tech</label>
-          </div>
           <div className="form-check form-check-inline">
             <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Music)} name="Music" type="checkbox" id="inlineCheckboxMusic" checked={this.state.Music} />
             <label className="form-check-label" htmlFor="inlineCheckbox2">Music</label>

@@ -12,7 +12,7 @@ class ClubCard extends Component {
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
       <p key={tag}>{tag}</p>
     ))
-    console.log(this.tags)  
+    // console.log(this.tags)
   }
 
   render() {
@@ -46,10 +46,10 @@ class ClubCard extends Component {
 
 
             {/* <MDBCardText component={'span'}> */}
-              <div className="tagshown">
-                {this.tags}
-              </div>
-              {org.intro.substring(0, 150) + '...'}
+            <div className="tagshown">
+              {this.tags}
+            </div>
+            {org.intro.substring(0, 150) + '...'}
             {/* </MDBCardText> */}
 
             <MDBCol md='12' className='d-flex justify-content-center'>
@@ -72,13 +72,13 @@ class ClubCard extends Component {
                 <div className="container-fluid vs--inner-tile">
                   <div className="vs-text-img">
                     <img src={placeholder}></img>
-                    </div>
+                  </div>
                   <div className="vs-text-wrapper">
                     <div className="row">
                       <div className="col-md-3">
-                      <i className="fas fa-envelope"></i>
-                      <p>Club:</p>
-                        </div>
+                        <i className="fas fa-envelope"></i>
+                        <p>Club:</p>
+                      </div>
                       <div className="col-md-9 ml-auto">{org.clubEmail}</div>
                     </div>
                     <div className="row">

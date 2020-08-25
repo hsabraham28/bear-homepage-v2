@@ -12,7 +12,20 @@ class Index extends React.Component {
         this.state = {
             stories: [
                 {
+                    type: "Transition", //or "Academics" or "Student Orgs"
                     id: "1231231",
+                    challenge: "challenge here blabla",
+                    concern: "not really",
+                    emo: "emo wow",
+                    feel: "feelgood",
+                    major: "m-m-m-major",
+                    name: "John Doenut",
+                    residency: "in-state",
+                    year: "sophomore"
+                },
+                {
+                    type: "Academics", //or "Academics" or "Student Orgs"
+                    id: "ssss",
                     challenge: "challenge here blabla",
                     concern: "not really",
                     emo: "emo wow",

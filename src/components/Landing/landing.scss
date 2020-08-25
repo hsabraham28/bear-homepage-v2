@@ -81,13 +81,17 @@
 /** new buttons **/
 .main .btns {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15%;
-    margin: 0 3em;
+    // gap: 15%;
+    margin: 0 15%;
     cursor: pointer;
     font-family: GlacialIndifferenceRegular;
+
+    @media (max-width: 576px) {
+        margin: 0;
+    }
 
     &>a {
         flex: 0 1 18em;

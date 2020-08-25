@@ -10,11 +10,11 @@ import { Link } from "react-router-dom";
 import bg from './backimg3.png';
 import gate from "./gate.svg"; import smile from "./smile.svg";
 
-console.log(obi);
-console.log(vsbi);
-console.log(asuclog);
-console.log(esclog);
-console.log(tab);
+// console.log(obi);
+// console.log(vsbi);
+// console.log(asuclog);
+// console.log(esclog);
+// console.log(tab);
 
 
 
@@ -30,10 +30,6 @@ class Landing extends React.Component {
     }
 
     this.state = { isMobile: window.innerWidth < 1100 }
-    // hides mobile menu when nav item is clicked
-    this.hideMobile = (e) => {
-      this.refs['hambCheck'].checked = !this.refs['hambCheck'].checked;
-    };
   }
 
   componentDidMount() {

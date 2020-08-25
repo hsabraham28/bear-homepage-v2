@@ -10,13 +10,13 @@ class ClubCard extends Component {
   constructor(props) {
     super()
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
-      <p>{tag}</p>
+      <p key={tag}>{tag}</p>
     ))
-    // console.log(this.tags)
+    console.log(this.tags)  
   }
 
   render() {
-    const org = this.props.org
+    const org = this.props.org;
 
     const cardID = 'a' + org.id;
     const cardIDPound = '#a' + org.id;
@@ -45,19 +45,19 @@ class ClubCard extends Component {
             </MDBCardTitle>
 
 
-            <MDBCardText>
+            {/* <MDBCardText component={'span'}> */}
               <div className="tagshown">
                 {this.tags}
               </div>
               {org.intro.substring(0, 150) + '...'}
-            </MDBCardText>
+            {/* </MDBCardText> */}
 
             <MDBCol md='12' className='d-flex justify-content-center'>
             </MDBCol>
           </MDBCardBody>
         </MDBCard>
 
-        <div className="modal fade" id={cardID} tabindex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
+        <div className="modal fade" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
           <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
               <div className="modal-header">

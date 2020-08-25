@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { MDBCol, MDBFormInline, MDBIcon } from "mdbreact";
+import Check from './Check';
 
 
 
@@ -39,14 +40,14 @@ class Filter extends Component {
 
 
   render() {
+    console.log(Object.entries(this.state).slice(0, -2));
+
     return (
 
       <div className="filter-section">
         <div className="boxes myFilter">
-          <h3>
-            Filters
-        </h3>
-
+          <h3>Filters</h3>
+          <Check tag={this.state.Technology} />
 
           <div className="form-check form-check-inline">
             <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Technology)} name="Technology" type="checkbox" id="inlineCheckboxTech" checked={this.state.Technology} />

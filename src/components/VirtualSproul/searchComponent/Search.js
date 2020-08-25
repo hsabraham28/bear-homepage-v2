@@ -23,8 +23,8 @@ class Search extends Component {
     this.showFailureorSuccess = this.showFailureorSuccess.bind(this)
   }
 
-  componentWillMount() {
-    this.state.searchElementName = ""
+  componentDidMount() { //fixme use will?
+    this.state.searchElementName = "" 
   }
 
   showFailureorSuccess() {

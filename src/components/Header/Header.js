@@ -10,9 +10,9 @@ class Header extends Component {
     super(props);
     this.state = {isMobile: window.innerWidth < 1000}
     // hides mobile menu when nav item is clicked
-    this.hideMobile = (e) => {
-      this.refs['hambCheck'].checked = !this.refs['hambCheck'].checked;
-    };    
+    this.mobileRef = React.createRef();
+    this.hideMobile = this.hideMobile.bind(this);
+        
 
     this.headerStyle = this.props.isLanding ? {
       background: 'rgba(0, 0, 0, 0)',
@@ -22,10 +22,14 @@ class Header extends Component {
     
   }
 
+  hideMobile(e) {
+    this.mobileRef.current.checked = !this.mobileRef.current.checked;
+  };
+
   componentDidMount() {
     window.addEventListener('resize', () => {
       this.setState({
-        isMobile: window.innerWidth < 1100
+        isMobile: window.innerWidth < 1100 
       });
     }, false);
   }
@@ -41,7 +45,7 @@ class Header extends Component {
           </label>
         </div>
         <nav>
-          <input type="checkbox" id="hamburger--check" ref={'hambCheck'}></input>
+          <input type="checkbox" id="hamburger--check" ref={this.mobileRef}></input>
           <ul className="navmenu">
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/discover">virtual sproul</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/story">our story</Link></li>

@@ -4,6 +4,72 @@ import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, 
 import ostile from './placeholder.png';
 
 class Tile extends Component {
+  constructor(props) {
+    super(props);
+    this.storyType = props.story.type;
+  }
+
+
+  /** card types **/
+  renderText() {
+    switch (this.storyType) {
+      case "Transition":
+        this.trClass = () => {
+          switch (this.props.story.residency) {
+            case "in-state":
+              return "tr-inst";
+            case "out-of-state":
+              return "tr-outst";
+            case "intl":
+              return "tr-intl";
+          }
+        }
+        return (
+          <MDBCardText className="story--card-text">
+            <div class="tr">Transition</div>
+            <div class={this.trClass()}>{this.props.story.residency}</div>
+          </MDBCardText>
+        );
+      case "Academics":
+        return (
+          <MDBCardText className="story--card-text">
+            <div class="ac">Academics</div>
+            <div class="ac">{this.props.story.major}</div>
+          </MDBCardText>
+        );
+      case "Student Org":
+        this.stClass = () => {
+          switch (this.props.story.residency) { //fixme
+            case "applications":
+              return "st-app";
+            case "clubs":
+              return "st-club";
+
+          }
+        }
+        return (
+          <MDBCardText className="story--card-text">
+            <div class="story--major">Student Orgs</div>
+            <div class={this.stClass()}>{this.props.story.residency}</div>
+          </MDBCardText>
+        );
+    }
+  }
+
+  cardBorder(type) {
+    const radius = {
+      borderRadius: '0 0 5px 5px', border: '2px solid'
+    }
+
+    switch (this.props.story.type) {
+      case "Transition":
+        return { ...radius, borderColor: '#00a9a5' };
+      case "Academics":
+        return { ...radius, borderColor: '#e75a7c' };
+      case "Student Orgs":
+        return { ...radius, borderColor: '#004aad' };
+    }
+  }
 
   render() {
     const story = this.props.story;
@@ -13,9 +79,11 @@ class Tile extends Component {
 
     const titleID = `title` + story.id
 
+
+
     return (
       <div className="shouldEvery tilebox">
-        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}>
+        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound} >
           <MDBView cascade>
             <MDBCardImage
               hover
@@ -26,16 +94,13 @@ class Tile extends Component {
             />
           </MDBView>
 
-          <MDBCardBody cascade className='text-center'>
+          <MDBCardBody cascade className='text-center' style={this.cardBorder()}>
             <MDBCardTitle className='card-title'>
-              <h4>{story.name}</h4>
+              {story.name}
             </MDBCardTitle>
 
 
-            <MDBCardText className="story--card-text">
-              <div class="story--major">{story.major}</div>
-              <div class="story--residency">{story.residency}</div>
-            </MDBCardText>
+            {this.renderText()}
 
             <MDBCol md='12' className='d-flex justify-content-center'>
             </MDBCol>

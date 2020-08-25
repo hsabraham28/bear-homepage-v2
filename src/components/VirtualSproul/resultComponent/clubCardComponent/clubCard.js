@@ -10,13 +10,13 @@ class ClubCard extends Component {
   constructor(props) {
     super()
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
-      <p>{tag}</p>
+      <p key={tag}>{tag}</p>
     ))
     // console.log(this.tags)
   }
 
   render() {
-    const org = this.props.org
+    const org = this.props.org;
 
     const cardID = 'a' + org.id;
     const cardIDPound = '#a' + org.id;
@@ -45,19 +45,19 @@ class ClubCard extends Component {
             </MDBCardTitle>
 
 
-            <MDBCardText>
-              <div className="tagshown">
-                {this.tags}
-              </div>
-              {org.intro.substring(0, 150) + '...'}
-            </MDBCardText>
+            {/* <MDBCardText component={'span'}> */}
+            <div className="tagshown">
+              {this.tags}
+            </div>
+            {org.intro.substring(0, 150) + '...'}
+            {/* </MDBCardText> */}
 
             <MDBCol md='12' className='d-flex justify-content-center'>
             </MDBCol>
           </MDBCardBody>
         </MDBCard>
 
-        <div className="modal fade" id={cardID} tabindex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
+        <div className="modal fade" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
           <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -72,13 +72,13 @@ class ClubCard extends Component {
                 <div className="container-fluid vs--inner-tile">
                   <div className="vs-text-img">
                     <img src={placeholder}></img>
-                    </div>
+                  </div>
                   <div className="vs-text-wrapper">
                     <div className="row">
                       <div className="col-md-3">
-                      <i className="fas fa-envelope"></i>
-                      <p>Club:</p>
-                        </div>
+                        <i className="fas fa-envelope"></i>
+                        <p>Club:</p>
+                      </div>
                       <div className="col-md-9 ml-auto">{org.clubEmail}</div>
                     </div>
                     <div className="row">

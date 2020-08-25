@@ -6,7 +6,7 @@
 }
 
 .side--main {
-    flex: 1 0 10em;
+    flex: 1 0 15em;
     margin-right: auto;
 }
 
@@ -17,7 +17,7 @@
 
 /** Sidebar **/
 .side--main {
-    padding: 1em 2em 0em;
+    padding: 0.4em 1em 0em;
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
     margin: 2em 0em 1em;
 }
@@ -41,7 +41,7 @@
     .side--main {
         margin: 0em 1em 0em;
         border: none;
-        padding: 1em 1em 0em;
+        padding: 1em 0.3em 0em;
         border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
     }
 
@@ -71,7 +71,7 @@ h3 {
 
 .allTiles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(10em, 14em));
     grid-template-rows: repeat(auto-fit, auto);
     grid-gap: 1em;
 
@@ -93,7 +93,7 @@ h3 {
 }
 
 .tilebox {
-    place-self: center;
+    place-self: start;
 }
 
 .tilebox > button {

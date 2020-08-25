@@ -1,75 +1,66 @@
 /** Overall layout **/
-
-
-.landingMain {
+.big-landing-wrapper {
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
-        "m m m"
-        "f f f";
-    height: 100%;
-}
+    grid-template-rows: minmax(100vh, auto); //savior!
 
-.main {
-    grid-area: m;
-    place-self: center;
-    width: 100%;
-    text-align: center;
-}
+    .AppChild {
+        background: rgba(0, 0, 0, 0.5);
 
-.footer {
-    float: left;
-    grid-area: ff;
-    text-align: right;
-    padding: 20px;
-    img {
-        padding-right: 0.5em;
+        .landingMain {
+            .main {
+                padding-top: 6%;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1.5em;
+            }
+        }
+
+        .footer {
+            float: left;
+            grid-area: ff;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 1em;
+
+            .disclaimer {
+                flex: 0 1 23em;
+                padding: 0.4em;
+                p {
+                    // visibility: hidden;
+                    color: rgba(255, 255, 255, 0.6);
+                    font-size: small;
+                    margin: 0 auto 0;
+                }
+            }
+            
+
+            div>img {
+                padding-right: 0.5em;
+            }
+        }
     }
 }
 
 /** Jumbo **/
 .jumbo {
+    background: rgba(91, 147, 194, 0.7);
+    padding: 2em;
+    color: white;
+    // margin: 0 3% 0.5em;
+    // border-radius: 1em;
+
     h1 {
         font-family: GlacialIndifferenceBold;
     }
     h2 {
         font-family: GlacialIndifferenceRegular;
-    }
-
-    background: rgba(91, 147, 194, 0.7);
-    padding: 2em;
-    margin-bottom: 0.5em;
-    min-width: 8em;
-    color: white;
-}
-
-.btns {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .btn1,
-    .btn2,
-    .btn {
-        cursor: pointer;
-        color: white;
-        font-family: GlacialIndifferenceRegular;
-        font-size: 2em;
-        background: #ffc480;
-        border-radius: 3em;
-        padding: 0.2em;
-        flex: 0 0 11em;
-        margin: 0.5em 1em 0.5em;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        h1 {
-            font-size: 90%;
-            margin: 0 auto 0 auto;
-        }
     }
 }
 
@@ -82,8 +73,68 @@
     background: black;
 }
 
-
 .f {
     grid-area: ff;
     background: black;
+}
+
+/** new buttons **/
+.main .btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    // gap: 15%;
+    margin: 0 15%;
+    cursor: pointer;
+    font-family: GlacialIndifferenceRegular;
+
+    @media (max-width: 576px) {
+        margin: 0;
+    }
+
+    &>a {
+        flex: 0 1 18em;
+
+    }
+    .vs,
+    .os {
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.8em;
+        margin: 1em 0;
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.25s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        img {
+            color: white;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 35px;
+        }
+
+        p {
+            border: 2.5px #ffc480 solid;
+            border-radius: 3em;
+            padding: 0 0.5em 0;
+            color: #ffc480;
+            font-size: large;
+            font-weight: 400;
+        }
+    }
+    .os img {
+        width: 65%;
+    }
 }

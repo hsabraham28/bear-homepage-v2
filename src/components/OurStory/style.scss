@@ -1,22 +1,121 @@
 /** OS Tile Descriptions **/
+$transition: #00a9a5;
+$tr-inst: magenta;
+$tr-outst: orange;
+$tr-intl: green;
+$academics: #e75a7c;
+$storgs: #004aad;
+$st-app: blue;
+$st-club: blueviolet;
+
+.side--main {
+    .sideChunk {
+        border-radius: 0.5em;
+        padding: 0.8em 0.8em 0;
+        margin: 1em 0 1em;
+        border: 2px solid;
+    }
+
+    span {
+        font-weight: 600;
+    }
+
+    .tr {
+        border-color: $transition;
+
+        .tr-head {
+            color: $transition;
+        }
+
+        .tr-inst {
+            color: $tr-inst;
+        }
+
+        .tr-outst {
+            color: $tr-outst;
+        }
+
+        .tr-intl {
+            color: $tr-intl;
+        }
+    }
+    .ac {
+        border-color: $academics;
+
+        .ac-head {
+            color: $academics;
+        }
+
+        span {
+            color: $academics;
+        }
+    }
+    .st {
+        border-color: $storgs;
+
+        .st-head {
+            color: $storgs;
+        }
+
+        .st-app {
+            color: $st-app;
+        }
+
+        .st-club {
+            color: $st-club;
+        }
+    }
+}
+
 .story--card-text {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
     justify-content: center;
 
-    .story--major {
-        background-color: #00a9a5;
-
-    }
-
-    .story--residency {
-        background-color: #e75a7c;
-    }
-
-    * {
-        margin: 0 0.5em;
-        padding: 0 1em;
+    &>* {
+        padding: 0 0.5em;
         color: white;
         border-radius: 50em;
         display: inline-block;
+    }
+
+
+    .tr {
+        background-color: $transition;
+    }
+
+    .tr-inst {
+        background-color: $tr-inst;
+    }
+
+    .tr-outst {
+        background-color: $tr-outst;
+    }
+
+    .tr-intl {
+        background-color: $tr-intl;
+    }
+
+    .ac {
+        background-color: $academics;
+    }
+
+    .st {
+        background-color: $storgs;
+    }
+
+    .st-app {
+        background-color: $st-app;
+    }
+
+    .st-club {
+        background-color: $st-club;
+    }
+}
+
+.shouldEvery {
+    .tr-border {
+        border-color: 10px black solid;
     }
 }

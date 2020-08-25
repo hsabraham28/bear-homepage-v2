@@ -50,6 +50,7 @@
             color: #FFC480;
             font-weight: 400;
             font-style: italic;
+            margin-top: 1.5em;
         }
 
         .members {
@@ -62,7 +63,7 @@
             color: white;
 
             .member {
-                flex: 0 0 9.5em;
+                flex: 0 0 13em;
                 text-align: center;
 
                 img {
@@ -72,6 +73,8 @@
 
                 h2 {
                     padding-top: 0em;
+                    font-size: 25px;
+                    margin-top: -0.7em;
                 }
             }
         }

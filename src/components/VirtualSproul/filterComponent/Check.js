@@ -6,6 +6,7 @@ export class Check extends Component {
         this.tagName = props.tagName;
         this.tagID = this.tagName.replace(/\s/g, "");
         this.onCheck = this.onCheck.bind(this);
+        this.tagVar = props.tagVar;
     }
 
     onCheck(e) {
@@ -16,7 +17,7 @@ export class Check extends Component {
         this.tagBool = this.props.tagBool;
         return (
             <div className="form-check form-check-inline">
-                <input className="form-check-input" onChange={this.onCheck.bind(this)} name="Technology" type="checkbox" id={this.tagID} checked={this.tagBool} />
+                <input className="form-check-input" onChange={this.onCheck.bind(this)} name={this.tagVar} type="checkbox" id={this.tagID} checked={this.tagBool} />
                 <label className="form-check-label" htmlFor={this.tagID}>{this.tagName}</label>
             </div>
         )

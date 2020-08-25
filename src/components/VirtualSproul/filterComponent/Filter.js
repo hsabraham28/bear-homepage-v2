@@ -19,11 +19,11 @@ class Filter extends Component {
       Business: false,
       Government: false,
       Size50: false,
-      tagList: []
+      tagList: [],
     }
+
     this.filterCheckBoxEventHandler = this.filterCheckBoxEventHandler.bind(this)
 
- 
   }
 
   filterCheckBoxEventHandler(event, currBool) {
@@ -47,18 +47,15 @@ class Filter extends Component {
 
       <div className="filter-section">
         <div className="boxes myFilter">
-          <h3>Filters</h3>
-          <Check eHandler={this.filterCheckBoxEventHandler} key="Tech" tagName="Tech" tagBool={this.state.Technology} />
-
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Music)} name="Music" type="checkbox" id="inlineCheckboxMusic" checked={this.state.Music} />
-            <label className="form-check-label" htmlFor="inlineCheckbox2">Music</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Art)} name="Art" type="checkbox" id="inlineCheckboxArt" checked={this.state.Art} />
-            <label className="form-check-label" htmlFor="inlineCheckbox1">Art</label>
-          </div>
-          <div className="form-check form-check-inline">
+          <h3>What Type of Activity?</h3>
+          <p>Click on the search icon to apply filters.</p>
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Tech" tagName="Tech" tagVar="Technology" tagBool={this.state.Technology} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Music" tagName="Music" tagVar="Music" tagBool={this.state.Music} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Art" tagName="Art" tagVar="Art" tagBool={this.state.Art} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="" tagName="Test" tagVar="Test" tagBool={this.state.Test} />
+          <h3>Test</h3>
+          
+          {/* <div className="form-check form-check-inline">
             <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Greek)} name="Greek" type="checkbox" id="inlineCheckboxGreeks" checked={this.state.Greek} />
             <label className="form-check-label" htmlFor="inlineCheckbox2">Greeks</label>
           </div>
@@ -73,7 +70,7 @@ class Filter extends Component {
           <div className="form-check form-check-inline">
             <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Size50)} name="Size50" type="checkbox" id="inlineCheckboxSize" checked={this.state.Size50} />
             <label className="form-check-label" htmlFor="inlineCheckbox1">Size &lt; 50</label>
-          </div>
+          </div> */}
         </div>
 
       </div>

@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/bear-homepage-v2/static/css/main.e8d02c7b.chunk.css",
-    "main.js": "/bear-homepage-v2/static/js/main.c4820eda.chunk.js",
-    "main.js.map": "/bear-homepage-v2/static/js/main.c4820eda.chunk.js.map",
+    "main.css": "/bear-homepage-v2/static/css/main.8d1852a0.chunk.css",
+    "main.js": "/bear-homepage-v2/static/js/main.df4f8077.chunk.js",
+    "main.js.map": "/bear-homepage-v2/static/js/main.df4f8077.chunk.js.map",
     "runtime-main.js": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js",
     "runtime-main.js.map": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js.map",
     "static/css/2.4b2ef6ba.chunk.css": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css",
-    "static/js/2.afff45ad.chunk.js": "/bear-homepage-v2/static/js/2.afff45ad.chunk.js",
-    "static/js/2.afff45ad.chunk.js.map": "/bear-homepage-v2/static/js/2.afff45ad.chunk.js.map",
+    "static/js/2.2f2f7021.chunk.js": "/bear-homepage-v2/static/js/2.2f2f7021.chunk.js",
+    "static/js/2.2f2f7021.chunk.js.map": "/bear-homepage-v2/static/js/2.2f2f7021.chunk.js.map",
     "index.html": "/bear-homepage-v2/index.html",
-    "precache-manifest.a49153da0872638b426357951240d8b0.js": "/bear-homepage-v2/precache-manifest.a49153da0872638b426357951240d8b0.js",
+    "precache-manifest.996971b37c674b248d61cd2fde869a95.js": "/bear-homepage-v2/precache-manifest.996971b37c674b248d61cd2fde869a95.js",
     "service-worker.js": "/bear-homepage-v2/service-worker.js",
     "static/css/2.4b2ef6ba.chunk.css.map": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css.map",
-    "static/css/main.e8d02c7b.chunk.css.map": "/bear-homepage-v2/static/css/main.e8d02c7b.chunk.css.map",
-    "static/js/2.afff45ad.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.afff45ad.chunk.js.LICENSE.txt",
+    "static/css/main.8d1852a0.chunk.css.map": "/bear-homepage-v2/static/css/main.8d1852a0.chunk.css.map",
+    "static/js/2.2f2f7021.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.2f2f7021.chunk.js.LICENSE.txt",
     "static/media/GlacialIndifference-Bold.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Bold.f801e234.otf",
     "static/media/GlacialIndifference-Italic.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Italic.69b161f1.otf",
     "static/media/GlacialIndifference-Regular.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Regular.13dc531a.otf",
@@ -36,8 +36,8 @@
   "entrypoints": [
     "static/js/runtime-main.30aa8497.js",
     "static/css/2.4b2ef6ba.chunk.css",
-    "static/js/2.afff45ad.chunk.js",
-    "static/css/main.e8d02c7b.chunk.css",
-    "static/js/main.c4820eda.chunk.js"
+    "static/js/2.2f2f7021.chunk.js",
+    "static/css/main.8d1852a0.chunk.css",
+    "static/js/main.df4f8077.chunk.js"
   ]
 }

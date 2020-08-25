@@ -17,7 +17,7 @@ export class Check extends Component {
         this.tagBool = this.props.tagBool;
         return (
             <div className="form-check form-check-inline">
-                <input className="form-check-input" onChange={this.onCheck.bind(this)} name={this.tagVar} type="checkbox" id={this.tagID} checked={this.tagBool} />
+                <input className="form-check-input" onChange={this.onCheck} name={this.tagVar} type="checkbox" id={this.tagID} checked={this.tagBool} />
                 <label className="form-check-label" htmlFor={this.tagID}>{this.tagName}</label>
             </div>
         )

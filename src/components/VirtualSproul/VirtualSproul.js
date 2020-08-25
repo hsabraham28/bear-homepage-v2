@@ -186,7 +186,7 @@ class App extends Component {
               </div>
               
               <Filter filterParentUpdate = {this.updateTagState} parentUpdateCB = {this.updateSearchKey} />
-              <Sort />
+              {/* <Sort /> */}
             </div>
   
             <div className="vs--main">

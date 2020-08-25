@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Check extends Component {
     constructor(props) {
         super(props);
-        this.tagName = props.tagName;
+        this.tagName = props.tagName.charAt(0).toUpperCase() + props.tagName.slice(1);
         this.tagID = this.tagName.replace(/\s/g, "");
         this.onCheck = this.onCheck.bind(this);
         this.tagVar = props.tagVar;

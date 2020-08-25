@@ -49,11 +49,22 @@ class Filter extends Component {
         <div className="boxes myFilter">
           <h3>What Type of Activity?</h3>
           <p>Click on the search icon to apply filters.</p>
-          <Check eHandler={this.filterCheckBoxEventHandler} key="Tech" tagName="Tech" tagVar="Technology" tagBool={this.state.Technology} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="Music" tagName="Music" tagVar="Music" tagBool={this.state.Music} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="Art" tagName="Art" tagVar="Art" tagBool={this.state.Art} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="" tagName="Test" tagVar="Test" tagBool={this.state.Test} />
-          <h3>Test</h3>
+          <Check eHandler={this.filterCheckBoxEventHandler} key="consulting" tagName="Consulting/Client Project" tagVar="consulting" tagBool={this.state.consulting} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="ncproject" tagName="Non-Client Project" tagVar="ncproject" tagBool={this.state.ncproject} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="cultural" tagName="Cultural" tagVar="cultural" tagBool={this.state.cultural} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="competition" tagName="Competition" tagVar="competition" tagBool={this.state.competition} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="performance" tagName="Performance" tagVar="performance" tagBool={this.state.performance} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="activism" tagName="Activism" tagVar="activism" tagBool={this.state.activism} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="sports" tagName="sports/Recreation" tagVar="sports" tagBool={this.state.sports} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="service" tagName="service" tagVar="service" tagBool={this.state.service} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="discussion" tagName="discussion" tagVar="discussion" tagBool={this.state.discussion} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="media" tagName="media/Publication" tagVar="media" tagBool={this.state.media} />
+          
+          <h3>Org Size</h3>
+          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.media} />
           
           {/* <div className="form-check form-check-inline">
             <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Greek)} name="Greek" type="checkbox" id="inlineCheckboxGreeks" checked={this.state.Greek} />

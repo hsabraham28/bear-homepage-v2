@@ -7,36 +7,36 @@ function About(props) {
     const teams = {
         frontend: [
             {
-                name: "Hannah Abraham",
-                pic: require('./teampics/hannah.jpg')
+                name: "Ivan A. Kristanto",
+                pic: require('./teampics/ivan.jpg')
             },
             {
-                name: "Ivan A. Kristanto",
-                pic: require('./teampics/placeholder.png')
+                name: "Hannah Abraham",
+                pic: require('./teampics/hannah.jpg')
             },
         ],
         backend: [
             {
-                name: "Person3",
+                name: "",
                 pic: require('./teampics/placeholder.png')
             },
             {
-                name: "Person4",
-                pic: require('./teampics/placeholder.png')
-            },
-            {
-                name: "Person5",
-                pic: require('./teampics/placeholder.png')
-            },
-            {
-                name: "Person6",
-                pic: require('./teampics/placeholder.png')
+                name: "Muse Yang",
+                pic: require('./teampics/muse.jpg')
             },
         ],
         uiux: [
             {
                 name: "Muskaan Agarwal",
                 pic: require("./teampics/muskaan.jpg"),
+            },
+            {
+                name: "Danji Liu",
+                pic: require("./teampics/danji.jpg"),
+            },
+            {
+                name: "Yuqi Ye",
+                pic: require("./teampics/yuqi.jpg"),
             },
         ],
         marketing: [
@@ -68,15 +68,15 @@ function About(props) {
                 <div class="body">
                     <h2>MEET THE TEAM</h2>
                     <h3>UI/UX Team</h3>
-                    <Team team={teams.uiux}/>
+                    <Team team={teams.uiux} />
                     <h3>Front End Team</h3>
-                    <Team team={teams.frontend}/>
+                    <Team team={teams.frontend} />
                     <h3>Back End Team</h3>
-                    <Team team={teams.backend}/>
+                    <Team team={teams.backend} />
                     <h3>Marketing Team</h3>
-                    <Team team={teams.marketing}/>
+                    <Team team={teams.marketing} />
                     <h3>Special Thanks</h3>
-                    <Team team={teams.special}/>
+                    <Team team={teams.special} />
                 </div>
             </div>
         </div>

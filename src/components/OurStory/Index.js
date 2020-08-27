@@ -13,6 +13,7 @@ class Index extends React.Component {
             stories: [
                 {
                     type: "Transition", //or "Academics" or "Student Orgs"
+                    subtype: "", 
                     id: "1231231",
                     challenge: "challenge here blabla",
                     concern: "not really",

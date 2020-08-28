@@ -78,7 +78,7 @@ class Index extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:8083`)
+        fetch(`http://157.245.228.180:8083`)
             .then(response => response.json())
             .then(result => {
                 this.setState({ stories: result }, () => console.log(this.state.stories))

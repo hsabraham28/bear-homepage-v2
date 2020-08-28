@@ -94,7 +94,7 @@ class App extends Component {
     //console.log(tagParams.length)
     //Case 1
     if(searchName.length>0 && tagParams.length==0) {
-      fetch(`http://localhost:8081/searchByName/` + searchName)
+      fetch(`http://157.245.228.180:8081/searchByName/` + searchName)
     .then(response => 
       response.json())
     .then(result => {
@@ -116,7 +116,7 @@ class App extends Component {
       
 
       
-      fetch(`http://localhost:8081/searchTagsAndKey/` + searchName + "/"
+      fetch(`http://157.245.228.180:8081/searchTagsAndKey/` + searchName + "/"
       + accumulator)
       .then(response => response.json())
       .then(result =>{
@@ -135,7 +135,7 @@ class App extends Component {
       console.log("Case 3 triggered")
       console.log(accumulator)
       //console.log(this.state.searchDisplayName)
-      fetch(`http://localhost:8081/searchMultipleTags/` + accumulator)
+      fetch(`http://157.245.228.180:8081/searchMultipleTags/` + accumulator)
       .then(response => response.json())
       .then(result =>{
         this.setState({organizations: result})
@@ -149,7 +149,7 @@ class App extends Component {
 
   async componentDidMount() {
     // console.log("Should happen once!")
-    await fetch(`http://localhost:8081/getClubData`)
+    await fetch(`http://157.245.228.180:8081/getClubData`)
       .then(response =>
         response.json())
       .then(result => 

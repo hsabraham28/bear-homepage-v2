@@ -40,18 +40,37 @@ class Tile extends Component {
       border: '2px solid'
     };
 
+    let storyType = null;
+    let type = null;
+    // infer type from fields
+    if (this.storyType == null) {
+      if (this.story.college != null || this.story.tips != null) {
+        storyType = "academics";
+      } else if (this.story.residency != null || this.story.challenge != null) {
+        storyType = "transition";
+      } else if (this.story.clubs != null || this.story.proscons != null) {
+        storyType = "student orgs";
+        type = "clubs"
+      } else if (this.story.factors != null || this.story.advice != null) {
+        storyType = "student orgs";
+        type = "apps"
+      }
+    } else {
+      storyType = this.storyType
+    }
 
-    switch (this.storyType) {
+
+    switch (storyType) {
       /** Transition */
       case "transition":
         // helper function
         this.trClass = () => {
           switch (this.props.story.residency) {
-            case "in-state":
+            case "In-state":
               return "tr-inst";
-            case "out-of-state":
+            case "Out-of-state":
               return "tr-outst";
-            case "international":
+            case "International":
               return "tr-intl";
             default:
               return "";
@@ -113,7 +132,7 @@ class Tile extends Component {
         };
 
         this.stBody = () => {
-          switch (this.props.story.type) { //fixme
+          switch (type) { //fixme
             // Applications
             case "apps":
               return [

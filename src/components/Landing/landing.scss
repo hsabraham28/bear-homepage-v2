@@ -86,7 +86,6 @@
     flex-wrap: wrap;
     // gap: 15%;
     margin: 0 15%;
-    cursor: pointer;
     font-family: GlacialIndifferenceRegular;
 
     @media (max-width: 576px) {
@@ -100,6 +99,7 @@
     .vs,
     .os {
         color: white;
+        cursor: pointer;
 
         display: flex;
         flex-direction: column;

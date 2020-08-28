@@ -151,7 +151,35 @@ class Tile extends Component {
         };
 
       default:
-        return output;
+        return {
+          cardTextJSX: (
+            <MDBCardText className="story--card-text">
+              <div style={{backgroundColor: "grey"}}>Uncategorized</div>
+            </MDBCardText>
+          ),
+          cardStyle: { ...radius, borderColor: 'grey'},
+          cardBodies: [
+            this.story.feel==null ? null : <TileBody key={this.idGen()} label={"How did you feel when you first transitioned into Berkeley?"} content={this.story.feel} />,
+            this.story.concern==null ? null : <TileBody key={this.idGen()} label={"Were there any concerns? Unexpected circumstances?"} content={this.story.concern} />,
+            this.story.challenge==null ? null : <TileBody key={this.idGen()} label={"Was transitioning into Berkeley socially challenging?"} content={this.story.challenge} />,
+            this.story.emo==null ? null : <TileBody key={this.idGen()} label={"Positive and negative emotions?"} content={this.story.emo} />,
+            this.story.college==null ? null : <TileBody key={this.idGen()} label={"College"} content={this.story.college} />,
+            this.story.email==null ? null : <TileBody key={this.idGen()} label={"Email:"} content={this.story.email} />,
+            this.story.gpareq==0 || this.story.gpareq==null ? null : <TileBody key={this.idGen()} label={"GPA Requirements"} content={this.story.gpareq} />,
+            this.story.prereq==null ? null : <TileBody key={this.idGen()} label={"What prerequisites and maximum units do you recommend taking during the fall semester?"} content={this.story.prereq} />,
+            this.story.tips==null ? null : <TileBody key={this.idGen()} label={"Tips on planning classes and coping with academic stress"} content={this.story.tips} />,
+            this.story.rigor==null ? null : <TileBody key={this.idGen()} label={"What do you think about the academic rigor of UC Berkeley classes when compared to your school curriculum / AP courses / Community college classes?"} content={this.story.rigor} />,
+            this.story.factors==null ? null : <TileBody key={this.idGen()} label={"What important factors did you consider when applying to clubs? How did you survey, categorize, or sort the clubs you wanted to join?"} content={this.story.factors} />,
+            this.story.cope==null ? null : <TileBody key={this.idGen()} label={"How do you cope with the club application processes (info-sessions, interviews, applications)?"} content={this.story.cope} />,
+            this.story.advice==null ? null : <TileBody key={this.idGen()} label={"Any advice on preparing for club interviews and filling out applications?"} content={this.story.advice} />,
+            this.story.clubs==null ? null : <TileBody key={this.idGen()} label={"Which Clubs / Student Organizations are you part of? Why did you pick them?"} content={this.story.clubs} />,
+            this.story.transition==null ? null : <TileBody key={this.idGen()} label={"How was the transition into the clubs? How long did it take you to get used to its logistics?"} content={this.story.transition} />,
+            this.story.proscons==null ? null : <TileBody key={this.idGen()} label={"What do you think are the pros / cons of being in a club?"} content={this.story.proscons} />,
+            this.story.balance==null ? null : <TileBody key={this.idGen()} label={"How do you balance club activities with academics and social life?"} content={this.story.balance} />,
+          ]
+        }
+
+
     }
   }
 

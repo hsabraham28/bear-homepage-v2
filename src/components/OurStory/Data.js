@@ -39,3 +39,5 @@ const eachStory = {
     advice: null,
     pic: null,
 }
+
+export default eachStory;

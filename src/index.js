@@ -12,9 +12,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 ReactDOM.render(
   // fixme might cause trouble for Virtual Sproul
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 

@@ -143,6 +143,17 @@ class App extends Component {
       })    
     }
 
+    //Case 4
+    else if(searchName.length == 0 && tagParams.length == 0) {
+      fetch(`http://157.245.228.180:8081/getClubData`)
+      .then(response => response.json())
+      .then(result=> {
+        this.setState({
+          organizations: result
+        })
+      })
+    }
+
 
     
 }

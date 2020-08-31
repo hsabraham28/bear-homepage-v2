@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
-import ostile from './placeholder.png';
+import placeholder from './placeholder.png';
 import TileBody from './TileBody';
 import PropTypes from 'prop-types';
 
@@ -43,21 +43,24 @@ class Tile extends Component {
     let storyType = null;
     let type = null;
     // infer type from fields
+    
     if (this.storyType == null) {
       if (this.story.college != null || this.story.tips != null) {
         storyType = "academics";
       } else if (this.story.residency != null || this.story.challenge != null) {
         storyType = "transition";
       } else if (this.story.clubs != null || this.story.proscons != null) {
-        storyType = "student orgs";
-        type = "clubs"
+        storyType = "student organization";
+        type = "Club"
       } else if (this.story.factors != null || this.story.advice != null) {
         storyType = "student orgs";
-        type = "apps"
+        type = "Application"
       }
     } else {
-      storyType = this.storyType
+      storyType = this.storyType.toLowerCase();
     }
+
+    console.log(this.story.storyType) //fixme
 
 
     switch (storyType) {
@@ -117,14 +120,14 @@ class Tile extends Component {
 
 
       /** Student org supertype */
-      case "student orgs":
+      case "student organization":
         this.stClass = () => {
           switch (this.props.story.type) { //fixme
             // Applications
-            case "apps":
+            case "Application":
               return "st-app";
             // Clubs
-            case "clubs":
+            case "Club":
               return "st-club";
             default:
               return "";
@@ -134,7 +137,7 @@ class Tile extends Component {
         this.stBody = () => {
           switch (type) { //fixme
             // Applications
-            case "apps":
+            case "Application":
               return [
                 <TileBody key={this.idGen()} label={"Story Type:"} content={"Student Org, Application Process."} />,
                 <TileBody key={this.idGen()} label={"What important factors did you consider when applying to clubs? How did you survey, categorize, or sort the clubs you wanted to join?"} content={this.story.factors} />,
@@ -144,7 +147,7 @@ class Tile extends Component {
               ];
 
             // Clubs
-            case "clubs":
+            case "Club":
               return [
                 <TileBody key={this.idGen()} label={"Story Type:"} content={"Student Org, Clubs on Campus."} />,
                 <TileBody key={this.idGen()} label={"Which Clubs / Student Organizations are you part of? Why did you pick them?"} content={this.story.clubs} />,
@@ -178,23 +181,23 @@ class Tile extends Component {
           ),
           cardStyle: { ...radius, borderColor: 'grey'},
           cardBodies: [
-            this.story.feel==null ? null : <TileBody key={this.idGen()} label={"How did you feel when you first transitioned into Berkeley?"} content={this.story.feel} />,
-            this.story.concern==null ? null : <TileBody key={this.idGen()} label={"Were there any concerns? Unexpected circumstances?"} content={this.story.concern} />,
-            this.story.challenge==null ? null : <TileBody key={this.idGen()} label={"Was transitioning into Berkeley socially challenging?"} content={this.story.challenge} />,
-            this.story.emo==null ? null : <TileBody key={this.idGen()} label={"Positive and negative emotions?"} content={this.story.emo} />,
-            this.story.college==null ? null : <TileBody key={this.idGen()} label={"College"} content={this.story.college} />,
-            this.story.email==null ? null : <TileBody key={this.idGen()} label={"Email:"} content={this.story.email} />,
-            this.story.gpareq==0 || this.story.gpareq==null ? null : <TileBody key={this.idGen()} label={"GPA Requirements"} content={this.story.gpareq} />,
-            this.story.prereq==null ? null : <TileBody key={this.idGen()} label={"What prerequisites and maximum units do you recommend taking during the fall semester?"} content={this.story.prereq} />,
-            this.story.tips==null ? null : <TileBody key={this.idGen()} label={"Tips on planning classes and coping with academic stress"} content={this.story.tips} />,
-            this.story.rigor==null ? null : <TileBody key={this.idGen()} label={"What do you think about the academic rigor of UC Berkeley classes when compared to your school curriculum / AP courses / Community college classes?"} content={this.story.rigor} />,
-            this.story.factors==null ? null : <TileBody key={this.idGen()} label={"What important factors did you consider when applying to clubs? How did you survey, categorize, or sort the clubs you wanted to join?"} content={this.story.factors} />,
-            this.story.cope==null ? null : <TileBody key={this.idGen()} label={"How do you cope with the club application processes (info-sessions, interviews, applications)?"} content={this.story.cope} />,
-            this.story.advice==null ? null : <TileBody key={this.idGen()} label={"Any advice on preparing for club interviews and filling out applications?"} content={this.story.advice} />,
-            this.story.clubs==null ? null : <TileBody key={this.idGen()} label={"Which Clubs / Student Organizations are you part of? Why did you pick them?"} content={this.story.clubs} />,
-            this.story.transition==null ? null : <TileBody key={this.idGen()} label={"How was the transition into the clubs? How long did it take you to get used to its logistics?"} content={this.story.transition} />,
-            this.story.proscons==null ? null : <TileBody key={this.idGen()} label={"What do you think are the pros / cons of being in a club?"} content={this.story.proscons} />,
-            this.story.balance==null ? null : <TileBody key={this.idGen()} label={"How do you balance club activities with academics and social life?"} content={this.story.balance} />,
+            !this.story.feel ? null : <TileBody key={this.idGen()} label={"How did you feel when you first transitioned into Berkeley?"} content={this.story.feel} />,
+            !this.story.concern ? null : <TileBody key={this.idGen()} label={"Were there any concerns? Unexpected circumstances?"} content={this.story.concern} />,
+            !this.story.challenge ? null : <TileBody key={this.idGen()} label={"Was transitioning into Berkeley socially challenging?"} content={this.story.challenge} />,
+            !this.story.emo ? null : <TileBody key={this.idGen()} label={"Positive and negative emotions?"} content={this.story.emo} />,
+            !this.story.college ? null : <TileBody key={this.idGen()} label={"College"} content={this.story.college} />,
+            !this.story.email ? null : <TileBody key={this.idGen()} label={"Email:"} content={this.story.email} />,
+            !this.story.gpareq ? null : <TileBody key={this.idGen()} label={"GPA Requirements"} content={this.story.gpareq} />,
+            !this.story.prereq ? null : <TileBody key={this.idGen()} label={"What prerequisites and maximum units do you recommend taking during the fall semester?"} content={this.story.prereq} />,
+            !this.story.tips ? null : <TileBody key={this.idGen()} label={"Tips on planning classes and coping with academic stress"} content={this.story.tips} />,
+            !this.story.rigor ? null : <TileBody key={this.idGen()} label={"What do you think about the academic rigor of UC Berkeley classes when compared to your school curriculum / AP courses / Community college classes?"} content={this.story.rigor} />,
+            !this.story.factors ? null : <TileBody key={this.idGen()} label={"What important factors did you consider when applying to clubs? How did you survey, categorize, or sort the clubs you wanted to join?"} content={this.story.factors} />,
+            !this.story.cope ? null : <TileBody key={this.idGen()} label={"How do you cope with the club application processes (info-sessions, interviews, applications)?"} content={this.story.cope} />,
+            !this.story.advice ? null : <TileBody key={this.idGen()} label={"Any advice on preparing for club interviews and filling out applications?"} content={this.story.advice} />,
+            !this.story.clubs ? null : <TileBody key={this.idGen()} label={"Which Clubs / Student Organizations are you part of? Why did you pick them?"} content={this.story.clubs} />,
+            !this.story.transition ? null : <TileBody key={this.idGen()} label={"How was the transition into the clubs? How long did it take you to get used to its logistics?"} content={this.story.transition} />,
+            !this.story.proscons ? null : <TileBody key={this.idGen()} label={"What do you think are the pros / cons of being in a club?"} content={this.story.proscons} />,
+            !this.story.balance ? null : <TileBody key={this.idGen()} label={"How do you balance club activities with academics and social life?"} content={this.story.balance} />,
           ]
         }
 
@@ -215,6 +218,8 @@ class Tile extends Component {
     /** Destructuring the variable elements for the different types */
     const { cardTextJSX, cardStyle, cardBodies } = this.renderTypes();
 
+    /** Conditional image sources */
+    const imageLink = story.pic ? story.pic : placeholder;
 
     return (
       <div className="shouldEvery tilebox">
@@ -224,7 +229,7 @@ class Tile extends Component {
               hover
               overlay='white-slight'
               className='card-img-top'
-              src={ostile}
+              src={imageLink}
               alt='Card cap'
             />
           </MDBView>

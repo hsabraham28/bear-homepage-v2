@@ -50,7 +50,7 @@ class Header extends Component {
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/discover">virtual sproul</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/story">our story</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/about">about us</Link></li>
-            <li className={trapezoidness}><Link onClick={this.hideMobile} to="#">sign up</Link></li>
+            <li className={trapezoidness}><Link onClick={this.hideMobile} to="#">contact us</Link></li>
           </ul>
         </nav>
       </header>

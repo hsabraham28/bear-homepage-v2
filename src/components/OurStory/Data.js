@@ -8,6 +8,7 @@ const eachStory = {
     year: null, // string (freshmen, junior, etc)
     major: null,
     storyType: null, // string (either "academics", "transition", or "student orgs") 
+    pic: null,
 
     // academics
     email: null,
@@ -37,7 +38,6 @@ const eachStory = {
     factors: null,
     cope: null,
     advice: null,
-    pic: null,
 }
 
 export default eachStory;

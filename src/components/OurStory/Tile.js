@@ -43,21 +43,24 @@ class Tile extends Component {
     let storyType = null;
     let type = null;
     // infer type from fields
+    
     if (this.storyType == null) {
       if (this.story.college != null || this.story.tips != null) {
         storyType = "academics";
       } else if (this.story.residency != null || this.story.challenge != null) {
         storyType = "transition";
       } else if (this.story.clubs != null || this.story.proscons != null) {
-        storyType = "student orgs";
-        type = "clubs"
+        storyType = "student organization";
+        type = "Club"
       } else if (this.story.factors != null || this.story.advice != null) {
         storyType = "student orgs";
-        type = "apps"
+        type = "Application"
       }
     } else {
-      storyType = this.storyType
+      storyType = this.storyType.toLowerCase();
     }
+
+    console.log(this.story.storyType) //fixme
 
 
     switch (storyType) {
@@ -117,14 +120,14 @@ class Tile extends Component {
 
 
       /** Student org supertype */
-      case "student orgs":
+      case "student organization":
         this.stClass = () => {
           switch (this.props.story.type) { //fixme
             // Applications
-            case "apps":
+            case "Application":
               return "st-app";
             // Clubs
-            case "clubs":
+            case "Club":
               return "st-club";
             default:
               return "";
@@ -134,7 +137,7 @@ class Tile extends Component {
         this.stBody = () => {
           switch (type) { //fixme
             // Applications
-            case "apps":
+            case "Application":
               return [
                 <TileBody key={this.idGen()} label={"Story Type:"} content={"Student Org, Application Process."} />,
                 <TileBody key={this.idGen()} label={"What important factors did you consider when applying to clubs? How did you survey, categorize, or sort the clubs you wanted to join?"} content={this.story.factors} />,
@@ -144,7 +147,7 @@ class Tile extends Component {
               ];
 
             // Clubs
-            case "clubs":
+            case "Club":
               return [
                 <TileBody key={this.idGen()} label={"Story Type:"} content={"Student Org, Clubs on Campus."} />,
                 <TileBody key={this.idGen()} label={"Which Clubs / Student Organizations are you part of? Why did you pick them?"} content={this.story.clubs} />,
@@ -184,7 +187,7 @@ class Tile extends Component {
             !this.story.emo ? null : <TileBody key={this.idGen()} label={"Positive and negative emotions?"} content={this.story.emo} />,
             !this.story.college ? null : <TileBody key={this.idGen()} label={"College"} content={this.story.college} />,
             !this.story.email ? null : <TileBody key={this.idGen()} label={"Email:"} content={this.story.email} />,
-            this.story.gpareq==0 || !this.story.gpareq ? null : <TileBody key={this.idGen()} label={"GPA Requirements"} content={this.story.gpareq} />,
+            !this.story.gpareq ? null : <TileBody key={this.idGen()} label={"GPA Requirements"} content={this.story.gpareq} />,
             !this.story.prereq ? null : <TileBody key={this.idGen()} label={"What prerequisites and maximum units do you recommend taking during the fall semester?"} content={this.story.prereq} />,
             !this.story.tips ? null : <TileBody key={this.idGen()} label={"Tips on planning classes and coping with academic stress"} content={this.story.tips} />,
             !this.story.rigor ? null : <TileBody key={this.idGen()} label={"What do you think about the academic rigor of UC Berkeley classes when compared to your school curriculum / AP courses / Community college classes?"} content={this.story.rigor} />,

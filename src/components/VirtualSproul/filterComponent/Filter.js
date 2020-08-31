@@ -175,7 +175,7 @@ class Filter extends Component {
 
 
 
-          <h3>Org Size</h3>
+          {/* <h3>Org Size</h3> */}
           {/* <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />

@@ -9,6 +9,7 @@ import placeholder from './placeholder.png';
 class ClubCard extends Component {
   constructor(props) {
     super()
+    console.log(props.org.tags[0])
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
       <p key={tag}>{tag}</p>
     ))
@@ -23,6 +24,9 @@ class ClubCard extends Component {
 
     const titleID = 'a' + org.id;
 
+    // Image links
+    const imageLink = this.props.org.logo == "" ? placeholder : this.props.org.logo;
+
     return (
 
 
@@ -34,7 +38,7 @@ class ClubCard extends Component {
               hover
               overlay='white-slight'
               className='card-img-top'
-              src={placeholder}
+              src={imageLink}
               alt='Card cap'
             />
           </MDBView>
@@ -71,7 +75,7 @@ class ClubCard extends Component {
 
                 <div className="container-fluid vs--inner-tile">
                   <div className="vs-text-img">
-                    <img src={placeholder}></img>
+                    <img src={imageLink}></img>
                   </div>
                   <div className="vs-text-wrapper">
                     <div className="row">

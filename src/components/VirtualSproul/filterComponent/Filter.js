@@ -51,9 +51,9 @@ class Filter extends Component {
         { name: "Women Interest", group: "5", selected: false },
         { name: "Apprenticeship", group: "5", selected: false },
 
-        { name: "Professional Development", group: "6", selected: false },
-        { name: "Career Development", group: "6", selected: false },
-        { name: "Academic Development", group: "6", selected: false },
+        { name: "Professional - Development", group: "6", selected: false },
+        { name: "Career - Development", group: "6", selected: false },
+        { name: "Academic - Development", group: "6", selected: false },
 
         { name: "Mentorship", group: "7", selected: false },
         { name: "Mental Health", group: "7", selected: false },

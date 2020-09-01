@@ -53,14 +53,15 @@ class Tile extends Component {
         storyType = "student organization";
         type = "Club"
       } else if (this.story.factors != null || this.story.advice != null) {
-        storyType = "student orgs";
+        storyType = "student organization";
         type = "Application"
       }
     } else {
       storyType = this.storyType.toLowerCase();
+      type = this.story.type;
     }
 
-    console.log(this.story.storyType) //fixme
+    console.log(storyType) //fixme
 
 
     switch (storyType) {
@@ -135,6 +136,7 @@ class Tile extends Component {
         };
 
         this.stBody = () => {
+          console.log(type);
           switch (type) { //fixme
             // Applications
             case "Application":

@@ -16,7 +16,8 @@
     "reactstrap": "^8.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
+    "prestart": "rm ./node_modules/webpack-dev-server/ssl/server.pem && cp -f /etc/ssl/testpem.pem ./node_modules/webpack-dev-server/ssl/server.pem",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

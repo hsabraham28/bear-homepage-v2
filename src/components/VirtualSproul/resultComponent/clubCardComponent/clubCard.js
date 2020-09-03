@@ -9,7 +9,7 @@ import placeholder from './placeholder.png';
 class ClubCard extends Component {
   constructor(props) {
     super()
-    console.log(props.org.tags[0])
+    // console.log(props.org.tags[0])
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
       <p key={tag}>{tag}</p>
     ))

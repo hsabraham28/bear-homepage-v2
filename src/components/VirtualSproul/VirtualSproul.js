@@ -7,7 +7,8 @@ import Search from './searchComponent/Search';
 import Filter from './filterComponent/Filter';
 import Sort from './sortComponent/Sort';
 import ClubComponent from './ClubComponent';
-import ClubCard from './resultComponent/clubCardComponent/clubCard'
+import ClubCard from './resultComponent/clubCardComponent/clubCard';
+import InfiniteScroll from "react-infinite-scroll-component";
 
 
 class App extends Component {
@@ -48,35 +49,41 @@ class App extends Component {
           yTLink: 'www.youtube.aaa'
         },
       ],
-      searchDisplayName:"",
-      tagList:[]
+      searchDisplayName: "",
+      tagList: [],
+
+      loadPage: 0, // 0 if fresh, 1 is first extra fetch
+      numItemsTotal: 17, //FIXME fetch this number
+      hasMore: true,
     }
-  this.componentDidMount = this.componentDidMount.bind(this)
-  this.updateSearchKey = this.updateSearchKey.bind(this)
-  this.updateTagState = this.updateTagState.bind(this)
-  this.fetchSearchData=this.fetchSearchData.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
+    this.updateSearchKey = this.updateSearchKey.bind(this)
+    this.updateTagState = this.updateTagState.bind(this)
+    this.fetchSearchData = this.fetchSearchData.bind(this)
   }
 
   //Updated TagList 
   updateTagState(updatedTags) {
     this.setState(
-      {tagList: updatedTags}
-      )
+      { tagList: updatedTags }
+    )
   }
 
   //Updating Organizations
   updateSearchKey(name) {
     //console.log("Name is ", name)
-      this.setState(
-        {
-          searchDisplayName: name
-        }, () => {this.fetchSearchData(this.state.searchDisplayName, this.state.tagList)}
-      )
-      //Sends the fetch call here once the searchKey and tagList are updated - tagList gets updated real time FYI, while
-      // the searchKey gets updated once we click the button, which is when we should also send API request, causing component
-      // to rerender
-      //console.log("Before fetch method, the skey is ", this.state.searchDisplayName)
-      
+    this.setState(
+      {
+        searchDisplayName: name,
+        loadPage: 0,
+        organizations: [],
+      }, () => { this.fetchSearchData(this.state.searchDisplayName, this.state.tagList) }
+    )
+    //Sends the fetch call here once the searchKey and tagList are updated - tagList gets updated real time FYI, while
+    // the searchKey gets updated once we click the button, which is when we should also send API request, causing component
+    // to rerender
+    //console.log("Before fetch method, the skey is ", this.state.searchDisplayName)
+
 
   }
 
@@ -93,19 +100,20 @@ class App extends Component {
     //console.log(searchName.length)
     //console.log(tagParams.length)
     //Case 1
-    if(searchName.length>0 && tagParams.length==0) {
+    if (searchName.length > 0 && tagParams.length == 0) {
       fetch(`http://157.245.228.180:8081/searchByName/` + searchName)
-    .then(response => 
-      response.json())
-    .then(result => {
-      this.setState({organizations: result}, () => console.log(this.state.organizations))
-      
-      
-  })
+        // fetch(`http://157.245.228.180:8081/searchByName/` + this.state.loadPage + `/` + searchName) //FIXME loadmore
+        .then(response =>
+          response.json())
+        .then(result => {
+          this.setState({ organizations: this.state.organizations.concat(result) }, () => console.log(this.state.organizations))
+
+
+        })
     }
 
     //Case 2
-    else if(searchName.length >0 && tagParams.length>0) {
+    else if (searchName.length > 0 && tagParams.length > 0) {
       let accumulator = ""
       console.log(tagParams)
       for (let tag in tagParams) {
@@ -113,103 +121,128 @@ class App extends Component {
       }
       //Send API call using this string separated by pattern
       console.log("Case 2 triggered")
-      
 
-      
+
+
       fetch(`http://157.245.228.180:8081/searchTagsAndKey/` + searchName + "/"
-      + accumulator)
-      .then(response => response.json())
-      .then(result =>{
-        this.setState({organizations: result})
-        console.log(this.state.organizations)
-      })
+        + accumulator)
+        // fetch(`http://157.245.228.180:8081/searchTagsAndKey/` + this.state.loadPage + `/` + searchName + "/" + accumulator) FIXME loadmore
+        .then(response => response.json())
+        .then(result => {
+          this.setState({ organizations: this.state.organizations.concat(result) })
+          console.log(this.state.organizations)
+        })
     }
 
     //Case 3
-    else if(searchName.length == 0 && tagParams.length>0) {
+    else if (searchName.length == 0 && tagParams.length > 0) {
       let accumulator = ""
       for (let tag in tagParams) {
         accumulator += "(" + tagParams[tag] + ")"
-        
+
       }
       console.log("Case 3 triggered")
       console.log(accumulator)
       //console.log(this.state.searchDisplayName)
       fetch(`http://157.245.228.180:8081/searchMultipleTags/` + accumulator)
-      .then(response => response.json())
-      .then(result =>{
-        this.setState({organizations: result})
-        console.log(this.state.organizations)
-      })    
+        // fetch(`http://157.245.228.180:8081/searchMultipleTags/` + this.state.loadPage + `/` + accumulator) FIXME loadmore
+        .then(response => response.json())
+        .then(result => {
+          this.setState({ organizations: this.state.organizations.concat(result) })
+          console.log(this.state.organizations)
+        })
     }
 
     //Case 4
-    else if(searchName.length == 0 && tagParams.length == 0) {
+    else if (searchName.length == 0 && tagParams.length == 0) {
       fetch(`http://157.245.228.180:8081/getClubData`)
-      .then(response => response.json())
-      .then(result=> {
-        this.setState({
-          organizations: result
+        // fetch(`http://157.245.228.180:8081/getClubData/` + this.state.loadPage) //FIXME loadmore
+        .then(response => response.json())
+        .then(result => {
+          this.setState({
+            organizations: result,
+          })
         })
-      })
     }
 
 
-    
-}
+
+  }
 
   async componentDidMount() {
     // console.log("Should happen once!")
     await fetch(`http://157.245.228.180:8081/getClubData`)
+      // await fetch(`http://157.245.228.180:8081/getClubData/0`) //FIXME loadmore
       .then(response =>
         response.json())
-      .then(result => 
-        {
+      .then(result => {
         this.setState({
-          organizations: result
+          organizations: result.slice(0, 4), //FIXME loadmore
+          loadPage: 0,
         }, () => console.log(this.state.organizations))
       }
       )
     //console.log(this.state.organizations)
   }
 
+  loadMore = () => {
+    if (this.state.organizations.length >= this.state.numItemsTotal) {
+      this.setState({
+        hasMore: false
+      })
+      return;
+    }
+    let nextPage = this.state.loadPage + 1;
+    this.setState({
+      loadPage: nextPage,
+    }, () => { this.fetchSearchData(this.state.searchDisplayName, this.state.tagList) }
+    )
+  }
 
 
   render() {
     /** Call fetch function here */
-   
+    console.log(this.state.loadPage)
     const mappedClubs = this.state.organizations.map(item => (
-      <ClubCard key={item.id} org={item}/> //fixme var imports
+      <ClubCard key={item.id} org={item} /> //fixme var imports
     ))
-    
+
 
     return (
       <div className="AppChild">
         <Header isLanding={false} />
         <div className="AppChild">
-          
+
           <div className="big-flex">
             <div className='vs--sidebar'>
               <div className="welcome-message">
-              <Search parentUpdateCB = {this.updateSearchKey} />
-                <h1>Welcome to Virtual Sproul</h1> 
+                <Search parentUpdateCB={this.updateSearchKey} />
+                <h1>Welcome to Virtual Sproul</h1>
                 <h3>Start looking for the student orgs you're interested in!</h3>
               </div>
-              
-              <Filter filterParentUpdate = {this.updateTagState} parentUpdateCB = {this.updateSearchKey} />
+
+              <Filter filterParentUpdate={this.updateTagState} parentUpdateCB={this.updateSearchKey} />
               {/* <Sort /> */}
             </div>
-  
+
             <div className="vs--main">
-              
-              <ClubComponent clubArray={mappedClubs} />
+              <InfiniteScroll
+                className="vs--cards"
+                dataLength={this.state.organizations.length}
+                next={this.loadMore}
+                hasMore={this.state.hasMore}
+                loader={<h4 className="infinite-loading">Loading...</h4>}
+                endMessage={<p></p>}
+              >
+                {mappedClubs}
+              </InfiniteScroll>
             </div>
           </div>
-  
-          {/** This part should rerender based off the search results! */ }
-  
+
+          {/** This part should rerender based off the search results! */}
+
           {/**Conditional rendering should be done here to display "Search results for XYZ when search button is clicked" */}
-  
+
           {this.state.searchDisplayName.length != 0 && //fixme
             <h1> Search Results for {this.state.searchDisplayName}</h1>
           }

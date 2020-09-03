@@ -2,11 +2,13 @@ import React from 'react';
 import { Component } from 'react';
 import './style.scss';
 import './layout.scss';
+import axios from 'axios';
 import Header from '../Header/Header';
 import Search from './searchComponent/Search';
 import Filter from './filterComponent/Filter';
 import Sort from './sortComponent/Sort';
 import ClubComponent from './ClubComponent';
+import PageNavigation from './PageNavigation';
 import ClubCard from './resultComponent/clubCardComponent/clubCard'
 
 
@@ -49,13 +51,45 @@ class App extends Component {
         },
       ],
       searchDisplayName:"",
-      tagList:[]
+      tagList:[],
+      totalResults: 0,
+    totalPages: 0,
+    currentPageNo: 0,
     }
   this.componentDidMount = this.componentDidMount.bind(this)
   this.updateSearchKey = this.updateSearchKey.bind(this)
   this.updateTagState = this.updateTagState.bind(this)
   this.fetchSearchData=this.fetchSearchData.bind(this)
+  
+
   }
+
+  getPagesCount = (total, denominator) => {
+  const divisible = total % denominator === 0;
+  const valueToBeAdded = divisible ? 0 : 1;
+
+  return Math.floor(total / denominator) + valueToBeAdded;
+};
+
+handlePageClick = (type) => {
+  event.preventDefault();
+  const updatedPageNo =
+          'prev' === type
+            ? this.state.currentPageNo - 1
+            : this.state.currentPageNo + 1;
+  if (!this.state.loading) {
+    this.setState({ loading: true, message: '' }, () => {
+      // Fetch previous 20 Results
+      this.fetchSearchResults(updatedPageNo, this.state.query);
+    });
+  }
+};
+
+const { query, loading, message, currentPageNo, totalPages } = this.state;
+// showPrevLink will be false, when on the 1st page, hence Prev link be shown on 1st page.
+const showPrevLink = 1 < currentPageNo;
+// showNextLink will be false, when on the last page, hence Next link wont be shown last page.
+const showNextLink = totalPages > currentPageNo;
 
   //Updated TagList 
   updateTagState(updatedTags) {
@@ -92,6 +126,26 @@ class App extends Component {
     //console.log("Calling fetchSearchData to consume backend API")
     //console.log(searchName.length)
     //console.log(tagParams.length)
+
+    axios.get(searchUrl, {
+    cancelToken: this.cancel.token,
+  })
+  .then((res) => {
+    const total = res.data.total;
+    const totalPagesCount = this.getPagesCount( total, 20 );
+    const resultNotFoundMsg = !res.data.hits.length
+      ? 'There are no more search results. Please try a new search.'
+      : '';
+    this.setState({
+      results: res.data.hits,
+      totalResults: res.data.total,
+      currentPageNo: updatedPageNo,
+      totalPages: totalPagesCount,
+      message: resultNotFoundMsg,
+      loading: false,
+    });
+  })
+
     //Case 1
     if(searchName.length>0 && tagParams.length==0) {
       fetch(`http://157.245.228.180:8081/searchByName/` + searchName)
@@ -198,10 +252,28 @@ class App extends Component {
           {/** This part should rerender based off the search results! */ }
   
           {/**Conditional rendering should be done here to display "Search results for XYZ when search button is clicked" */}
-  
+  {/*Navigation Top*/}
+<PageNavigation
+  loading={loading}
+  showPrevLink={showPrevLink}
+  showNextLink={showNextLink}
+  handlePrevClick={() => this.handlePageClick('prev')}
+  handleNextClick={() => this.handlePageClick('next')}
+/>
+
+
           {this.state.searchDisplayName.length != 0 && //fixme
             <h1> Search Results for {this.state.searchDisplayName}</h1>
           }
+
+  {/*Navigation Bottom*/}
+<PageNavigation
+  loading={loading}
+  showPrevLink={showPrevLink}
+  showNextLink={showNextLink}
+  handlePrevClick={() => this.handlePageClick('prev')}
+  handleNextClick={() => this.handlePageClick('next')}
+/>
         </div>
       </div>
     );

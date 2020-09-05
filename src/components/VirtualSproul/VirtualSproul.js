@@ -101,8 +101,8 @@ class App extends Component {
     //console.log(tagParams.length)
     //Case 1
     if (searchName.length > 0 && tagParams.length == 0) {
-      fetch(`http://157.245.228.180:8081/searchByName/` + searchName)
-        // fetch(`http://157.245.228.180:8081/searchByName/` + this.state.loadPage + `/` + searchName) //FIXME loadmore
+      fetch(`https://157.245.228.180:8081/searchByName/` + searchName)
+        // fetch(`https://157.245.228.180:8081/searchByName/` + this.state.loadPage + `/` + searchName) //FIXME loadmore
         .then(response =>
           response.json())
         .then(result => {
@@ -124,9 +124,9 @@ class App extends Component {
 
 
 
-      fetch(`http://157.245.228.180:8081/searchTagsAndKey/` + searchName + "/"
+      fetch(`https://157.245.228.180:8081/searchTagsAndKey/` + searchName + "/"
         + accumulator)
-        // fetch(`http://157.245.228.180:8081/searchTagsAndKey/` + this.state.loadPage + `/` + searchName + "/" + accumulator) FIXME loadmore
+        // fetch(`https://157.245.228.180:8081/searchTagsAndKey/` + this.state.loadPage + `/` + searchName + "/" + accumulator) FIXME loadmore
         .then(response => response.json())
         .then(result => {
           this.setState({ organizations: this.state.organizations.concat(result) })
@@ -144,8 +144,8 @@ class App extends Component {
       console.log("Case 3 triggered")
       console.log(accumulator)
       //console.log(this.state.searchDisplayName)
-      fetch(`http://157.245.228.180:8081/searchMultipleTags/` + accumulator)
-        // fetch(`http://157.245.228.180:8081/searchMultipleTags/` + this.state.loadPage + `/` + accumulator) FIXME loadmore
+      fetch(`https://157.245.228.180:8081/searchMultipleTags/` + accumulator)
+        // fetch(`https://157.245.228.180:8081/searchMultipleTags/` + this.state.loadPage + `/` + accumulator) FIXME loadmore
         .then(response => response.json())
         .then(result => {
           this.setState({ organizations: this.state.organizations.concat(result) })
@@ -155,8 +155,8 @@ class App extends Component {
 
     //Case 4
     else if (searchName.length == 0 && tagParams.length == 0) {
-      fetch(`http://157.245.228.180:8081/getClubData`)
-        // fetch(`http://157.245.228.180:8081/getClubData/` + this.state.loadPage) //FIXME loadmore
+      fetch(`https://157.245.228.180:8081/getClubData`)
+        // fetch(`https://157.245.228.180:8081/getClubData/` + this.state.loadPage) //FIXME loadmore
         .then(response => response.json())
         .then(result => {
           this.setState({
@@ -171,13 +171,13 @@ class App extends Component {
 
   async componentDidMount() {
     // console.log("Should happen once!")
-    await fetch(`http://157.245.228.180:8081/getClubData`)
-      // await fetch(`http://157.245.228.180:8081/getClubData/0`) //FIXME loadmore
+    await fetch(`https://157.245.228.180:8081/getClubData`)
+      // await fetch(`https://157.245.228.180:8081/getClubData/0`) //FIXME loadmore
       .then(response =>
         response.json())
       .then(result => {
         this.setState({
-          organizations: result, //.slice(0, 4), //FIXME loadmore
+          organizations: result.slice(0, 1), //FIXME loadmore
           loadPage: 0,
         }, () => console.log(this.state.organizations))
       }

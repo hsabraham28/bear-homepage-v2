@@ -177,7 +177,7 @@ class App extends Component {
         response.json())
       .then(result => {
         this.setState({
-          organizations: result.slice(0, 1), //FIXME loadmore
+          organizations: result,//.slice(0, 1), //FIXME loadmore
           loadPage: 0,
         }, () => console.log(this.state.organizations))
       }

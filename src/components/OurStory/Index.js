@@ -78,7 +78,7 @@ class Index extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://bearbeginnings.club:8083`)
+        fetch(`https://bearbeginnings.club:8444`)
             .then(response => response.json())
             .then(result => {
                 this.setState({ stories: result }) //for debug use: , () => console.log(this.state.stories)

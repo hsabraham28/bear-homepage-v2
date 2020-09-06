@@ -6,6 +6,8 @@ COPY ./testkey.pem /app/testkey.pem
 
 RUN CI=true
 
+
+RUN npm install
 COPY . .
-EXPOSE 3006
+EXPOSE 3000
 CMD ["npm", "start"]

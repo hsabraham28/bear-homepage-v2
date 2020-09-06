@@ -17,7 +17,7 @@
     "reactstrap": "^8.5.1"
   },
   "scripts": {
-    "start": "HTTPS=true SSL_CRT_FILE=/app/testcrt.pem SSL_KEY_FILE=/app/testkey.pem react-scripts start",
+    "start": "PORT = 3006 HTTPS=true SSL_CRT_FILE=/app/testcrt.pem SSL_KEY_FILE=/app/testkey.pem react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

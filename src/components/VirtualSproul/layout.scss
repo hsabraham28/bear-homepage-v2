@@ -10,7 +10,7 @@
 }
 
 .vs--sidebar {
-    flex: 0 0 15em;
+    flex: 1 0 15em;
     margin-right: auto;
     padding: 0.5em;
     margin-top: 1em;
@@ -127,6 +127,7 @@ h5 {
 /** Sidebar **/
 .vs--sidebar {
     border-right: 1px rgba(0, 0, 0, 0.2) solid;
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
 
     & > * {
         padding: 0 1em;

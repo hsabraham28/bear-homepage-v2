@@ -23,10 +23,10 @@ class Filter extends Component {
       discussion: false,
       media: false,
 
-      less20: false,
+      Lessthan20: false,
       twentyfifty: false,
       fiftyhundred: false,
-      more100: false,
+      Morethan100: false,
 
       dropdown: [
         { name: "Linguistic", group: "1", selected: false },
@@ -92,7 +92,6 @@ class Filter extends Component {
         { name: "Aerospace", group: "13", selected: false },
 
       ],
-      Size50: false,
       tagList: [],
     };
 
@@ -188,10 +187,10 @@ class Filter extends Component {
           <Check eHandler={this.filterCheckBoxEventHandler} key="media" tagName="media/Publication" tagVar="media" tagBool={this.state.media} />
 
           <h3>Org Size</h3>
-          <Check eHandler={this.filterCheckBoxEventHandler} key="less20" tagName="Less than 20 members" tagVar="less20" tagBool={this.state.less20} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Lessthan20" tagName="Less than 20 members" tagVar="Lessthan20" tagBool={this.state.Lessthan20} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="twentyfifty" tagName="20-50 members" tagVar="twentyfifty" tagBool={this.state.twentyfifty} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="fiftyhundred" tagName="50-100 members" tagVar="fiftyhundred" tagBool={this.state.fiftyhundred} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="more100" tagName="More than 100 members" tagVar="more100" tagBool={this.state.more100} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="fiftyhundred" tagName="50-100 members" tagVar="fiftyhundred" tagBool={this.state.fiftyhundred} /> 
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Morethan100" tagName="More than 100 members" tagVar="Morethan100" tagBool={this.state.Morethan100} />
 
           <br />
 

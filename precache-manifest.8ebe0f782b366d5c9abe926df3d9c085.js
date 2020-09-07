@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af3da18fb56820b565ef3b00ab421c90",
+    "revision": "35b8bb5e3ddb3357582961a59acd4008",
     "url": "/bear-homepage-v2/index.html"
   },
   {
-    "revision": "bbc31a62f947fc67841c",
+    "revision": "0f036a101695254cdcbe",
     "url": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css"
   },
   {
-    "revision": "ae17774a3e6971227345",
-    "url": "/bear-homepage-v2/static/css/main.1c2d86f3.chunk.css"
+    "revision": "bebb60508b28a327d65e",
+    "url": "/bear-homepage-v2/static/css/main.006c104c.chunk.css"
   },
   {
-    "revision": "bbc31a62f947fc67841c",
-    "url": "/bear-homepage-v2/static/js/2.c14831f7.chunk.js"
+    "revision": "0f036a101695254cdcbe",
+    "url": "/bear-homepage-v2/static/js/2.5f3a3ccc.chunk.js"
   },
   {
     "revision": "d2966845b94a3318bf32eecc7af8015d",
-    "url": "/bear-homepage-v2/static/js/2.c14831f7.chunk.js.LICENSE.txt"
+    "url": "/bear-homepage-v2/static/js/2.5f3a3ccc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ae17774a3e6971227345",
-    "url": "/bear-homepage-v2/static/js/main.1815a288.chunk.js"
+    "revision": "bebb60508b28a327d65e",
+    "url": "/bear-homepage-v2/static/js/main.0ebc7ac7.chunk.js"
   },
   {
     "revision": "442a76d5af93cb2910c4",
@@ -148,6 +148,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bear-homepage-v2/static/media/lib-bg.3ffacbd2.png"
   },
   {
+    "revision": "ea698ccd634237432779156d0afd4ec5",
+    "url": "/bear-homepage-v2/static/media/michael.ea698ccd.png"
+  },
+  {
     "revision": "b4ad73c821286d93074e978c3171f0e2",
     "url": "/bear-homepage-v2/static/media/muse.b4ad73c8.jpg"
   },
@@ -164,12 +168,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bear-homepage-v2/static/media/placeholder.053346dc.png"
   },
   {
+    "revision": "89232c3730336626912772749b714881",
+    "url": "/bear-homepage-v2/static/media/placeholder.89232c37.png"
+  },
+  {
+    "revision": "0d1aa3fc8fd2788580a8cd1e9ce1a6e2",
+    "url": "/bear-homepage-v2/static/media/ruirui.0d1aa3fc.jpg"
+  },
+  {
     "revision": "db600f6fb95f6fac89da876ee82c9658",
     "url": "/bear-homepage-v2/static/media/smile.db600f6f.svg"
   },
   {
+    "revision": "3be1cdb86dea417e34012ae6dc2a31cb",
+    "url": "/bear-homepage-v2/static/media/sreeja.3be1cdb8.jpeg"
+  },
+  {
     "revision": "5d1e1a1e8887a2a90a10914fda656760",
     "url": "/bear-homepage-v2/static/media/vsbuttonimg3.5d1e1a1e.png"
+  },
+  {
+    "revision": "c81d49774074bd82cacd84fb021cbb87",
+    "url": "/bear-homepage-v2/static/media/william.c81d4977.jpeg"
   },
   {
     "revision": "ece7bb0ca5144896c25c16de4a8df2d4",

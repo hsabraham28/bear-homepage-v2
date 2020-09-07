@@ -14,12 +14,12 @@
     margin-right: auto;
     padding: 0.5em;
     margin-top: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .vs--main {
     flex: 15 0 20em;
-    padding: 2em;
+    padding: 1.5em;
 
     .infinite-loading {
         text-align: center;
@@ -112,16 +112,16 @@ h5 {
 
 /** Search.js **/
 
-.searchSpace * {
-    padding: 0em;
-    margin: 0em;
-}
-
 .searchSpace {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+
+    * {
+        padding: 0em;
+        margin: 0em;
+    }
 }
 
 /** Sidebar **/
@@ -160,6 +160,18 @@ h5 {
 
         h3 {
             margin: 0.8em 0 0.3em;
+        }
+
+        .resetButtonWrapper {
+            margin-top: 1em;
+            text-align: center;
+
+            .resetButton {
+                border: 1.5px solid #004aad;
+                border-radius: 4px;
+                background: white;
+                color: #024baa;
+            }
         }
     }
 

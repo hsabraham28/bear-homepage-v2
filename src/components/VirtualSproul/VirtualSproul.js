@@ -234,10 +234,10 @@ class App extends Component {
                 dataLength={this.state.organizations.length}
                 next={this.loadMore}
                 hasMore={this.state.hasMore}
-                loader={<h4 className="infinite-loading">Loading...</h4>}
+                loader={<h4 className="infinite-loading"></h4>}
                 endMessage={<p></p>}
               >
-                {mappedClubs}
+                {mappedClubs.length>0 ? mappedClubs : "Clubs matching your search and tags are not found."}
               </InfiniteScroll>
             </div>
           </div>

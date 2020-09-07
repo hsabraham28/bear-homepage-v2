@@ -93,7 +93,7 @@ class Index extends React.Component {
                 <div className="story--main">
                     <Sidebar />
                     <div className="story--body">
-                        <h1 className="story--heading">Stories</h1>
+                        <h1 className="story--heading"></h1>
                         <Tiles stories={this.state.stories} />
                     </div>
                 </div>

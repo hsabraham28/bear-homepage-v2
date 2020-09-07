@@ -51,8 +51,4 @@ function Result(props) {
   );
 }
 
-
-
-
-
 export default Result;

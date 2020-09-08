@@ -53,8 +53,8 @@ function About(props) {
 
             {
                 name: "Wing Yiu Lo",
-                pic: require("./teampics/placeholder.png"),
-                desig: "UI/UX Designer",
+                pic: require("./teampics/wing.jpg"),
+                desig: "UI/UX Designer + Marketing",
             },
         ],
         row4: [

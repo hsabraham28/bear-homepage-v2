@@ -2,24 +2,26 @@ import React from 'react';
 import { Component } from 'react';
 import './header.scss'
 import { Link, withRouter } from "react-router-dom";
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBView, MDBIcon } from 'mdbreact';
+
 
 
 class Header extends Component {
   // Remove trapezoids from mobile menu; from https://stackoverflow.com/questions/48669646/how-to-add-or-remove-a-classname-when-screen-size-change-in-react
   constructor(props) {
     super(props);
-    this.state = {isMobile: window.innerWidth < 1000}
+    this.state = { isMobile: window.innerWidth < 1000 }
     // hides mobile menu when nav item is clicked
     this.mobileRef = React.createRef();
     this.hideMobile = this.hideMobile.bind(this);
-        
+
 
     this.headerStyle = this.props.isLanding ? {
       background: 'rgba(0, 0, 0, 0)',
     } : {
-      background: '#244067',
-    }
-    
+        background: '#244067',
+      }
+
   }
 
   hideMobile(e) {
@@ -29,7 +31,7 @@ class Header extends Component {
   componentDidMount() {
     window.addEventListener('resize', () => {
       this.setState({
-        isMobile: window.innerWidth < 1100 
+        isMobile: window.innerWidth < 1100
       });
     }, false);
   }
@@ -50,7 +52,7 @@ class Header extends Component {
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/discover">virtual sproul</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/story">our story</Link></li>
             <li className={trapezoidness}><Link onClick={this.hideMobile} to="/about">about us</Link></li>
-            <li className={trapezoidness}><a onClick={this.hideMobile} href="mailto:bearbeginningsberkeley@gmail.com">contact us</a></li>
+            <li className={trapezoidness}><Link onClick={this.hideMobile} to="/contact">contact us</Link></li>
           </ul>
         </nav>
       </header>

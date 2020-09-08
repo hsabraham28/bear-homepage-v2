@@ -3,7 +3,7 @@ import Member from './Member';
 
 function Team(props) {
     const team = props.team.map(member => (
-        <Member name={member.name} pic={member.pic} />
+        <Member name={member.name} pic={member.pic} desig={member.desig}/>
     ));
 
     return (

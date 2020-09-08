@@ -19,12 +19,15 @@ function Member(props) {
         maskRepeat: 'no-repeat',
         maskPosition: 'center'
     };
-    return(<div className="member">
+    return (
+        <div className="member">
             <div style={memberImageStyle}>
                 <img src={props.pic} />
             </div>
             <h2>{props.name}</h2>
-        </div>);
+            <h4>{props.desig}</h4>
+        </div>
+    );
 }
 
 export default Member;

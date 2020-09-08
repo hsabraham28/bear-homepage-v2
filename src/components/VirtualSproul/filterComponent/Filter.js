@@ -23,6 +23,11 @@ class Filter extends Component {
       discussion: false,
       media: false,
 
+      less20: false,
+      twentyfifty: false,
+      fiftyhundred: false,
+      more100: false,
+
       dropdown: [
         { name: "Linguistic", group: "1", selected: false },
         { name: "Underrepresented minorities", group: "1", selected: false },
@@ -51,9 +56,9 @@ class Filter extends Component {
         { name: "Women Interest", group: "5", selected: false },
         { name: "Apprenticeship", group: "5", selected: false },
 
-        { name: "Professional Development", group: "6", selected: false },
-        { name: "Career Development", group: "6", selected: false },
-        { name: "Academic Development", group: "6", selected: false },
+        { name: "Professional - Development", group: "6", selected: false },
+        { name: "Career - Development", group: "6", selected: false },
+        { name: "Academic - Development", group: "6", selected: false },
 
         { name: "Mentorship", group: "7", selected: false },
         { name: "Mental Health", group: "7", selected: false },
@@ -96,7 +101,7 @@ class Filter extends Component {
   }
 
   filterCheckBoxEventHandler(event, currBool) {
-    console.log(this.state)
+    // console.log(this.state)
     this.setState({ [event.target.name]: !currBool })
     if (!currBool && !this.state.tagList.includes(event.target.name)) {
       this.state.tagList.push(event.target.name)
@@ -105,7 +110,7 @@ class Filter extends Component {
       const index = this.state.tagList.indexOf(event.target.name)
       this.state.tagList.splice(index, 1)
     }
-    console.log(this.state.tagList)
+    // console.log(this.state.tagList)
     this.props.filterParentUpdate(this.state.tagList)
   }
 
@@ -135,7 +140,7 @@ class Filter extends Component {
       const index = this.state.tagList.indexOf(selectedItem.name)
       this.state.tagList.splice(index, 1)
     }
-    console.log(this.state.tagList)
+    // console.log(this.state.tagList)
     this.props.filterParentUpdate(this.state.tagList)
   }
 
@@ -176,27 +181,12 @@ class Filter extends Component {
 
 
           <h3>Org Size</h3>
-          {/* <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.test} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="test" tagName="test" tagVar="test" tagBool={this.state.media} /> */}
+          <Check eHandler={this.filterCheckBoxEventHandler} key="less20" tagName="Less than 20 members" tagVar="less20" tagBool={this.state.less20} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="twentyfifty" tagName="20-50 members" tagVar="twentyfifty" tagBool={this.state.twentyfifty} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="fiftyhundred" tagName="50-100 members" tagVar="fiftyhundred" tagBool={this.state.fiftyhundred} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="more100" tagName="More than 100 members" tagVar="more100" tagBool={this.state.more100} />
 
-          {/* <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Greek)} name="Greek" type="checkbox" id="inlineCheckboxGreeks" checked={this.state.Greek} />
-            <label className="form-check-label" htmlFor="inlineCheckbox2">Greeks</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Business)} name="Business" type="checkbox" id="inlineCheckboxBusiness" checked={this.state.Business} />
-            <label className="form-check-label" htmlFor="inlineCheckbox1">Business</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Government)} name="Government" type="checkbox" id="inlineCheckboxGovernment" checked={this.state.Government} />
-            <label className="form-check-label" htmlFor="inlineCheckbox2">Government</label>
-          </div>
-          <div className="form-check form-check-inline">
-            <input className="form-check-input" onChange={e => this.filterCheckBoxEventHandler(e, this.state.Size50)} name="Size50" type="checkbox" id="inlineCheckboxSize" checked={this.state.Size50} />
-            <label className="form-check-label" htmlFor="inlineCheckbox1">Size &lt; 50</label>
-          </div> */}
+  
         </div>
 
       </div>

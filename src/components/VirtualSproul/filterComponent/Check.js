@@ -16,7 +16,7 @@ export class Check extends Component {
     render() {
         this.tagBool = this.props.tagBool;
         return (
-            <div className="form-check form-check-inline">
+            <div className="form-check form-check-inline" style={{display:"block"}}>
                 <input className="form-check-input" onChange={this.onCheck} name={this.tagVar} type="checkbox" id={this.tagID} checked={this.tagBool} />
                 <label className="form-check-label" htmlFor={this.tagID}>{this.tagName}</label>
             </div>

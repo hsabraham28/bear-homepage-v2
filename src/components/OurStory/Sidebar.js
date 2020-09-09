@@ -20,6 +20,11 @@ function Sidebar() {
                 <p><span className="st-club">Club</span> - learn about the best ways to explore student orgs!</p>
                 <p><span className="st-app">Applications</span> - with recruitment season on the horizon, learn more about what it's like to apply and interview for orgs!</p>
             </div>
+            <div style={{fontSize: "small", margin: "3px"}}>
+                <p>
+                    *DISCLAIMER - Bear Beginnings is not responsible or liable in any manner for any Content posted on our Website. You are solely responsible for you interactions with other users of the website, and we will not be liable for any damage or harm resulting from any content or your interactions with other users of the website.*
+                </p>
+            </div>
         </div>
     )
 }

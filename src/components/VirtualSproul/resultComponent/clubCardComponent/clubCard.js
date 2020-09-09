@@ -11,6 +11,12 @@ class ClubCard extends Component {
     super()
     // console.log(props.org.tags[0])
     this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => {
+      if (tag == 'twentyfifty') {
+        tag = '20-50'
+      } else if (tag == 'fiftyhundred') {
+        tag = '50-100'
+      }
+
       tag = tag.charAt(0).toUpperCase() + tag.slice(1);
       return (
         <p key={tag}>{tag}</p>

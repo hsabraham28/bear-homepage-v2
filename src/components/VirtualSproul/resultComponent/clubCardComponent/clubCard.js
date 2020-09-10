@@ -32,7 +32,7 @@ class ClubCard extends Component {
 
       <div className="clubLayout">
 
-        <MDBCard wide cascade href="#" data-toggle="modal" data-target={cardIDPound}>
+        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}> 
           <MDBView cascade>
             <MDBCardImage
               hover

@@ -61,7 +61,7 @@ class ClubCard extends Component {
           </MDBCardBody>
         </MDBCard>
 
-        <div className="modal clickable" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
+        <div className="modal hide" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
           <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -139,6 +139,8 @@ class ClubCard extends Component {
           </div>
         </div>
       </div>
+
+
     );
   }
 

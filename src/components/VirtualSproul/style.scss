@@ -119,9 +119,10 @@
 	font-weight: 400;
 }
 
- .modal-dialog, .modal-content {
+ .modal, .modal-dialog, .modal-content {
  	max-width: 95%;
  	max-height: 90%;
+ 	
  }
 
  .clickable {

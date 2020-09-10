@@ -3,6 +3,20 @@
     grid-column: 1 / 2;
     display: flex;
     flex-wrap: wrap;
+
+    .view-cascade {
+        height: 18em; // change this to alter height of card image
+        .overlay {
+            height: 100%;
+            div.Ripple-parent {
+                height: 100%;
+                .card-img-top {
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
 }
 
 .side--main {
@@ -71,9 +85,10 @@ h3 {
 
 .allTiles {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(10em, 14em));
+    grid-template-columns: repeat(auto-fill, minmax(10em, 18em));
     grid-template-rows: repeat(auto-fit, auto);
     grid-gap: 1em;
+    justify-content: center;
 
     .shouldEvery {
         box-shadow: default;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBView, MDBCol } from 'mdbreact';
 import placeholder from './placeholder.png';
-import {ScrollLocky} from 'react-scroll-locky';
+
 
 //console.log(oski);
 
@@ -63,7 +63,7 @@ class ClubCard extends Component {
         </MDBCard>
 
         
-        <div className="modal modal-fullscreen clickable" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
+        <div className="modal modal-open clickable" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -139,11 +139,8 @@ class ClubCard extends Component {
               </div>
 
               <div className="modal-footer">
-  <button type="button" className="btn btn-default" data-dismiss="modal">Cancel</button> 
-  <button type="button" className="btn btn-default" data-glyphicon="glyphicon-refresh">Reload Data</button> 
-  <button type="button" id="btnTestSettingsFAButtons" className="btn btn-default" data-faicon="fa-cog">Settings</button> 
-  <button type="button" id="btnTestRefreshTextButtons" className="btn btn-default" data-mobile-text="Reload">Reload Data</button>
-  <button type="button" id="btnTestSaveTextButtons" className="btn btn-default btn-primary">Save</button> 
+  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button> 
+  
 </div>
             </div>
           </div>

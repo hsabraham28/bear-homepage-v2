@@ -101,6 +101,8 @@ body.modal-open {
     left:   0;
 }
 .modal {
+	position: fixed;
+	z-index: 3;
     will-change: display;
 }
 

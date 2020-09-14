@@ -23,6 +23,8 @@ class Filter extends Component {
       discussion: false,
       media: false,
 
+      escaffiliation: false,
+
       Lessthan20: false,
       twentyfifty: false,
       fiftyhundred: false,
@@ -185,6 +187,9 @@ class Filter extends Component {
           <Check eHandler={this.filterCheckBoxEventHandler} key="service" tagName="service" tagVar="service" tagBool={this.state.service} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="discussion" tagName="discussion" tagVar="discussion" tagBool={this.state.discussion} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="media" tagName="media/Publication" tagVar="media" tagBool={this.state.media} />
+      
+          <h3>Affiliations</h3>
+          <Check eHandler={this.filterCheckBoxEventHandler} key="escaffiliation" tagName="ESC Affiliated" tagVar="escaffiliation" tagBool={this.state.escaffiliation} className="escaffl"/>
 
           <h3>Org Size</h3>
           <Check eHandler={this.filterCheckBoxEventHandler} key="Lessthan20" tagName="Less than 20 members" tagVar="Lessthan20" tagBool={this.state.Lessthan20} />

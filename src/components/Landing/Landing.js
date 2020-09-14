@@ -82,8 +82,8 @@ class Landing extends React.Component {
             </div>
 
             <div>
-              <img src={asuclog} alt="asuc" />
-              <img src={esclog} alt="esc" />
+              {/* <img src={asuclog} alt="asuc" />
+              <img src={esclog} alt="esc" /> */}
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bear-homepage-v2/static/css/main.d51c99f0.chunk.css",
+    "main.css": "/bear-homepage-v2/static/css/main.37a3d720.chunk.css",
     "main.js": "/bear-homepage-v2/static/js/main.a5890ed7.chunk.js",
     "main.js.map": "/bear-homepage-v2/static/js/main.a5890ed7.chunk.js.map",
     "runtime-main.js": "/bear-homepage-v2/static/js/runtime-main.30aa8497.js",
@@ -9,10 +9,10 @@
     "static/js/2.9bdd3b09.chunk.js": "/bear-homepage-v2/static/js/2.9bdd3b09.chunk.js",
     "static/js/2.9bdd3b09.chunk.js.map": "/bear-homepage-v2/static/js/2.9bdd3b09.chunk.js.map",
     "index.html": "/bear-homepage-v2/index.html",
-    "precache-manifest.bd14cb67f59db1a144954f1783981900.js": "/bear-homepage-v2/precache-manifest.bd14cb67f59db1a144954f1783981900.js",
+    "precache-manifest.c83806663115814b59788b791d010ec3.js": "/bear-homepage-v2/precache-manifest.c83806663115814b59788b791d010ec3.js",
     "service-worker.js": "/bear-homepage-v2/service-worker.js",
     "static/css/2.4b2ef6ba.chunk.css.map": "/bear-homepage-v2/static/css/2.4b2ef6ba.chunk.css.map",
-    "static/css/main.d51c99f0.chunk.css.map": "/bear-homepage-v2/static/css/main.d51c99f0.chunk.css.map",
+    "static/css/main.37a3d720.chunk.css.map": "/bear-homepage-v2/static/css/main.37a3d720.chunk.css.map",
     "static/js/2.9bdd3b09.chunk.js.LICENSE.txt": "/bear-homepage-v2/static/js/2.9bdd3b09.chunk.js.LICENSE.txt",
     "static/media/GlacialIndifference-Bold.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Bold.f801e234.otf",
     "static/media/GlacialIndifference-Italic.otf": "/bear-homepage-v2/static/media/GlacialIndifference-Italic.69b161f1.otf",
@@ -34,6 +34,7 @@
     "static/media/ourstorybuttonimg6.png": "/bear-homepage-v2/static/media/ourstorybuttonimg6.04126c63.png",
     "static/media/placeholder.png": "/bear-homepage-v2/static/media/placeholder.89232c37.png",
     "static/media/placeholderbg.jpg": "/bear-homepage-v2/static/media/placeholderbg.28b88f46.jpg",
+    "static/media/about.scss": "/bear-homepage-v2/static/media/placeholderbg.57d8f3b3.jpg",
     "static/media/ruirui.jpg": "/bear-homepage-v2/static/media/ruirui.0d1aa3fc.jpg",
     "static/media/smile.svg": "/bear-homepage-v2/static/media/smile.db600f6f.svg",
     "static/media/sreeja.jpeg": "/bear-homepage-v2/static/media/sreeja.3be1cdb8.jpeg",
@@ -46,7 +47,7 @@
     "static/js/runtime-main.30aa8497.js",
     "static/css/2.4b2ef6ba.chunk.css",
     "static/js/2.9bdd3b09.chunk.js",
-    "static/css/main.d51c99f0.chunk.css",
+    "static/css/main.37a3d720.chunk.css",
     "static/js/main.a5890ed7.chunk.js"
   ]
 }

@@ -66,6 +66,8 @@
 .modal-content {
 	/* 80% of window height */
 	height: 90%;
+	position: fixed;
+	z-index: 1060;
 }
 
 .modal-body {

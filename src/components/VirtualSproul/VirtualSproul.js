@@ -232,7 +232,7 @@ class App extends Component {
               <InfiniteScroll
                 className="vs--cards"
                 dataLength={this.state.organizations.length}
-                next={this.loadMore}
+                // next={this.loadMore}
                 hasMore={this.state.hasMore}
                 loader={<h4 className="infinite-loading"></h4>}
                 endMessage={<p></p>}

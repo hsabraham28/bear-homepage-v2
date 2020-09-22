@@ -1,1 +1,1 @@
-.App{display:grid;height:100vh;grid-template-rows:auto 1fr;grid-template-columns:1fr;grid-template-areas:"h" "."}.header{grid-area:h}
+.AppChild{display:grid;grid-template-rows:auto 1fr auto;grid-template-columns:1fr;grid-template-areas:"h" "." "ff"}.header{grid-area:h}

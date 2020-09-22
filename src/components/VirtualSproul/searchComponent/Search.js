@@ -17,6 +17,7 @@ class Search extends Component {
     this.state = {
       searchElementName: "",
       redirect: false,
+      
     }
     this.changeSearchElementName = this.changeSearchElementName.bind(this)
     this.callsAppCallBack = this.callsAppCallBack.bind(this)
@@ -26,6 +27,12 @@ class Search extends Component {
   componentDidMount() { //fixme use will?
     this.state.searchElementName = "" 
   }
+
+  getPagesCount = (total, denominator) => {
+  const divisible = total % denominator === 0;
+  const valueToBeAdded = divisible ? 0 : 1;
+  return Math.floor(total / denominator) + valueToBeAdded;
+};
 
   showFailureorSuccess() {
     if (this.state.fetchedData.length > 0) {
@@ -57,7 +64,9 @@ class Search extends Component {
   changeSearchElementName(event) {
     //console.log("Going here")
     this.setState({ [event.target.name]: event.target.value })
+    
     //console.log(this.state.searchElementName)
+    
   }
 
   shouldComponentUpdate(nextProps, nextState) {

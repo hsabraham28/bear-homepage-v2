@@ -210,6 +210,10 @@ class Tile extends Component {
   cardBorder(type) { //FIXME delete after transfering to renderText
   }
 
+  addDefaultSrc(e) {
+    e.target.src = placeholder;
+  }
+
   render() {
     /** defining constants for convenience */
     const story = this.props.story;
@@ -233,6 +237,7 @@ class Tile extends Component {
               className='card-img-top'
               src={imageLink}
               alt='Card cap'
+              onError={this.addDefaultSrc}
             />
           </MDBView>
 

@@ -4,7 +4,7 @@
     grid-template-rows: minmax(100vh, auto); //savior!
 
     .AppChild {
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.1);
 
         .landingMain {
             .main {
@@ -30,7 +30,7 @@
             gap: 1em;
 
             .disclaimer {
-                flex: 0 1 23em;
+                flex: 0 1 43em;
                 padding: 0.4em;
                 p {
                     // visibility: hidden;
@@ -58,9 +58,11 @@
 
     h1 {
         font-family: GlacialIndifferenceBold;
+        font-size: x-large;
     }
     h2 {
         font-family: GlacialIndifferenceRegular;
+        font-size: large;
     }
 }
 
@@ -122,7 +124,7 @@
         }
 
         h1 {
-            font-size: 35px;
+            font-size: 33px;
         }
 
         p {

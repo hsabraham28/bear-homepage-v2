@@ -12,7 +12,7 @@ class Filter extends Component {
 
   constructor() {
     super()
-    this.state = { //look at Check's prop called tagVar
+    this.og_state = { //look at Check's prop called tagVar
       consulting: false,
       ncproject: false,
       cultural: false,
@@ -23,10 +23,12 @@ class Filter extends Component {
       discussion: false,
       media: false,
 
-      less20: false,
+      escaffiliation: false,
+
+      Lessthan20: false,
       twentyfifty: false,
       fiftyhundred: false,
-      more100: false,
+      Morethan100: false,
 
       dropdown: [
         { name: "Linguistic", group: "1", selected: false },
@@ -92,12 +94,14 @@ class Filter extends Component {
         { name: "Aerospace", group: "13", selected: false },
 
       ],
-      Size50: false,
       tagList: [],
-    }
+    };
 
-    this.filterCheckBoxEventHandler = this.filterCheckBoxEventHandler.bind(this)
+    this.state = Object.assign(this.og_state);
+
+    this.filterCheckBoxEventHandler = this.filterCheckBoxEventHandler.bind(this);
     this.dropdownSelectHandler = this.dropdownSelectHandler.bind(this)
+    this.onReset = this.onReset.bind(this);
   }
 
   filterCheckBoxEventHandler(event, currBool) {
@@ -144,6 +148,11 @@ class Filter extends Component {
     this.props.filterParentUpdate(this.state.tagList)
   }
 
+  onReset(e) {
+    this.props.filterParentUpdate([]);
+    this.props.parentUpdateCB("");
+    this.setState(Object.assign(this.og_state));
+  }
 
   render() {
     // this.foi = [
@@ -155,6 +164,7 @@ class Filter extends Component {
 
       <div className="filter-section">
         <div className="boxes myFilter">
+
           <h3>Field of Interest</h3>
           <Multiselect
             options={this.state.dropdown}
@@ -166,7 +176,7 @@ class Filter extends Component {
           />
 
           <h3>What Type of Activity?</h3>
-          <p>Click on the search icon to apply filters.</p>
+
           <Check eHandler={this.filterCheckBoxEventHandler} key="consulting" tagName="Consulting/Client Project" tagVar="consulting" tagBool={this.state.consulting} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="ncproject" tagName="Non-Client Project" tagVar="ncproject" tagBool={this.state.ncproject} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="cultural" tagName="Cultural" tagVar="cultural" tagBool={this.state.cultural} />
@@ -177,16 +187,21 @@ class Filter extends Component {
           <Check eHandler={this.filterCheckBoxEventHandler} key="service" tagName="service" tagVar="service" tagBool={this.state.service} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="discussion" tagName="discussion" tagVar="discussion" tagBool={this.state.discussion} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="media" tagName="media/Publication" tagVar="media" tagBool={this.state.media} />
-
-
+      
+          <h3>Affiliations</h3>
+          <Check eHandler={this.filterCheckBoxEventHandler} key="escaffiliation" tagName="ESC Affiliated" tagVar="escaffiliation" tagBool={this.state.escaffiliation} className="escaffl"/>
 
           <h3>Org Size</h3>
-          <Check eHandler={this.filterCheckBoxEventHandler} key="less20" tagName="Less than 20 members" tagVar="less20" tagBool={this.state.less20} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Lessthan20" tagName="Less than 20 members" tagVar="Lessthan20" tagBool={this.state.Lessthan20} />
           <Check eHandler={this.filterCheckBoxEventHandler} key="twentyfifty" tagName="20-50 members" tagVar="twentyfifty" tagBool={this.state.twentyfifty} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="fiftyhundred" tagName="50-100 members" tagVar="fiftyhundred" tagBool={this.state.fiftyhundred} />
-          <Check eHandler={this.filterCheckBoxEventHandler} key="more100" tagName="More than 100 members" tagVar="more100" tagBool={this.state.more100} />
+          <Check eHandler={this.filterCheckBoxEventHandler} key="fiftyhundred" tagName="50-100 members" tagVar="fiftyhundred" tagBool={this.state.fiftyhundred} /> 
+          <Check eHandler={this.filterCheckBoxEventHandler} key="Morethan100" tagName="More than 100 members" tagVar="Morethan100" tagBool={this.state.Morethan100} />
 
-  
+          <br />
+
+          <p>*Click on the search icon to apply filters.</p>
+
+          <div className="resetButtonWrapper"><button onClick={this.onReset} className="resetButton"> Reset Filters </button></div>
         </div>
 
       </div>

@@ -2,8 +2,9 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import './layout.scss';
 import './style.scss';
-import Tiles from "./Tiles";
 import Header from '../Header/Header';
+import Tile from './Tile';
+import InfiniteScroll from "react-infinite-scroll-component";
 
 
 
@@ -69,32 +70,74 @@ class Index extends React.Component {
                 //     pic: "pic1",
                 //     type: "apps",
                 // },
-            ]
+            ],
+            loadPage: 0, // 0 if fresh, 1 is first extra fetch
+            numItemsTotal: 17, //FIXME fetch this number
+            hasMore: true,
         }
 
         this.componentDidMount = this.componentDidMount.bind(this)
+        this.loadMore = this.loadMore.bind(this);
 
-        
     }
 
-    componentDidMount() {
-        fetch(`https://bearbeginnings.club:8444`)
+    fetchPage(pageNum) {
+        console.log("fetch" + pageNum)
+        fetch(`https://bearbeginnings.club:8444/`) // + pageNum)
             .then(response => response.json())
             .then(result => {
-                this.setState({ stories: result }) //for debug use: , () => console.log(this.state.stories)
+                 this.setState({ stories: this.state.stories.concat(result) }) //for debug use: , () => console.log(this.state.stories)
+
+                // if (pageNum==0) { //FIXME diags pre-backend-work
+                //     this.setState({ stories: result.slice(0, 17) })
+                // } else if (pageNum==1) {
+                //     this.setState({ stories: this.state.stories.concat(result.slice(17, 34))})
+                // }
+                // console.log(this.state.stories)
             })
+    }
+
+    loadMore() {
+        if (this.state.stories.length > this.state.numItemsTotal) {
+          this.setState({
+            hasMore: false
+          })
+          return;
+        }
+        let nextPage = this.state.loadPage + 1;
+        this.setState({
+          loadPage: nextPage,
+        }, () => { this.fetchPage(nextPage) }
+        )
+      }
+
+    componentDidMount() {
+        this.fetchPage(0);
     }
 
 
     render() {
+        this.mappedStories = this.state.stories.map(story => {
+            return <Tile key={story.id} story={story} />
+        })
+
         return (
             <div className="AppChild">
                 <Header isLanding={false} />
                 <div className="story--main">
                     <Sidebar />
                     <div className="story--body">
-                        <h1 className="story--heading">Stories</h1>
-                        <Tiles stories={this.state.stories} />
+                        <h1 className="story--heading"></h1>
+                        <InfiniteScroll
+                            className="allTiles"
+                            dataLength={this.state.stories.length}
+                            next={this.loadMore}
+                            hasMore={this.state.hasMore}
+                            loader={<h4 className="infinite-loading"></h4>}
+                            endMessage={<p></p>}
+                        >
+                            {this.mappedStories}
+                        </InfiniteScroll>
                     </div>
                 </div>
             </div>

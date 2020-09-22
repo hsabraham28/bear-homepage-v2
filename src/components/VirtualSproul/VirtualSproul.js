@@ -221,7 +221,10 @@ class App extends Component {
                 <h3>Start looking for the student orgs you're interested in!</h3>
               </div>
 
-              <Filter filterParentUpdate={this.updateTagState} parentUpdateCB={this.updateSearchKey} />
+              <Filter
+                filterParentUpdate={this.updateTagState}
+                parentUpdateCB={this.updateSearchKey}
+              />
               {/* <Sort /> */}
             </div>
 
@@ -229,12 +232,12 @@ class App extends Component {
               <InfiniteScroll
                 className="vs--cards"
                 dataLength={this.state.organizations.length}
-                next={this.loadMore}
+                // next={this.loadMore}
                 hasMore={this.state.hasMore}
-                loader={<h4 className="infinite-loading">Loading...</h4>}
+                loader={<h4 className="infinite-loading"></h4>}
                 endMessage={<p></p>}
               >
-                {mappedClubs}
+                {mappedClubs.length>0 ? mappedClubs : "Clubs matching your search and tags are not found."}
               </InfiniteScroll>
             </div>
           </div>

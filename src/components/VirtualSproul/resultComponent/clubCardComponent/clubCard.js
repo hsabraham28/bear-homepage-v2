@@ -11,10 +11,23 @@ class ClubCard extends Component {
   constructor(props) {
     super()
     // console.log(props.org.tags[0])
-    this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => (
-      <p key={tag}>{tag}</p>
-    ))
+    this.tags = props.org.tags[0].split(/\s#|#/).filter(Boolean).map(tag => {
+      if (tag == 'twentyfifty') {
+        tag = '20-50'
+      } else if (tag == 'fiftyhundred') {
+        tag = '50-100'
+      }
+
+      tag = tag.charAt(0).toUpperCase() + tag.slice(1);
+      return (
+        <p key={tag}>{tag}</p>
+      )
+    })
     // console.log(this.tags)
+  }
+
+  addDefaultSrc(e) {
+    e.target.src = placeholder;
   }
 
   render() {
@@ -41,6 +54,7 @@ class ClubCard extends Component {
               className='card-img-top'
               src={imageLink}
               alt='Card cap'
+              onError={this.addDefaultSrc}
             />
           </MDBView>
 
@@ -77,7 +91,7 @@ class ClubCard extends Component {
 
                 <div className="container-fluid vs--inner-tile">
                   <div className="vs-text-img">
-                    <img src={imageLink}></img>
+                    <img src={imageLink} onError={this.addDefaultSrc}></img>
                   </div>
                   <div className="vs-text-wrapper">
                     <div className="row">

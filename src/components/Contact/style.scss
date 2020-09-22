@@ -1,0 +1,62 @@
+.contact-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+    .heading {
+        background: url("../About/placeholderbg.jpg");
+        background-size: cover;
+        background-position: center;
+        color: white;
+
+        .heading-overlay {
+            background: rgba(36, 64, 103, 0.45);
+            text-align: center;
+
+            & > h2 {
+                text-shadow: 0 0 19px black;
+                padding: 2em 0.5em;
+                margin-bottom: -0em;
+            }
+        }
+    }
+
+    .body {
+        background: #244067;
+        padding: 0 5% 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .join, .email {
+            margin: 3em auto 3em;
+            padding: 0.5em;
+            border: 2px solid white;
+            border-radius: 0.4em;
+            background: rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+
+            h2 {
+                color: white;
+                margin: 0;
+            }
+        }
+
+        .join:hover, .email:hover {
+            box-shadow: 0 0 10px black;
+        }
+
+        .email {
+            margin: 1em auto 3em;
+
+        }
+
+        h4 {
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+    }
+}

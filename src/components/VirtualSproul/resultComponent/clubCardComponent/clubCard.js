@@ -3,7 +3,6 @@ import { Component } from 'react';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBView, MDBCol } from 'mdbreact';
 import placeholder from './placeholder.png';
 
-
 //console.log(oski);
 
 
@@ -46,7 +45,7 @@ class ClubCard extends Component {
 
       <div className="clubLayout">
 
-        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}> 
+        <MDBCard wide cascade data-toggle="modal" data-target={cardIDPound}>
           <MDBView cascade>
             <MDBCardImage
               hover
@@ -76,9 +75,8 @@ class ClubCard extends Component {
           </MDBCardBody>
         </MDBCard>
 
-        
-        <div className="modal modal-open clickable" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
-          <div className="modal-dialog" role="document">
+        <div className="modal fade" id={cardID} tabIndex="-1" role="dialog" aria-labelledby={titleID} aria-hidden="true">
+          <div className="modal-dialog modal-xl" role="document">
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title" id={titleID}>{org.name}</h5>
@@ -151,18 +149,10 @@ class ClubCard extends Component {
                   </div>
                 </div>
               </div>
-
-              <div className="modal-footer">
-  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button> 
-  
-</div>
             </div>
           </div>
         </div>
-        
       </div>
-
-
     );
   }
 

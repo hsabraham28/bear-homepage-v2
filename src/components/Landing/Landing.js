@@ -8,7 +8,7 @@ import tab from './tabbed3.png';
 import Header from '../Header/Header';
 import { Link } from "react-router-dom";
 // import bg from './backimg3.png';
-import bg from './placeholderbg.jpg';
+import bg from './campanile.jpg';
 import gate from "./gate.png"; 
 import smile from "./smile.svg";
 
@@ -79,7 +79,7 @@ class Landing extends React.Component {
           </div>
           <div className="footer">
             <div className="disclaimer">
-              <p>Image credit (c) Ritvick Bhalla</p>
+              {/* <p>Image credit (c) Ritvick Bhalla</p> */}
               <p>DISCLAIMER - Bear Beginnings is not responsible or liable in any manner for any Content posted on our Website. You are solely responsible for you interactions with other users of the website, and we will not be liable for any damage or harm resulting from any content or your interactions with other users of the website.</p>
             </div>
 
